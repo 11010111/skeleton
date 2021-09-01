@@ -144,7 +144,7 @@ page {
     }
 
     includeCSS {
-        skeleton_layout = EXT:skeleton/Resources/Public/Css/layout.min.css
+        layout = EXT:skeleton/Resources/Public/Css/layout.css
     }
 
     includeJSLibs {
@@ -160,7 +160,7 @@ page {
     }
 
     includeJSFooter {
-        skeleton_main = EXT:skeleton/Resources/Public/JavaScript/Src/main.js
+        main = EXT:skeleton/Resources/Public/JavaScript/Src/main.js
     }
 }
 
