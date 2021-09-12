@@ -1,0 +1,53 @@
+base: '/'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:skeleton/Resources/Private/Templates/Sites/Error404.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: 500
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:skeleton/Resources/Private/Templates/Sites/Error500.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: 403
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:skeleton/Resources/Private/Templates/Sites/Error403.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: 503
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:skeleton/Resources/Private/Templates/Sites/Error503.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: 0
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:skeleton/Resources/Private/Templates/Sites/AnyError.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+languages:
+  -
+    title: English
+    enabled: true
+    base: /
+    typo3Language: en
+    locale: en_US.UTF-8
+    iso-639-1: en
+    websiteTitle: ''
+    navigationTitle: English
+    hreflang: en-US
+    direction: ltr
+    flag: us
+    languageId: 0
+rootPageId: 1
+websiteTitle: ''
