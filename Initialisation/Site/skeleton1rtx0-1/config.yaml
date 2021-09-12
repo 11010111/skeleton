@@ -40,7 +40,7 @@ languages:
     title: English
     enabled: true
     base: /
-    typo3Language: en
+    typo3Language: default
     locale: en_US.UTF-8
     iso-639-1: en
     websiteTitle: ''
