@@ -1,9 +1,4 @@
-@font-face {
-  font-family: "Jura";
-  src: url("../../Fonts/Jura/Jura-VariableFont_wght.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
 html {
   scroll-behavior: smooth;
   font: normal normal 400 18px "Jura", "Helvetica Neue", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
