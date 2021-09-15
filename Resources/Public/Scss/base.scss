@@ -1,0 +1,439 @@
+// Imports
+@import "functions";
+@import "variables";
+@import "fonts";
+
+// base.scss
+$font-name: 'Basier Circle';
+
+html {
+  scroll-behavior: smooth;
+  font: normal normal 400 18px $font-name, 'Helvetica Neue', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: color('secondary');
+  border-radius: 10px;
+
+  &:hover {
+    background-color: color('link');
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.88em;
+  line-height: 3.88rem;
+  margin-bottom: 2.33rem;
+
+  @media screen and (min-width: breakpoint('md')) {
+    font-size: 3.88em;
+  }
+}
+
+h2 {
+  font-size: 1.77em;
+  line-height: 2.77rem;
+
+  @media screen and (min-width: breakpoint('md')) {
+    font-size: 2.77em;
+  }
+}
+
+h3 {
+  font-size: 1.38em;
+  line-height: 1.94rem;
+
+  @media screen and (min-width: breakpoint('md')) {
+    font-size: 1.94em;
+  }
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.15em;
+}
+
+h6 {
+  font-size: 1.1em;
+}
+
+hr {
+  border: 2px solid color('primary');
+  margin: 0 1rem;
+  border-radius: 2px;
+}
+
+a {
+  color: color('link');
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    color: color('link-hover');
+  }
+}
+
+img {
+  //width: 100%;
+  //height: auto;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: color('black');
+  border: none;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: color('black');
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+
+  tr:nth-child(2n) {
+    background-color: color('lightgrey');
+  }
+
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.5rem;
+  }
+
+  th {
+    background-color: color('lightgrey');
+  }
+}
+
+label {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+input, textarea, select, datalist {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: $font-name;
+  width: 100%;
+  background-color: transparent;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border-radius: 0;
+  border: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid color('lightgrey');
+
+  &:hover {
+    border-bottom: 1px solid color('link-hover');
+  }
+
+  &:focus {
+    border-bottom: 1px solid color('link');
+  }
+
+  &:disabled {
+    background-color: color('lightgrey');
+    border-bottom: 1px solid color('lightgrey');
+  }
+
+  &:invalid {
+    border-bottom: 1px solid color('error');
+  }
+}
+
+input::-webkit-calendar-picker-indicator {
+  //filter: invert(1);
+}
+
+input[type=file], input[type=range] {
+  border-top: 0;
+  border-bottom: 0;
+  cursor: pointer;
+}
+
+input[type=color] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 2rem;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  //background: transparent url("../../icons/dropdown-arrow.png") no-repeat right;
+  background-size: contain;
+  background-origin: content-box;
+  cursor: pointer;
+}
+
+option {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:hover {
+    background-color: color('lightgrey')!important;
+    box-shadow: 0 0 0.5rem rgba(color('link'), 0.15);
+  }
+
+  &:checked {
+    background-color: color('lightgrey')!important;
+    box-shadow: 0 0 0.5rem rgba(color('link'), 0.15);
+  }
+}
+
+input[type=radio] {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 0;
+  border-radius: 50%;
+  color: color('white');
+  background-color: color('link');
+  margin-right: 0.5rem;
+  cursor: pointer;
+
+  &::before {
+    content: '#';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  &:checked {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+input[type=checkbox] {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 0;
+  border-radius: 5px;
+  color: color('white');
+  background-color: color('link');
+  margin-right: 0.5rem;
+  cursor: pointer;
+
+  &::before {
+    content: "#";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  &:checked {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+input[type=submit], input[type=button], input[type=reset] {
+  background-color: color('link');
+  color: color('white');
+  margin: 0.5rem 0;
+  padding: 0.5rem 1.5rem;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px;
+  border: 0;
+  border-bottom: 1px solid color('link');
+  cursor: pointer;
+}
+
+input[type=checkbox], input[type=radio], input[type=submit], input[type=button], input[type=reset] {
+  &:hover {
+    transition: 0.5s;
+    background-color: color('link-hover');
+    box-shadow: 0 0 0.5rem rgba(color('link'), 0.15);
+  }
+}
+
+button {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: $font-name;
+  font-size: 1.11em;
+  color: color('white');
+  background-color: color('link');
+  margin: 0.5rem 0;
+  padding: 0.88rem 1.94rem;
+  outline: none;
+  border-radius: 5px;
+  border: 0;
+  border-bottom: 1px solid color('link');
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 0.5rem rgba(color('link-hover'), 0.15);
+    background-color: color('link-hover');
+  }
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 12.5px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: color('lightgrey');
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -12.5px;
+  width: 20px;
+  height: 30px;
+  background: color('link');
+  border: 1px solid color('link');
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: color('lightgrey');
+}
+
+input[type=range]::-moz-range-track {
+  background: color('lightgrey');
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 30px;
+  background: color('link');
+  border: 1px solid color('link');
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 13px 0;
+  color: transparent;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: color('lightgrey');
+  border: 0;
+  border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: color('lightgrey');
+  border: 0;
+  border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+  width: 20px;
+  height: 30px;
+  background: color('link');
+  border: 1px solid color('link');
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: color('lightgrey');
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: color('lightgrey');
+}
