@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "Jura";
+  src: url("../../Fonts/Jura/Jura-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
 html {
   scroll-behavior: smooth;
-  font: normal normal 400 18px "Basier Circle", "Helvetica Neue", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font: normal normal 400 18px "Jura", "Helvetica Neue", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
 body {
@@ -142,7 +148,7 @@ input, textarea, select, datalist {
   position: relative;
   top: 0;
   left: 0;
-  font-family: "Basier Circle";
+  font-family: "Jura";
   width: 100%;
   background-color: transparent;
   margin: 0.5rem 0;
@@ -289,7 +295,7 @@ button {
   position: relative;
   top: 0;
   left: 0;
-  font-family: "Basier Circle";
+  font-family: "Jura";
   font-size: 1.11em;
   color: #ffffff;
   background-color: #3c55ff;
