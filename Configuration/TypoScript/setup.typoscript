@@ -31,7 +31,7 @@ page {
         #
         # Database Entry
         # value: -1 -> None.html
-        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html ###
         templateName = TEXT
         templateName {
             cObject = TEXT
