@@ -5,6 +5,16 @@
   width: 100%;
   height: 100%;
 }
-.site_error .site_error_num {
+.site_error .inline {
+  display: flex;
+  align-items: center;
+}
+.site_error .inline .site_error_num, .site_error .inline .site_error_pip {
   font-size: 2em;
+}
+.site_error .inline .site_error_pip {
+  margin: 0 0.25rem;
+}
+.site_error .inline .site_error_msg {
+  font-size: 1em;
 }
