@@ -144,10 +144,11 @@ input, textarea, select, datalist {
   top: 0;
   left: 0;
   font-family: "Jura";
+  font-size: 1em;
   width: 100%;
   background-color: transparent;
   margin: 0.5rem 0;
-  padding: 0.5rem;
+  padding: 0.66rem;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -269,7 +270,7 @@ input[type=submit], input[type=button], input[type=reset] {
   background-color: #3c55ff;
   color: #ffffff;
   margin: 0.5rem 0;
-  padding: 0.5rem 1.5rem;
+  padding: 0.66rem 1.94rem;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
@@ -291,11 +292,11 @@ button {
   top: 0;
   left: 0;
   font-family: "Jura";
-  font-size: 1.11em;
+  font-size: 1em;
   color: #ffffff;
   background-color: #3c55ff;
   margin: 0.5rem 0;
-  padding: 0.88rem 1.94rem;
+  padding: 0.66rem 1.94rem;
   outline: none;
   border-radius: 5px;
   border: 0;
