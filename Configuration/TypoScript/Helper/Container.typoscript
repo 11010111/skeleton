@@ -1,0 +1,9 @@
+#########################
+### Content Container ###
+#########################
+
+tt_content.50-50 =< lib.contentElement
+tt_content.50-50 {
+  templateName = 50-50
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
