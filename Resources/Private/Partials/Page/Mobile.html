@@ -2,7 +2,7 @@
 
 <f:comment>
     <f:if condition="{mainnavigation}">
-        <ul class="hidden">
+        <ul>
             <f:for each="{mainnavigation}" as="mainnavigationItem">
                 <li class="{f:if(condition: mainnavigationItem.active, then:'active')}">
                     <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">
