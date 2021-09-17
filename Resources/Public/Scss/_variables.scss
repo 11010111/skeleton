@@ -14,6 +14,8 @@ $colors: (
         'lightgrey': #eeeeee,
 );
 
+$margin-lr: 1rem;
+
 // Flex Sizes
 $flex-sizes: (
         'sm',
@@ -41,14 +43,14 @@ $breakpoints: (
 
 // Flex Percentages
 $flex-percentages: (
-        '20': calc(20% - 1rem),
-        '25': calc(25% - 1rem),
-        '30': calc(30% - 1rem),
-        '33': calc(33.33% - 1rem),
-        '50': calc(50% - 1rem),
-        '66': calc(66% - 1rem),
-        '70': calc(70% - 1rem),
-        '80': calc(80% - 1rem),
+        '20': calc(20% - 1rem / 2),
+        '25': calc(25% - 1rem / 2),
+        '30': calc(30% - 1rem / 2),
+        '33': calc(33.33% - 1rem / 2),
+        '50': calc(50% - 1rem / 2),
+        '66': calc(66% - 1rem / 2),
+        '70': calc(70% - 1rem / 2),
+        '80': calc(80% - 1rem / 2),
         '100': 100%
 );
 

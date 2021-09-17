@@ -4,10 +4,9 @@
 
 
 // _mixins.scss
-// flex
-@mixin flex($var: null) {
-  .flex--#{$var} {
-    display: flex;
+// break
+@mixin break($var: null) {
+  .break--#{$var} {
     flex-direction: column;
 
     @media screen and (min-width: breakpoint(#{$var})) {

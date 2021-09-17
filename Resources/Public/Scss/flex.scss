@@ -5,22 +5,12 @@
 
 // Flex
 @each $name, $breakpoint in $breakpoints {
-  @include flex(#{$name});
+  @include break(#{$name});
   @include flex-size(#{$name});
-}
-
-.flex--default {
-  // default
 }
 
 .flex {
   display: flex;
-  flex-direction: column;
-  //gap: 1rem;
-
-  @media screen and (min-width: breakpoint('md')) {
-    flex-direction: row;
-  }
 }
 
 .flex--top {
