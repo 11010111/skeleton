@@ -1,12 +1,15 @@
-<div class="b_multicolumn b_multicolumn--twocols">
-    <div class="b_multicolumn__col">
+<div class="flex--md">
+
+    <div class="flex--md-50">
         <f:for each="{children_201}" as="element">
             {element.renderedContent -> f:format.raw()}
         </f:for>
     </div>
-    <div class="b_multicolumn__col">
+
+    <div class="flex--md-50">
         <f:for each="{children_202}" as="element">
             {element.renderedContent -> f:format.raw()}
         </f:for>
     </div>
+
 </div>
