@@ -17,12 +17,14 @@
 
 // flex--size
 @mixin flex-size($var: null) {
-  @each $name, $percentage in $flex-percentages {
+  @each $name, $rem in $flex-percentages {
     .flex--#{$var}-#{$name} {
       width: 100%;
 
+      $percent: '%';
+
       @media screen and (min-width: breakpoint(#{$var})) {
-        width: $percentage;
+        width: calc(#{$name}#{$percent} - #{$rem});
       }
     }
   }

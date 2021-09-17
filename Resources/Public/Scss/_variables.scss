@@ -43,15 +43,14 @@ $breakpoints: (
 
 // Flex Percentages
 $flex-percentages: (
-        '20': calc(20% - 1rem / 2),
-        '25': calc(25% - 1rem / 2),
-        '30': calc(30% - 1rem / 2),
-        '33': calc(33.33% - 1rem / 2),
-        '50': calc(50% - 1rem / 2),
-        '66': calc(66% - 1rem / 2),
-        '70': calc(70% - 1rem / 2),
-        '80': calc(80% - 1rem / 2),
-        '100': 100%
+        '20': $margin-lr / 2,
+        '25': $margin-lr / 2,
+        '30': $margin-lr / 2,
+        '33': $margin-lr / 2,
+        '50': $margin-lr / 2,
+        '66': $margin-lr / 2,
+        '70': $margin-lr / 2,
+        '80': $margin-lr / 2
 );
 
 // Gaps - TOP / BOTTOM

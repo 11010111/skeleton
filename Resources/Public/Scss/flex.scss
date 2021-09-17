@@ -4,11 +4,6 @@
 @import "mixins";
 
 // Flex
-@each $name, $breakpoint in $breakpoints {
-  @include break(#{$name});
-  @include flex-size(#{$name});
-}
-
 .flex {
   display: flex;
 }
@@ -349,4 +344,13 @@
   display: flex;
   align-self: stretch;
   height: 100%;
+}
+
+.flex--100 {
+  width: 100%;
+}
+
+@each $name, $breakpoint in $breakpoints {
+  @include break(#{$name});
+  @include flex-size(#{$name});
 }
