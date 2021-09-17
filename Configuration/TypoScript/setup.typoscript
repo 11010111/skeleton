@@ -89,10 +89,6 @@ page {
         keywords {
             override.field = keywords
         }
-        X-UA-Compatible = {$page.meta.compatible}
-        X-UA-Compatible {
-            attribute = http-equiv
-        }
 
         # OpenGraph Tags
         og:title {
