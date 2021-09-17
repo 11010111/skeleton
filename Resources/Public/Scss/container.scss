@@ -1,0 +1,10 @@
+// Imports
+@import 'functions';
+@import 'variables';
+
+
+// Container.scss
+.container--default {
+  width: 100%;
+  max-width: 76rem;
+}
