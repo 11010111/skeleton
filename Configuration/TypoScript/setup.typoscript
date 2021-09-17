@@ -142,6 +142,7 @@ page {
 
     includeCSS {
         base = EXT:skeleton/Resources/Public/Css/base.css
+        container = EXT:skeleton/Resources/Public/Css/container.css
         flex = EXT:skeleton/Resources/Public/Css/flex.css
         gap = EXT:skeleton/Resources/Public/Css/gap.css
         layout = EXT:skeleton/Resources/Public/Css/layout.css
