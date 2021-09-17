@@ -89,14 +89,9 @@ TCEFORM {
             addItems {
                 xs = XS
                 sm = SM
-                md = MD
                 lg = LG
                 xl = XL
                 xxl = XXL
-            }
-
-            config {
-                default = 3
             }
         }
     }

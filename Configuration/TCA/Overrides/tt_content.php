@@ -43,12 +43,7 @@ call_user_func(function () {
                     'type' => 'select',
                     'renderType' => 'selectSingle',
                     'items' => [
-                        ['XS', 'xs'],
-                        ['SM', 'sm'],
-                        ['MD', 'md'],
-                        ['LG', 'lg'],
-                        ['XL', 'xl'],
-                        ['XXL', 'xxl'],
+                        ['md', 'MD'],
                     ],
                 ],
             ]
