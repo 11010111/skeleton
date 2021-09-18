@@ -1,6 +1,7 @@
 // Imports
 @import 'functions';
 @import 'variables';
+@import "mixins";
 
 
 // Container.scss
@@ -12,8 +13,9 @@
 }
 
 .container--full {
-  width: 100%;
-  max-width: calc(100% + 2rem);
-  margin-left: -1rem;
-  margin-right: -1rem;
+  @include fullWidth();
+  margin-left: -$margin-lr;
+  margin-right: -$margin-lr;
+  padding-left: $margin-lr;
+  padding-right: $margin-lr;
 }

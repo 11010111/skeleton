@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
 html {
   scroll-behavior: smooth;
-  font: normal normal 400 18px "Jura", "Helvetica Neue", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font: normal normal 400 16px "Jura", "Helvetica Neue", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
 body {

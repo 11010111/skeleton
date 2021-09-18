@@ -6,8 +6,10 @@
 }
 
 .container--full {
-  width: 100%;
-  max-width: calc(100% + 2rem);
+  width: calc(100% + 1rem * 2);
+  max-width: calc(100% + 1rem * 2);
   margin-left: -1rem;
   margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
