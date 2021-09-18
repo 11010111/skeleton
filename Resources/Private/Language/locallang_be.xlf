@@ -20,6 +20,9 @@
             <trans-unit id="breakpoint">
                 <source>Breakpoint</source>
             </trans-unit>
+            <trans-unit id="color_picker">
+                <source>Color</source>
+            </trans-unit>
 
         </body>
     </file>
