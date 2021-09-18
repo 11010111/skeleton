@@ -32,7 +32,7 @@ TCEFORM {
             }
 
             config {
-                default = md
+                md = 1
             }
         }
 
