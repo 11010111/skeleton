@@ -25,7 +25,7 @@ call_user_func(function () {
         [
             'container' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:container',
+                'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:container',
                 'description' => '',
                 'config' => [
                     'type' => 'select',
@@ -38,7 +38,7 @@ call_user_func(function () {
             ],
             'breakpoint' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:breakpoint',
+                'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:breakpoint',
                 'description' => '',
                 'config' => [
                     'type' => 'select',
