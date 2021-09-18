@@ -35,6 +35,21 @@ call_user_func(function () {
                         ['Full Width', 'full']
                     ],
                 ],
+                'displayCond' => [
+                    'AND' => [
+                        'FIELD:CType:=:100',
+                        'OR' => [
+                            'FIELD:CType:=:50-50',
+                            'FIELD:CType:=:25-75',
+                            'FIELD:CType:=:75-25',
+                            'FIELD:CType:=:33-66',
+                            'FIELD:CType:=:66-33',
+                            'FIELD:CType:=:33-33-33',
+                            'FIELD:CType:=:20-80',
+                            'FIELD:CType:=:80-20'
+                        ]
+                    ]
+                ]
             ],
             'breakpoint' => [
                 'exclude' => 1,
@@ -44,6 +59,21 @@ call_user_func(function () {
                     'type' => 'select',
                     'renderType' => 'selectSingle'
                 ],
+                'displayCond' => [
+                    'AND' => [
+                        'FIELD:CType:=:100',
+                        'OR' => [
+                            'FIELD:CType:=:50-50',
+                            'FIELD:CType:=:25-75',
+                            'FIELD:CType:=:75-25',
+                            'FIELD:CType:=:33-66',
+                            'FIELD:CType:=:66-33',
+                            'FIELD:CType:=:33-33-33',
+                            'FIELD:CType:=:20-80',
+                            'FIELD:CType:=:80-20'
+                        ]
+                    ]
+                ]
             ],
             'color_picker' => [
                 'exclude' => 1,
@@ -73,7 +103,7 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, container, breakpoint, color_picker'
+        '--linebreak--, container, breakpoint, --linebreak--, color_picker'
     );
 
 });
