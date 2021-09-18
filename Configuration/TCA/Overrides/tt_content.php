@@ -8,7 +8,7 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer((
             new \B13\Container\Tca\ContainerConfiguration(
                     '50-50',
-                    '50-50 Column Container',
+                    '50-50',
                     'Insert an element dividing the content area into two columns',
                     [
                         [
@@ -20,18 +20,19 @@ call_user_func(function () {
             )
     );
 
-    TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
         [
-            'frame_class_extra' => [
+            'container' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:frame.extra',
+                'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:container',
                 'description' => '',
                 'config' => [
                     'type' => 'select',
                     'renderType' => 'selectSingle',
                     'items' => [
-                        ['Default', ''],
+                        ['Content', 'content'],
+                        ['Full Width', 'full']
                     ],
                 ],
             ],
@@ -47,17 +48,17 @@ call_user_func(function () {
         ]
     );
 
-    TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'frame_class_extra, breakpoint',
+        'container, breakpoint',
         'appearance',
         'after:space_after_class'
     );
 
-    TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, frame_class_extra, breakpoint'
+        '--linebreak--, container, breakpoint'
     );
 
 });

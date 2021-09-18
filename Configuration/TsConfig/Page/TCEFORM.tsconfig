@@ -7,12 +7,10 @@ TCEFORM {
             #removeItems = image,textpic
         }
 
-        imagewidth {
-          #disabled = 1
-        }
-
-        imageheight {
-          #disabled = 1
+        container {
+            addItems {
+                #class = Name
+            }
         }
 
         frame_class {
@@ -23,9 +21,18 @@ TCEFORM {
             }
         }
 
-        frame_class_extra {
+        breakpoint {
             addItems {
-                #class = Name
+                xs = XS
+                sm = SM
+                md = MD
+                lg = LG
+                xl = XL
+                xxl = XXL
+            }
+
+            config {
+                default = md
             }
         }
 
@@ -85,19 +92,12 @@ TCEFORM {
             }
         }
 
-        breakpoint {
-            addItems {
-                xs = XS
-                sm = SM
-                md = MD
-                lg = LG
-                xl = XL
-                xxl = XXL
-            }
+        imagewidth {
+          #disabled = 1
+        }
 
-            config {
-                default = 2
-            }
+        imageheight {
+          #disabled = 1
         }
     }
 
