@@ -44,13 +44,23 @@ call_user_func(function () {
                     'type' => 'select',
                     'renderType' => 'selectSingle'
                 ],
+            ],
+            'color_picker' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:color_picker',
+                'description' => '',
+                'config' => [
+                    'type' => 'input',
+                    'renderType' => 'colorpicker',
+                    'size' => 10,
+                ],
             ]
         ]
     );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'container, breakpoint',
+        'container, breakpoint, color_picker',
         'appearance',
         'after:space_after_class'
     );
@@ -58,7 +68,7 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, container, breakpoint'
+        '--linebreak--, container, breakpoint, color_picker'
     );
 
 });
