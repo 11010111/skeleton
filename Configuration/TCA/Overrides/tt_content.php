@@ -36,18 +36,16 @@ call_user_func(function () {
                     ],
                 ],
                 'displayCond' => [
-                    'AND' => [
+                    'OR' => [
                         'FIELD:CType:=:100',
-                        'OR' => [
-                            'FIELD:CType:=:50-50',
-                            'FIELD:CType:=:25-75',
-                            'FIELD:CType:=:75-25',
-                            'FIELD:CType:=:33-66',
-                            'FIELD:CType:=:66-33',
-                            'FIELD:CType:=:33-33-33',
-                            'FIELD:CType:=:20-80',
-                            'FIELD:CType:=:80-20'
-                        ]
+                        'FIELD:CType:=:50-50',
+                        'FIELD:CType:=:25-75',
+                        'FIELD:CType:=:75-25',
+                        'FIELD:CType:=:33-66',
+                        'FIELD:CType:=:66-33',
+                        'FIELD:CType:=:33-33-33',
+                        'FIELD:CType:=:20-80',
+                        'FIELD:CType:=:80-20'
                     ]
                 ]
             ],
@@ -60,18 +58,16 @@ call_user_func(function () {
                     'renderType' => 'selectSingle'
                 ],
                 'displayCond' => [
-                    'AND' => [
+                    'OR' => [
                         'FIELD:CType:=:100',
-                        'OR' => [
-                            'FIELD:CType:=:50-50',
-                            'FIELD:CType:=:25-75',
-                            'FIELD:CType:=:75-25',
-                            'FIELD:CType:=:33-66',
-                            'FIELD:CType:=:66-33',
-                            'FIELD:CType:=:33-33-33',
-                            'FIELD:CType:=:20-80',
-                            'FIELD:CType:=:80-20'
-                        ]
+                        'FIELD:CType:=:50-50',
+                        'FIELD:CType:=:25-75',
+                        'FIELD:CType:=:75-25',
+                        'FIELD:CType:=:33-66',
+                        'FIELD:CType:=:66-33',
+                        'FIELD:CType:=:33-33-33',
+                        'FIELD:CType:=:20-80',
+                        'FIELD:CType:=:80-20'
                     ]
                 ]
             ],
