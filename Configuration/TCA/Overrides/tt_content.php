@@ -38,7 +38,7 @@ call_user_func(function () {
             ],
             'breakpoint' => [
                 'exclude' => 1,
-                'label' => 'Breakpoint',
+                'label' => 'LLL:EXT:lynx/Resources/Private/Language/locallang_be.xlf:breakpoint',
                 'description' => '',
                 'config' => [
                     'type' => 'select',
