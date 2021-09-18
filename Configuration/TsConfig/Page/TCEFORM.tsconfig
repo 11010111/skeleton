@@ -30,10 +30,6 @@ TCEFORM {
                 xl = XL
                 xxl = XXL
             }
-
-            config {
-                default = 3
-            }
         }
 
         space_before_class {
