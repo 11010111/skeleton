@@ -7,6 +7,21 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer((
             new \B13\Container\Tca\ContainerConfiguration(
+                    '100',
+                    '100',
+                    'Insert an element with full width of content',
+                    [
+                        [
+                            ['name' => '100%', 'colPos' => 201]
+                        ]
+                    ]
+                )
+            )
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \B13\Container\Tca\Registry::class)->configureContainer((
+            new \B13\Container\Tca\ContainerConfiguration(
                     '50-50',
                     '50-50',
                     'Insert an element dividing the content area into two columns',
@@ -59,7 +74,6 @@ call_user_func(function () {
                 ],
                 'displayCond' => [
                     'OR' => [
-                        'FIELD:CType:=:100',
                         'FIELD:CType:=:50-50',
                         'FIELD:CType:=:25-75',
                         'FIELD:CType:=:75-25',
