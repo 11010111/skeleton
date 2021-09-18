@@ -14,4 +14,4 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['skeleton'] = 'EXT:skeleton/Config
 );
 
 $pageRenderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
-$pageRenderer->addCssFile('FILE:EXT:skeleton/Resources/Public/Css/backend.css');
+$pageRenderer->addCssFile('EXT:skeleton/Resources/Public/Css/backend.css');
