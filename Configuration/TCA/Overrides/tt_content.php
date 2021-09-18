@@ -41,10 +41,7 @@ call_user_func(function () {
                 'description' => '',
                 'config' => [
                     'type' => 'select',
-                    'renderType' => 'selectSingle',
-                    'items' => [
-                        ['Default', '']
-                    ],
+                    'renderType' => 'selectSingle'
                 ],
             ]
         ]
