@@ -43,7 +43,7 @@ call_user_func(function () {
                     'type' => 'select',
                     'renderType' => 'selectSingle',
                     'items' => [
-                        ['MD', 'md']
+                        ['Default', '']
                     ],
                 ],
             ]
