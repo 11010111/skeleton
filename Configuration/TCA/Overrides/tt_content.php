@@ -23,16 +23,15 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
         [
-            'container' => [
+            'class_extra' => [
                 'exclude' => 1,
-                'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:container',
+                'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:class_extra',
                 'description' => '',
                 'config' => [
                     'type' => 'select',
                     'renderType' => 'selectSingle',
                     'items' => [
-                        ['Content', 'content'],
-                        ['Full Width', 'full']
+                        ['Default', '']
                     ],
                 ],
             ],
@@ -50,7 +49,7 @@ call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'container, breakpoint',
+        'class_extra, breakpoint',
         'appearance',
         'after:space_after_class'
     );
@@ -58,7 +57,7 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, container, breakpoint'
+        '--linebreak--, class_extra, breakpoint'
     );
 
 });

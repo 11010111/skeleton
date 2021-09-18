@@ -8,7 +8,8 @@ editor:
         contentsCss: "EXT:skeleton/Resources/Public/Css/rte.css"
 
         stylesSet:
-            - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+            - { name: "Schriftgröße 12", element: "p", attributes: { 'class': 'font-size-12' } }
+            - { name: "Schriftgröße 20", element: "p", attributes: { 'class': 'font-size-20' } }
 
         toolbarGroups:
             - { name: styles, groups: [ format, styles ] }
@@ -40,3 +41,93 @@ editor:
             - Anchor
             - Underline
             - Strike
+            - Table
+
+processing:
+    allowTags:
+        - button
+
+# Button config and defaults
+buttons:
+    link:
+        relAttribute.:
+            enabled: false
+        properties:
+            class:
+                allowedClasses: 'link,btn-primary,btn-secondary,btn-next,btn-prev,link-download,link-folder,link-external,link-external-blank,link-mail'
+        page:
+            properties.:
+                class.:
+                    default: 'link'
+        file:
+            properties.:
+                class:
+                    default: 'link-download'
+        folder:
+            properties.:
+                class:
+                    default: 'link-folder'
+        url:
+            properties.:
+                class:
+                    default: 'link'
+        mail:
+            properties.:
+                class:
+                    default: 'link-mail'
+
+# Classes config
+classesAnchor:
+    link:
+        class: 'link'
+        type: 'page'
+        titleText: 'Link'
+    btn-primary:
+        class: 'btn-primary'
+        type: 'page'
+        titleText: 'Button (Primary)'
+    btn-secondary:
+        class: 'btn-secondary'
+        type: 'page'
+        titleText: 'Button (Secondary)'
+    btn-next:
+        class: 'btn-next'
+        type: 'page'
+        titleText: 'Button (Next)'
+    btn-prev:
+        class: 'btn-prev'
+        type: 'page'
+        titleText: 'Button (Previous)'
+    link-download:
+        class: 'link-download'
+        type: 'file'
+        titleText: 'Link (Download)'
+    link-folder:
+        class: 'link-folder'
+        type: 'folder'
+        titleText: 'Link (Folder)'
+    link-external:
+        class: 'link-external'
+        type: 'url'
+        titleText: 'Link (External)'
+    link-external-blank:
+        class: 'link-external-blank'
+        type: 'url'
+        target: '_blank'
+        titleText: 'Link (External Blank)'
+    link-mail:
+        class: 'link-mail'
+        type: 'mail'
+        titleText: 'Link (Mail)'
+
+classes:
+    link:
+        name: 'Link'
+    btn-primary:
+        name: 'Button (Primary)'
+    btn-secondary:
+        name: 'Button (Secondary)'
+    btn-next:
+        name: 'Button (Next)'
+    btn-prev:
+        name: 'Button (Previous)'
