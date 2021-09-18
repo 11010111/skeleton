@@ -54,6 +54,11 @@ call_user_func(function () {
                     'renderType' => 'colorpicker',
                     'size' => 10,
                 ],
+                'displayCond' => [
+                    'AND' => [
+                        'FIELD:container:=:full'
+                    ]
+                ]
             ]
         ]
     );

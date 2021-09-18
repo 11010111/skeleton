@@ -21,7 +21,7 @@
                 <source>Breakpoint</source>
             </trans-unit>
             <trans-unit id="color_picker">
-                <source>Color</source>
+                <source>Background Color</source>
             </trans-unit>
 
         </body>
