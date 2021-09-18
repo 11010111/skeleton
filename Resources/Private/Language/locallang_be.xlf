@@ -20,8 +20,11 @@
             <trans-unit id="breakpoint">
                 <source>Breakpoint</source>
             </trans-unit>
-            <trans-unit id="color_picker">
+            <trans-unit id="background_color">
                 <source>Background Color</source>
+            </trans-unit>
+            <trans-unit id="foreground_color">
+                <source>Foreground Color</source>
             </trans-unit>
 
         </body>
