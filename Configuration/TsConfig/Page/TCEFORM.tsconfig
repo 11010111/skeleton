@@ -7,16 +7,7 @@ TCEFORM {
             #removeItems = image,textpic
         }
 
-        layout {
-            removeItems = 0,1,2,3
-
-            addItems {
-                content = Content
-                full = Full Width
-            }
-        }
-
-        class_extra {
+        container {
             addItems {
                 #class = Name
             }
