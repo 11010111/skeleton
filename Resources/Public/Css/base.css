@@ -90,7 +90,7 @@ a {
   font-weight: 600;
 }
 a:hover {
-  color: #a8bad8;
+  color: #9c644f;
 }
 
 iframe {
@@ -162,7 +162,7 @@ input, textarea, select, datalist {
   border-bottom: 1px solid #eeeeee;
 }
 input:hover, textarea:hover, select:hover, datalist:hover {
-  border-bottom: 1px solid #a8bad8;
+  border-bottom: 1px solid #9c644f;
 }
 input:focus, textarea:focus, select:focus, datalist:focus {
   border-bottom: 1px solid #6b8ec8;
@@ -286,7 +286,7 @@ input[type=submit], input[type=button], input[type=reset] {
 
 input[type=checkbox]:hover, input[type=radio]:hover, input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover {
   transition: 0.5s;
-  background-color: #a8bad8;
+  background-color: #9c644f;
   box-shadow: 0 0 0.5rem rgba(107, 142, 200, 0.15);
 }
 
@@ -309,8 +309,8 @@ button {
 }
 button:hover {
   transition: 0.5s;
-  box-shadow: 0 0 0.5rem rgba(168, 186, 216, 0.15);
-  background-color: #a8bad8;
+  box-shadow: 0 0 0.5rem rgba(156, 100, 79, 0.15);
+  background-color: #9c644f;
 }
 
 input[type=range] {
