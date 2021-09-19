@@ -12,14 +12,3 @@
     }
   }
 }
-
-// Gaps - LEFT / RIGHT
-@each $gap, $options in $side-gaps {
-  @media screen and (min-width: breakpoint($gap)) {
-    @each $size, $value in $options {
-      .frame-space-left-#{$size}, .frame-space-right-#{$size} {
-        margin-left: $value;
-      }
-    }
-  }
-}

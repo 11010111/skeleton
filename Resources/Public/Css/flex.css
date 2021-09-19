@@ -416,6 +416,15 @@
   }
 }
 
+.flex--xs-75 {
+  width: 100%;
+}
+@media screen and (min-width: 15em) {
+  .flex--xs-75 {
+    width: calc(75% - 0.5rem);
+  }
+}
+
 .flex--xs-80 {
   width: 100%;
 }
@@ -494,6 +503,15 @@
 @media screen and (min-width: 33.75em) {
   .flex--sm-70 {
     width: calc(70% - 0.5rem);
+  }
+}
+
+.flex--sm-75 {
+  width: 100%;
+}
+@media screen and (min-width: 33.75em) {
+  .flex--sm-75 {
+    width: calc(75% - 0.5rem);
   }
 }
 
@@ -578,6 +596,15 @@
   }
 }
 
+.flex--md-75 {
+  width: 100%;
+}
+@media screen and (min-width: 48em) {
+  .flex--md-75 {
+    width: calc(75% - 0.5rem);
+  }
+}
+
 .flex--md-80 {
   width: 100%;
 }
@@ -656,6 +683,15 @@
 @media screen and (min-width: 67.5em) {
   .flex--lg-70 {
     width: calc(70% - 0.5rem);
+  }
+}
+
+.flex--lg-75 {
+  width: 100%;
+}
+@media screen and (min-width: 67.5em) {
+  .flex--lg-75 {
+    width: calc(75% - 0.5rem);
   }
 }
 
@@ -740,6 +776,15 @@
   }
 }
 
+.flex--xl-75 {
+  width: 100%;
+}
+@media screen and (min-width: 85.375em) {
+  .flex--xl-75 {
+    width: calc(75% - 0.5rem);
+  }
+}
+
 .flex--xl-80 {
   width: 100%;
 }
@@ -818,6 +863,15 @@
 @media screen and (min-width: 103.125em) {
   .flex--xxl-70 {
     width: calc(70% - 0.5rem);
+  }
+}
+
+.flex--xxl-75 {
+  width: 100%;
+}
+@media screen and (min-width: 103.125em) {
+  .flex--xxl-75 {
+    width: calc(75% - 0.5rem);
   }
 }
 
