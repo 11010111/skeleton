@@ -2,4 +2,5 @@
 # TCAdefaults
 #
 TCAdefaults.tt_content.header_layout = 100
+TCAdefaults.tt_content.container = content
 TCAdefaults.tt_content.breakpoint = md
