@@ -13,3 +13,45 @@ tt_content.50-50 {
   templateName = 50-50
   dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
 }
+
+tt_content.25-75 =< lib.contentElement
+tt_content.25-75 {
+  templateName = 25-75
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.75-25 =< lib.contentElement
+tt_content.75-25 {
+  templateName = 75-25
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.33-66 =< lib.contentElement
+tt_content.33-66 {
+  templateName = 33-66
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.66-33 =< lib.contentElement
+tt_content.66-33 {
+  templateName = 66-33
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.33-33-33 =< lib.contentElement
+tt_content.33-33-33 {
+  templateName = 33-33-33
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.20-80 =< lib.contentElement
+tt_content.20-80 {
+  templateName = 20-80
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.80-20 =< lib.contentElement
+tt_content.80-20 {
+  templateName = 80-20
+  dataProcessing.10 = B13\Container\DataProcessing\ContainerProcessor
+}

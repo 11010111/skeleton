@@ -5,34 +5,138 @@ defined('TYPO3_MODE') || die();
 call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-        \B13\Container\Tca\Registry::class)->configureContainer((
-            new \B13\Container\Tca\ContainerConfiguration(
-                    '100',
-                    '100',
-                    'Insert an element with full width of content',
-                    [
-                        [
-                            ['name' => '100%', 'colPos' => 201]
-                        ]
-                    ]
-                )
-            )
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '100',
+            '100',
+            '',
+            [
+                [
+                    ['name' => '100%', 'colPos' => 201]
+                ]
+            ]
+        )
     );
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-        \B13\Container\Tca\Registry::class)->configureContainer((
-            new \B13\Container\Tca\ContainerConfiguration(
-                    '50-50',
-                    '50-50',
-                    'Insert an element dividing the content area into two columns',
-                    [
-                        [
-                            ['name' => '50% Left', 'colPos' => 201],
-                            ['name' => '50% Right', 'colPos' => 202]
-                        ]
-                    ]
-                )
-            )
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '50-50',
+            '50-50',
+            '',
+            [
+                [
+                    ['name' => '50%', 'colPos' => 201],
+                    ['name' => '50%', 'colPos' => 202]
+                ]
+            ]
+        )
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '25-75',
+            '25-75',
+            '',
+            [
+                [
+                    ['name' => '25%', 'colPos' => 201],
+                    ['name' => '75%', 'colPos' => 202]
+                ]
+            ]
+        )
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '75-25',
+            '75-25',
+            '',
+            [
+                [
+                    ['name' => '75%', 'colPos' => 201],
+                    ['name' => '25%', 'colPos' => 202]
+                ]
+            ]
+        )
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '33-66',
+            '33-66',
+            '',
+            [
+                [
+                    ['name' => '33%', 'colPos' => 201],
+                    ['name' => '66%', 'colPos' => 202]
+                ]
+            ]
+        )
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '66-33',
+            '66-33',
+            '',
+            [
+                [
+                    ['name' => '66%', 'colPos' => 201],
+                    ['name' => '33%', 'colPos' => 202]
+                ]
+            ]
+        )
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '33-33-33',
+            '33-33-33',
+            '',
+            [
+                [
+                    ['name' => '33%', 'colPos' => 201],
+                    ['name' => '33%', 'colPos' => 202],
+                    ['name' => '33%', 'colPos' => 203]
+                ]
+            ]
+        )
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '20-80',
+            '20-80',
+            '',
+            [
+                [
+                    ['name' => '20%', 'colPos' => 201],
+                    ['name' => '80%', 'colPos' => 202]
+                ]
+            ]
+        )
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \B13\Container\Tca\Registry::class)->configureContainer(
+        new \B13\Container\Tca\ContainerConfiguration(
+            '80-20',
+            '80-20',
+            '',
+            [
+                [
+                    ['name' => '80%', 'colPos' => 201],
+                    ['name' => '20%', 'colPos' => 202]
+                ]
+            ]
+        )
     );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
