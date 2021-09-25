@@ -14,7 +14,8 @@ $colors: (
         'lightgrey': #eeeeee,
 );
 
-$margin-lr: 1rem;
+$margin-lr: 2rem;
+$flex-between: 0.5rem;
 
 // Flex Sizes
 $flex-sizes: (
@@ -43,15 +44,15 @@ $breakpoints: (
 
 // Flex Percentages
 $flex-percentages: (
-        '20': $margin-lr / 2,
-        '25': $margin-lr / 2,
-        '30': $margin-lr / 2,
-        '33': $margin-lr / 2,
-        '50': $margin-lr / 2,
-        '66': $margin-lr / 2,
-        '70': $margin-lr / 2,
-        '75': $margin-lr / 2,
-        '80': $margin-lr / 2
+        '20': $flex-between,
+        '25': $flex-between,
+        '30': $flex-between,
+        '33': $flex-between,
+        '50': $flex-between,
+        '66': $flex-between,
+        '70': $flex-between,
+        '75': $flex-between,
+        '80': $flex-between
 );
 
 // Gaps - TOP / BOTTOM

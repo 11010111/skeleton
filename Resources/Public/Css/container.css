@@ -6,10 +6,10 @@
 }
 
 .fullwidth {
-  width: calc(100% + 1rem * 2);
-  max-width: calc(100% + 1rem * 2);
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: calc(100% + 2rem * 2);
+  max-width: calc(100% + 2rem * 2);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
