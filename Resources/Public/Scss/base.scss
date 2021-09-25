@@ -15,7 +15,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 $margin-lr;
   width: 100%;
   background-color: color('secondary');
   color: color('primary');

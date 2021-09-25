@@ -6,8 +6,12 @@
 @each $gap, $options in $gaps {
   @media screen and (min-width: breakpoint($gap)) {
     @each $size, $value in $options {
-      .frame-space-before-#{$size}, .frame-space-after-#{$size} {
+      .frame-space-before-#{$size} {
         margin-top: $value;
+      }
+
+      .frame-space-after-#{$size} {
+        margin-bottom: $value;
       }
     }
   }
