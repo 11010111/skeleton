@@ -12,7 +12,7 @@
   margin-right: auto;
 }
 
-.fullwidth {
+.full {
   @include fullWidth();
   margin-left: -$margin-lr / 2;
   margin-right: -$margin-lr / 2;
