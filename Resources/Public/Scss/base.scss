@@ -15,10 +15,14 @@ html {
 
 body {
   margin: 0;
-  padding: 0 $margin-lr;
+  padding: 0 $margin-lr / 2;
   width: 100%;
   background-color: color('secondary');
   color: color('primary');
+
+  @media screen and (min-width: breakpoint('md')) {
+    padding: 0 $margin-lr;
+  }
 }
 
 body::-webkit-scrollbar {

@@ -14,8 +14,16 @@
 
 .fullwidth {
   @include fullWidth();
-  margin-left: -$margin-lr;
-  margin-right: -$margin-lr;
-  padding-left: $margin-lr;
-  padding-right: $margin-lr;
+  margin-left: -$margin-lr / 2;
+  margin-right: -$margin-lr / 2;
+  padding-left: $margin-lr / 2;
+  padding-right: $margin-lr / 2;
+
+  @media screen and (min-width: breakpoint('md')) {
+    @include fullWidthBig();
+    margin-left: -$margin-lr;
+    margin-right: -$margin-lr;
+    padding-left: $margin-lr;
+    padding-right: $margin-lr;
+  }
 }
