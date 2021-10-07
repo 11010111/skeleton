@@ -7,9 +7,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '100',
-            '100',
-            '',
+            '100%',
+            '100% Container',
+            'Container with one 100% column',
             [
                 [
                     ['name' => '100%', 'colPos' => 201]
