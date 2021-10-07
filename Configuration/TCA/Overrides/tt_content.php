@@ -9,7 +9,7 @@ call_user_func(function () {
         new \B13\Container\Tca\ContainerConfiguration(
             '100',
             '100% Container',
-            'Container with one 100% column',
+            '1 Column',
             [
                 [
                     ['name' => '100%', 'colPos' => 201]
@@ -22,8 +22,8 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
             '50-50',
-            '50-50',
-            '',
+            '50% - 50% Container',
+            '2 Columns',
             [
                 [
                     ['name' => '50%', 'colPos' => 201],
@@ -37,8 +37,8 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
             '25-75',
-            '25-75',
-            '',
+            '25% - 75% Container',
+            '2 Columns',
             [
                 [
                     ['name' => '25%', 'colPos' => 201],
@@ -52,8 +52,8 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
             '75-25',
-            '75-25',
-            '',
+            '75% - 25% Container',
+            '2 Columns',
             [
                 [
                     ['name' => '75%', 'colPos' => 201],
@@ -67,8 +67,8 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
             '33-66',
-            '33-66',
-            '',
+            '33% - 66% Container',
+            '2 Columns',
             [
                 [
                     ['name' => '33%', 'colPos' => 201],
@@ -82,8 +82,8 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
             '66-33',
-            '66-33',
-            '',
+            '66% - 33%',
+            '2 Columns',
             [
                 [
                     ['name' => '66%', 'colPos' => 201],
@@ -97,8 +97,8 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
             '33-33-33',
-            '33-33-33',
-            '',
+            '33% - 33% - 33% Container',
+            '3 Columns',
             [
                 [
                     ['name' => '33%', 'colPos' => 201],
@@ -113,8 +113,8 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
             '20-80',
-            '20-80',
-            '',
+            '20% -80% Container',
+            '2 Columns',
             [
                 [
                     ['name' => '20%', 'colPos' => 201],
@@ -128,8 +128,8 @@ call_user_func(function () {
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
             '80-20',
-            '80-20',
-            '',
+            '80% - 20%',
+            '2 Columns',
             [
                 [
                     ['name' => '80%', 'colPos' => 201],
