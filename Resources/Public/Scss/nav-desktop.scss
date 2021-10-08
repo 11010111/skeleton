@@ -1,20 +1,26 @@
 
 nav.desktop {
-  .desktop-menu {
+  .level1-menu {
     display: flex;
     justify-content: flex-end;
 
-    .level1 {
+    .desktop-level1 {
       margin: 0 1.38rem;
       list-style: none;
       padding-bottom: 1.38rem;
+
+      .level2-menu {
+        .desktop-level2 {
+
+        }
+      }
     }
 
-    .level1:first-child {
+    .desktop-level1:first-child {
       margin-left: 0;
     }
 
-    .level1:last-child {
+    .desktop-level1:last-child {
       margin-right: 0;
     }
   }
