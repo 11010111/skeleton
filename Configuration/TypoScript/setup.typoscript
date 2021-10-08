@@ -146,6 +146,7 @@ page {
         flex = EXT:skeleton/Resources/Public/Css/flex.css
         gap = EXT:skeleton/Resources/Public/Css/gap.css
         layout = EXT:skeleton/Resources/Public/Css/layout.css
+        nav_desktop = EXT:skeleton/Resources/Public/Css/nav-desktop.css
     }
 
     includeJSLibs {

@@ -1,0 +1,21 @@
+
+nav.desktop {
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+
+    .level1 {
+      margin: 0 1.38rem;
+      list-style: none;
+      padding-bottom: 1.38rem;
+    }
+
+    .level1:first-child {
+      margin-left: 0;
+    }
+
+    .level1:last-child {
+      margin-right: 0;
+    }
+  }
+}

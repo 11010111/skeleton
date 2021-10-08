@@ -1,18 +1,18 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:if condition="{mainnavigation}">
-    <ul>
-        <f:for each="{mainnavigation}" as="mainnavigationItem">
-            <li class="{f:if(condition: mainnavigationItem.active, then:'active')}">
-                <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">
-                    {mainnavigationItem.title}
+    <ul class="desktop-menu">
+        <f:for each="{mainnavigation}" as="level1">
+            <li class="des-level1{f:if(condition:'{level1.active}',then:' active')}">
+                <a href="{level1.link}" target="{level1.target}" title="{level1.title}">
+                    {level1.title}
                 </a>
-                <f:if condition="{mainnavigationItem.children}">
+                <f:if condition="{level1.children}">
                     <ul>
-                        <f:for each="{mainnavigationItem.children}" as="child">
-                            <li class="{f:if(condition: child.active, then:'active')}">
-                                <a href="{child.link}" target="{child.target}" title="{child.title}">
-                                    {child.title}
+                        <f:for each="{level1.children}" as="level2">
+                            <li class="des-level2{f:if(condition:'{level2.active}',then:' active')}">
+                                <a href="{level2.link}" target="{level2.target}" title="{level2.title}">
+                                    {level2.title}
                                 </a>
                             </li>
                         </f:for>

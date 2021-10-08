@@ -5,11 +5,15 @@
 <f:section name="Navigation">
 
     <nav class="desktop">
-        <f:render partial="Desktop" arguments="{_all}" />
+        <div class="content">
+            <f:render partial="Desktop" arguments="{_all}" />
+        </div>
     </nav>
 
     <nav class="mobile">
-        <f:render partial="Mobile" arguments="{_all}" />
+        <div class="content">
+            <f:render partial="Mobile" arguments="{_all}" />
+        </div>
     </nav>
 
 </f:section>
