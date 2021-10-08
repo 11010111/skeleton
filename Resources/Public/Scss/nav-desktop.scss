@@ -1,10 +1,17 @@
+// Imports
+@import "functions";
+@import "variables";
 
+// Nav Desktop
 nav.desktop {
   .level1-menu {
     display: flex;
     justify-content: flex-end;
 
     .desktop-level1 {
+      position: relative;
+      top: 0;
+      left: 0;
       margin: 0 1.38rem;
       list-style: none;
       padding-bottom: 1.38rem;
@@ -17,7 +24,12 @@ nav.desktop {
 
       .level2-menu {
         display: none;
-        padding: 0;
+        position: absolute;
+        top: 0;
+        left: -1rem;
+        padding: 1rem;
+        width: 12rem;
+        background-color: color('white');
 
         .desktop-level2 {
           list-style: none;

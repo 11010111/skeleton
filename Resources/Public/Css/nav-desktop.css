@@ -3,6 +3,9 @@ nav.desktop .level1-menu {
   justify-content: flex-end;
 }
 nav.desktop .level1-menu .desktop-level1 {
+  position: relative;
+  top: 0;
+  left: 0;
   margin: 0 1.38rem;
   list-style: none;
   padding-bottom: 1.38rem;
@@ -12,7 +15,12 @@ nav.desktop .level1-menu .desktop-level1:hover .level2-menu {
 }
 nav.desktop .level1-menu .desktop-level1 .level2-menu {
   display: none;
-  padding: 0;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  padding: 1rem;
+  width: 12rem;
+  background-color: #ffffff;
 }
 nav.desktop .level1-menu .desktop-level1 .level2-menu .desktop-level2 {
   list-style: none;
