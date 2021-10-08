@@ -47,48 +47,44 @@ body::-webkit-scrollbar-thumb {
 
 h1 {
   font-size: 2.88em;
-  line-height: 3.88rem;
-  margin-bottom: 2.33rem;
+  margin: 0 0 1.66rem;
 
   @media screen and (min-width: breakpoint('md')) {
     font-size: 3.88em;
-    line-height: 4.25;
   }
 }
 
 h2 {
   font-size: 1.77em;
-  line-height: 2.77rem;
+  margin: 0 0 1.66rem;
 
   @media screen and (min-width: breakpoint('md')) {
     font-size: 2.77em;
-    line-height: 3.25;
   }
 }
 
 h3 {
   font-size: 1.38em;
-  line-height: 1.94rem;
+  margin: 0 0 1.66rem;
 
   @media screen and (min-width: breakpoint('md')) {
     font-size: 1.94em;
-    line-height: 2.25;
   }
 }
 
 h4 {
   font-size: 1.25em;
-  line-height: 1.5;
+  margin: 0 0 1.66rem;
 }
 
 h5 {
   font-size: 1.15em;
-  line-height: 1.25;
+  margin: 0 0 1.66rem;
 }
 
 h6 {
   font-size: 1.1em;
-  line-height: 1.25;
+  margin: 0 0 1.66rem;
 }
 
 hr {
