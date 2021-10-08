@@ -9,7 +9,7 @@ body {
   padding: 0 1rem;
   width: 100%;
   background-color: #ffffff;
-  color: #299d9f;
+  color: #000000;
 }
 @media screen and (min-width: 48em) {
   body {
@@ -34,6 +34,10 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #299d9f;
 }
 
 h1 {

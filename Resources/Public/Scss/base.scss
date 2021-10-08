@@ -18,7 +18,7 @@ body {
   padding: 0 $margin-lr / 2;
   width: 100%;
   background-color: color('secondary');
-  color: color('primary');
+  color: color('black');
 
   @media screen and (min-width: breakpoint('md')) {
     padding: 0 $margin-lr;
@@ -43,6 +43,10 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: color('primary');
 }
 
 h1 {
