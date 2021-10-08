@@ -25,15 +25,15 @@ nav.desktop {
       .level2-menu {
         display: none;
         position: absolute;
-        top: 0;
+        top: 2.38rem;
         left: -1rem;
-        padding: 1rem;
+        padding: 0;
         width: 12rem;
         background-color: color('white');
 
         .desktop-level2 {
           list-style: none;
-          padding: 1.38rem 0 0;
+          padding: 0.88rem;
         }
       }
     }
@@ -44,6 +44,11 @@ nav.desktop {
 
     .desktop-level1:last-child {
       margin-right: 0;
+    }
+
+    .children {
+      list-style: initial;
+      color: color('link');
     }
   }
 }

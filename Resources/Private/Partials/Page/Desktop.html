@@ -3,7 +3,7 @@
 <f:if condition="{mainnavigation}">
     <ul class="level1-menu">
         <f:for each="{mainnavigation}" as="level1">
-            <li class="desktop-level1{f:if(condition:'{level1.active}',then:' active')}">
+            <li class="desktop-level1{f:if(condition:'{level1.children}',then:' children')}{f:if(condition:'{level1.active}',then:' active')}">
                 <a href="{level1.link}" target="{level1.target}" title="{level1.title}">
                     <span>{level1.title}</span>
                 </a>

@@ -16,19 +16,23 @@ nav.desktop .level1-menu .desktop-level1:hover .level2-menu {
 nav.desktop .level1-menu .desktop-level1 .level2-menu {
   display: none;
   position: absolute;
-  top: 0;
+  top: 2.38rem;
   left: -1rem;
-  padding: 1rem;
+  padding: 0;
   width: 12rem;
   background-color: #ffffff;
 }
 nav.desktop .level1-menu .desktop-level1 .level2-menu .desktop-level2 {
   list-style: none;
-  padding: 1.38rem 0 0;
+  padding: 0.88rem;
 }
 nav.desktop .level1-menu .desktop-level1:first-child {
   margin-left: 0;
 }
 nav.desktop .level1-menu .desktop-level1:last-child {
   margin-right: 0;
+}
+nav.desktop .level1-menu .children {
+  list-style: initial;
+  color: #6b8ec8;
 }
