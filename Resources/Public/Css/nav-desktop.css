@@ -7,6 +7,17 @@ nav.desktop .level1-menu .desktop-level1 {
   list-style: none;
   padding-bottom: 1.38rem;
 }
+nav.desktop .level1-menu .desktop-level1:hover .level2-menu {
+  display: block;
+}
+nav.desktop .level1-menu .desktop-level1 .level2-menu {
+  display: none;
+  padding: 0;
+}
+nav.desktop .level1-menu .desktop-level1 .level2-menu .desktop-level2 {
+  list-style: none;
+  padding: 1.38rem 0 0;
+}
 nav.desktop .level1-menu .desktop-level1:first-child {
   margin-left: 0;
 }

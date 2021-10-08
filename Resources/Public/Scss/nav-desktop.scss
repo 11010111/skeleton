@@ -9,9 +9,19 @@ nav.desktop {
       list-style: none;
       padding-bottom: 1.38rem;
 
-      .level2-menu {
-        .desktop-level2 {
+      &:hover {
+        .level2-menu {
+          display: block;
+        }
+      }
 
+      .level2-menu {
+        display: none;
+        padding: 0;
+
+        .desktop-level2 {
+          list-style: none;
+          padding: 1.38rem 0 0;
         }
       }
     }
