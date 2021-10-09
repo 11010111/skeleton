@@ -224,7 +224,14 @@ call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'container, breakpoint, background_color, foreground_color',
+        'container',
+        'appearance',
+        'after:layout'
+    );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+        'tt_content',
+        'breakpoint, background_color, foreground_color',
         'appearance',
         'after:space_after_class'
     );
@@ -232,7 +239,7 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, container, breakpoint, --linebreak--, background_color, foreground_color'
+        '--linebreak--, breakpoint, --linebreak--, background_color, foreground_color'
     );
 
 });
