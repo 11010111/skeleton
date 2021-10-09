@@ -2,6 +2,10 @@
 :root {
   --font-family: "Jura";
   --font-size: 1.125em;
+  --font-color: #000000;
+  --background-color: #eeeeee;
+  --headline-color: color("primary");
+  --paragraph-line-height: 1.5;
 }
 
 html {
@@ -9,8 +13,7 @@ html {
   font-size: var(--font-size);
   font-style: normal;
   font-variant: normal;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: normal;
   scroll-behavior: smooth;
 }
 
@@ -47,7 +50,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #299d9f;
+  color: var(--headline-color);
+}
+
+p {
+  line-height: var(--paragraph-line-height);
 }
 
 h1 {
