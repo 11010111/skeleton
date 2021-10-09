@@ -34,7 +34,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0 var(--container-margin / 2);
+  padding: 0 calc(var(--container-margin) / 2);
   width: 100%;
   background-color: var(--background-color);
   color: var(--font-color);
