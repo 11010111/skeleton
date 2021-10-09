@@ -224,22 +224,15 @@ call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'container',
+        'container, breakpoint, background_color, foreground_color',
         'appearance',
-        'before:layout'
-    );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-        'tt_content',
-        'breakpoint, background_color, foreground_color',
-        'appearance',
-        'after:space_after_class'
+        'after:layout'
     );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        'container, frame_class, space_before_class, space_after_class, --linebreak--, breakpoint, --linebreak--, background_color, foreground_color'
+        'layout, container, frame_class, space_before_class, space_after_class, --linebreak--, breakpoint, --linebreak--, background_color, foreground_color'
     );
 
 });
