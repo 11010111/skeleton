@@ -4,17 +4,21 @@
 
 <f:section name="Navigation">
 
-    <nav class="desktop">
-        <div class="content desktop-content">
-            <f:render partial="Desktop" arguments="{_all}" />
-        </div>
-    </nav>
+    <section class="navigation">
+        <nav class="desktop">
+            <div class="content desktop-content">
+                <f:render partial="Desktop" arguments="{_all}" />
+            </div>
+        </nav>
 
-    <nav class="mobile">
-        <div class="content mobile-content">
-            <f:render partial="Mobile" arguments="{_all}" />
-        </div>
-    </nav>
+        <nav class="mobile">
+            <div class="content mobile-content">
+                <f:render partial="Mobile" arguments="{_all}" />
+            </div>
+        </nav>
+
+        <button class="mobile-menu-btn">Menu</button>
+    </section>
 
 </f:section>
 
