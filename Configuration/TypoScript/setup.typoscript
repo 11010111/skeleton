@@ -163,6 +163,7 @@ page {
 
     includeJSFooter {
         main = EXT:skeleton/Resources/Public/JavaScript/Src/main.js
+        main.type = module
     }
 }
 

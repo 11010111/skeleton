@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import {containerColors} from "./container-colors";
+import {containerColors} from "./container-colors.js";
 
 containerColors.init();
 console.log('WE LOVE TYPO3');
