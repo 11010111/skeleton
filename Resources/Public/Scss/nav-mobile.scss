@@ -75,6 +75,7 @@ nav.mobile-open {
 
   &:focus, &:hover, &:active {
     background-color: transparent;
+    box-shadow: unset;
   }
 
   span {
