@@ -92,7 +92,7 @@ TCEFORM {
             }
         }
 
-        padding_left {
+        padding_top {
             addItems {
                 10 = 10
                 20 = 20
@@ -118,7 +118,7 @@ TCEFORM {
             }
         }
 
-        padding_right {
+        padding_bottom {
             addItems {
                 10 = 10
                 20 = 20
