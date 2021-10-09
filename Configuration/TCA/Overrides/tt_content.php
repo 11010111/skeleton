@@ -152,7 +152,7 @@ call_user_func(function () {
                     'items' => [
                         ['Content', 'content'],
                         ['Full Width', 'full']
-                    ],
+                    ]
                 ],
                 'displayCond' => [
                     'OR' => [
@@ -195,7 +195,10 @@ call_user_func(function () {
                 'description' => '',
                 'config' => [
                     'type' => 'select',
-                    'renderType' => 'selectSingle'
+                    'renderType' => 'selectSingle',
+                    'items' => [
+                        ['Default', '']
+                    ]
                 ]
             ],
             'padding_bottom' => [
@@ -204,7 +207,10 @@ call_user_func(function () {
                 'description' => '',
                 'config' => [
                     'type' => 'select',
-                    'renderType' => 'selectSingle'
+                    'renderType' => 'selectSingle',
+                    'items' => [
+                        ['Default', '']
+                    ]
                 ]
             ],
             'background_color' => [
