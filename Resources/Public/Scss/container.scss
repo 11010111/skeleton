@@ -15,16 +15,16 @@
 .full {
   width: calc(100% + var(--container-margin));
   max-width: calc(100% + var(--container-margin));
-  margin-left: - var(--container-margin) / 2;
-  margin-right: - var(--container-margin) / 2;
-  padding-left: var(--container-margin) / 2;
-  padding-right: var(--container-margin) / 2;
+  margin-left: -(var(--container-margin) / 2);
+  margin-right: -(var(--container-margin) / 2);
+  padding-left: (var(--container-margin) / 2);
+  padding-right: (var(--container-margin) / 2);
 
   @media screen and (min-width: breakpoint('md')) {
-    width: calc(100% + var(--container-margin) * 2);
-    max-width: calc(100% + var(--container-margin) * 2);
-    margin-left: - var(--container-margin);
-    margin-right: - var(--container-margin);
+    width: calc(100% + (var(--container-margin) * 2));
+    max-width: calc(100% + (var(--container-margin) * 2));
+    margin-left: -(var(--container-margin));
+    margin-right: -(var(--container-margin));
     padding-left: var(--container-margin);
     padding-right: var(--container-margin);
   }

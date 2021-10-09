@@ -15,8 +15,8 @@
 }
 @media screen and (min-width: 48em) {
   .full {
-    width: calc(100% + var(--container-margin) * 2);
-    max-width: calc(100% + var(--container-margin) * 2);
+    width: calc(100% + (var(--container-margin) * 2));
+    max-width: calc(100% + (var(--container-margin) * 2));
     margin-left: -var(--container-margin);
     margin-right: -var(--container-margin);
     padding-left: var(--container-margin);
