@@ -5,7 +5,7 @@ let mobileMenu = {
 
         if (!mobileMenuBtn || !navMobile) return
 
-        mobileMenuBtn.addEventListener('touchend', function () {
+        mobileMenuBtn.addEventListener('click', function () {
             mobileMenuBtn.classList.toggle('mobile-btn-active')
             navMobile.classList.toggle('mobile-open')
         })

@@ -1,5 +1,4 @@
 nav.mobile {
-  display: block;
   position: fixed;
   top: 0;
   left: 100%;
@@ -59,6 +58,11 @@ nav.mobile-open {
   background-color: transparent;
   border: 0;
   box-shadow: unset;
+}
+@media screen and (min-width: 85.375em) {
+  .mobile-menu-btn {
+    display: none;
+  }
 }
 .mobile-menu-btn:focus, .mobile-menu-btn:hover, .mobile-menu-btn:active {
   background-color: transparent;

@@ -4,7 +4,6 @@
 
 // Nav Mobile
 nav.mobile {
-  display: block;
   position: fixed;
   top: 0;
   left: 100%;
@@ -72,6 +71,10 @@ nav.mobile-open {
   background-color: transparent;
   border: 0;
   box-shadow: unset;
+
+  @media screen and (min-width: breakpoint('xl')) {
+    display: none;
+  }
 
   &:focus, &:hover, &:active {
     background-color: transparent;
