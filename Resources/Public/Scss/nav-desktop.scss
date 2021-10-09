@@ -6,7 +6,7 @@
 nav.desktop {
   display: none;
 
-  @media screen and (min-width: breakpoint('lg')) {
+  @media screen and (min-width: breakpoint('xl')) {
     display: block;
   }
 
@@ -32,7 +32,7 @@ nav.desktop {
         display: none;
         position: absolute;
         top: 2.38rem;
-        left: -1rem;
+        right: 0;
         padding: 0;
         width: 12rem;
         background-color: color('white');

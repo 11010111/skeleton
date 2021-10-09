@@ -15,7 +15,7 @@ nav.mobile {
   transition: 0.25s;
   overflow-y: auto;
 
-  @media screen and (min-width: breakpoint('lg')) {
+  @media screen and (min-width: breakpoint('xl')) {
     display: none;
   }
 
