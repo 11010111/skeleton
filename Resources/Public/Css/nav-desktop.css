@@ -1,3 +1,11 @@
+nav.desktop {
+  display: none;
+}
+@media screen and (min-width: 67.5em) {
+  nav.desktop {
+    display: block;
+  }
+}
 nav.desktop .level1-menu {
   display: flex;
   justify-content: flex-end;
