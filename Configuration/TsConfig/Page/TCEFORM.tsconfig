@@ -7,6 +7,10 @@ TCEFORM {
             #removeItems = image,textpic
         }
 
+        layout {
+            disabled = 1
+        }
+
         container {
             addItems {
                 #class = Name
