@@ -60,6 +60,9 @@ nav.mobile-open {
   border: 0;
   box-shadow: unset;
 }
+.mobile-menu-btn:focus, .mobile-menu-btn:hover, .mobile-menu-btn:active {
+  background-color: transparent;
+}
 .mobile-menu-btn span {
   display: block;
   position: relative;
@@ -68,6 +71,7 @@ nav.mobile-open {
   width: 2rem;
   height: 2px;
   background-color: var(--mobile-btn-color);
+  transition: 0.25s;
 }
 .mobile-menu-btn span:before {
   content: "";
@@ -77,6 +81,7 @@ nav.mobile-open {
   width: 2rem;
   height: 2px;
   background-color: var(--mobile-btn-color);
+  transition: 0.25s;
 }
 .mobile-menu-btn span:after {
   content: "";
@@ -86,16 +91,17 @@ nav.mobile-open {
   width: 2rem;
   height: 2px;
   background-color: var(--mobile-btn-color);
+  transition: 0.25s;
 }
 
 .mobile-btn-active span {
   background-color: transparent;
 }
 .mobile-btn-active span:before {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(-6px, 6px);
   background-color: var(--error);
 }
 .mobile-btn-active span:after {
-  transform: rotate(45deg);
+  transform: rotate(45deg) translate(-6px, -6px);
   background-color: var(--error);
 }

@@ -73,6 +73,10 @@ nav.mobile-open {
   border: 0;
   box-shadow: unset;
 
+  &:focus, &:hover, &:active {
+    background-color: transparent;
+  }
+
   span {
     display: block;
     position: relative;
@@ -81,6 +85,7 @@ nav.mobile-open {
     width: 2rem;
     height: 2px;
     background-color: var(--mobile-btn-color);
+    transition: 0.25s;
 
     &:before {
       content: '';
@@ -90,6 +95,7 @@ nav.mobile-open {
       width: 2rem;
       height: 2px;
       background-color: var(--mobile-btn-color);
+      transition: 0.25s;
     }
 
     &:after {
@@ -100,6 +106,7 @@ nav.mobile-open {
       width: 2rem;
       height: 2px;
       background-color: var(--mobile-btn-color);
+      transition: 0.25s;
     }
   }
 }
@@ -109,12 +116,12 @@ nav.mobile-open {
     background-color: transparent;
 
     &:before {
-      transform: rotate(-45deg);
+      transform: rotate(-45deg) translate(-6px, 6px);
       background-color: var(--error);
     }
 
     &:after {
-      transform: rotate(45deg);
+      transform: rotate(45deg) translate(-6px, -6px);
       background-color: var(--error);
     }
   }
