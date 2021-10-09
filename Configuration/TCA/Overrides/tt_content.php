@@ -224,7 +224,14 @@ call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'container, breakpoint, background_color, foreground_color',
+        'container',
+        'appearance',
+        'before:layout'
+    );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+        'tt_content',
+        'breakpoint, background_color, foreground_color',
         'appearance',
         'after:space_after_class'
     );
