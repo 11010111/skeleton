@@ -19,6 +19,27 @@ page {
     typeNum = 0
     shortcutIcon = EXT:skeleton/Resources/Public/Icons/favicon.ico
 
+    # Add body class and id tags
+    bodyTag >
+    bodyTagCObject = COA
+    bodyTagCObject {
+        10 = TEXT
+        10 {
+            field = uid
+            if.isInList.field = uid
+            if.value = 1
+            wrap = <body id="site_4|8" class="home">
+        }
+        20 = TEXT
+        20 {
+            field = uid
+            if.isInList.field = uid
+            if.value = 1
+            if.negate = 1
+            wrap = <body id="site_4|8" class="sequel">
+        }
+    }
+
     10 = FLUIDTEMPLATE
     10 {
         # Template names will be generated automatically by converting the applied
@@ -71,6 +92,14 @@ page {
                 includeSpacer = 1
                 as = mainnavigation
             }
+            30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            30 {
+                as = languagemenu
+            }
+        }
+        variables {
+            testVariable = TEXT
+            #testVariable.value = 1
         }
     }
 
