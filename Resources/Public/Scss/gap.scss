@@ -13,6 +13,14 @@
       .frame-space-after-#{$size} {
         margin-bottom: $value;
       }
+
+      .frame-space-inline-before-#{$size} {
+        padding-top: $value;
+      }
+
+      .frame-space-inline-after-#{$size} {
+        padding-bottom: $value;
+      }
     }
   }
 }

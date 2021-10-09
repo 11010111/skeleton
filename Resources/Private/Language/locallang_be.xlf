@@ -2,6 +2,8 @@
 <xliff version="1.0">
     <file source-language="en" datatype="plaintext" original="messages" date="2021-09-01UTC20:03:420">
         <header>
+            <authorName>Konstantin Schneider</authorName>
+            <authorEmail></authorEmail>
         </header>
         <body>
 
@@ -25,6 +27,12 @@
             </trans-unit>
             <trans-unit id="foreground_color">
                 <source>Foreground Color</source>
+            </trans-unit>
+            <trans-unit id="padding_top">
+                <source>Space Inline Before</source>
+            </trans-unit>
+            <trans-unit id="padding_bottom">
+                <source>Space Inline After</source>
             </trans-unit>
 
         </body>

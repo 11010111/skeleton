@@ -189,6 +189,24 @@ call_user_func(function () {
                     ]
                 ]
             ],
+            'padding_top' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:padding_top',
+                'description' => '',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle'
+                ]
+            ],
+            'padding_bottom' => [
+                'exclude' => 1,
+                'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:padding_bottom',
+                'description' => '',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle'
+                ]
+            ],
             'background_color' => [
                 'exclude' => 1,
                 'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:background_color',
@@ -224,7 +242,7 @@ call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'breakpoint, container, background_color, foreground_color',
+        'breakpoint, container, padding_top, padding_bottom, background_color, foreground_color',
         'appearance',
         'after:space_after_class'
     );
@@ -232,7 +250,7 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        'container, --linebreak--, breakpoint, background_color, foreground_color'
+        'container, --linebreak--, breakpoint, padding_top, padding_bottom, --linebreak--, background_color, foreground_color'
     );
 
 });
