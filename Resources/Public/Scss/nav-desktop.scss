@@ -30,10 +30,17 @@ nav.desktop {
         padding: 0;
         width: 12rem;
         background-color: color('white');
+        border-radius: 0.27rem;
+        box-shadow: 0 0 1.38rem rgb(0 0 0 / 10%);
 
         .desktop-level2 {
           list-style: none;
           padding: 0.88rem;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .desktop-level2:last-child {
+          border-bottom: 0;
         }
       }
     }

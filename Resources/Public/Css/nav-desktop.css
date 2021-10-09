@@ -21,10 +21,16 @@ nav.desktop .level1-menu .desktop-level1 .level2-menu {
   padding: 0;
   width: 12rem;
   background-color: #ffffff;
+  border-radius: 0.27rem;
+  box-shadow: 0 0 1.38rem rgba(0, 0, 0, 0.1);
 }
 nav.desktop .level1-menu .desktop-level1 .level2-menu .desktop-level2 {
   list-style: none;
   padding: 0.88rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+nav.desktop .level1-menu .desktop-level1 .level2-menu .desktop-level2:last-child {
+  border-bottom: 0;
 }
 nav.desktop .level1-menu .desktop-level1:first-child {
   margin-left: 0;
