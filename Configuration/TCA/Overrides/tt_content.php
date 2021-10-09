@@ -239,7 +239,7 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, breakpoint, --linebreak--, background_color, foreground_color'
+        'container, --linebreak--, breakpoint, --linebreak--, background_color, foreground_color'
     );
 
 });
