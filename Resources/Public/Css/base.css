@@ -4,8 +4,15 @@
   --font-size: 1.125em;
   --font-color: #000000;
   --background-color: #eeeeee;
-  --headline-color: color("primary");
+  --headline-color: #299d9f;
   --paragraph-line-height: 1.5;
+  --link-color: #6b8ec8;
+  --link-hover-color: #9c644f;
+  --error: #d42525;
+  --warning: #e3ad40;
+  --success: #88c433;
+  --container-margin: 2rem;
+  --flex-between: 0.5rem;
 }
 
 html {
@@ -19,14 +26,14 @@ html {
 
 body {
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 var(--container-margin)/2;
   width: 100%;
-  background-color: #eeeeee;
-  color: #000000;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 @media screen and (min-width: 48em) {
   body {
-    padding: 0 2rem;
+    padding: 0 var(--container-margin);
   }
 }
 
@@ -203,7 +210,7 @@ input:disabled, textarea:disabled, select:disabled, datalist:disabled {
   border-bottom: 1px solid #eeeeee;
 }
 input:invalid, textarea:invalid, select:invalid, datalist:invalid {
-  border-bottom: 1px solid #d42525;
+  border-bottom: 1px solid;
 }
 
 input[type=file], input[type=range] {

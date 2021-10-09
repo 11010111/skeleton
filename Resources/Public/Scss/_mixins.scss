@@ -29,14 +29,3 @@
     }
   }
 }
-
-// full width rem calc
-@mixin fullWidth() {
-  width: calc(100% + #{$margin-lr / 2} * 2);
-  max-width: calc(100% + #{$margin-lr / 2} * 2);
-}
-
-@mixin fullWidthBig() {
-  width: calc(100% + #{$margin-lr} * 2);
-  max-width: calc(100% + #{$margin-lr} * 2);
-}

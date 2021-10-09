@@ -13,17 +13,19 @@
 }
 
 .full {
-  @include fullWidth();
-  margin-left: -$margin-lr / 2;
-  margin-right: -$margin-lr / 2;
-  padding-left: $margin-lr / 2;
-  padding-right: $margin-lr / 2;
+  width: calc(100% + var(--container-margin));
+  max-width: calc(100% + var(--container-margin));
+  margin-left: - var(--container-margin) / 2;
+  margin-right: - var(--container-margin) / 2;
+  padding-left: var(--container-margin) / 2;
+  padding-right: var(--container-margin) / 2;
 
   @media screen and (min-width: breakpoint('md')) {
-    @include fullWidthBig();
-    margin-left: -$margin-lr;
-    margin-right: -$margin-lr;
-    padding-left: $margin-lr;
-    padding-right: $margin-lr;
+    width: calc(100% + var(--container-margin) * 2);
+    max-width: calc(100% + var(--container-margin) * 2);
+    margin-left: - var(--container-margin);
+    margin-right: - var(--container-margin);
+    padding-left: var(--container-margin);
+    padding-right: var(--container-margin);
   }
 }
