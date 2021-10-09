@@ -90,7 +90,7 @@ nav.mobile-open {
     &:before {
       content: '';
       position: absolute;
-      top: -0.25rem;
+      top: -0.5rem;
       left: 0;
       width: 2rem;
       height: 2px;
@@ -101,7 +101,7 @@ nav.mobile-open {
     &:after {
       content: '';
       position: absolute;
-      top: 0.25rem;
+      top: 0.5rem;
       left: 0;
       width: 2rem;
       height: 2px;
