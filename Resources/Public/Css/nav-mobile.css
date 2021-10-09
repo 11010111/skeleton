@@ -78,7 +78,7 @@ nav.mobile-open {
   height: 2px;
   background-color: var(--mobile-btn-color);
 }
-.mobile-menu-btn span:before {
+.mobile-menu-btn span:after {
   content: "";
   position: absolute;
   top: 0.25rem;
@@ -95,7 +95,7 @@ nav.mobile-open {
   transform: rotate(-45deg);
   background-color: var(--error);
 }
-.mobile-btn-active span:before {
+.mobile-btn-active span:after {
   transform: rotate(45deg);
   background-color: var(--error);
 }

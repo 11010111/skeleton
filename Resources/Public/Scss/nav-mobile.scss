@@ -92,7 +92,7 @@ nav.mobile-open {
       background-color: var(--mobile-btn-color);
     }
 
-    &:before {
+    &:after {
       content: '';
       position: absolute;
       top: 0.25rem;
@@ -113,7 +113,7 @@ nav.mobile-open {
       background-color: var(--error);
     }
 
-    &:before {
+    &:after {
       transform: rotate(45deg);
       background-color: var(--error);
     }
