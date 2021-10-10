@@ -151,7 +151,6 @@ call_user_func(function () {
                     'renderType' => 'selectSingle',
                     'items' => [
                         ['Content', 'content'],
-                        ['Content Padding', 'content-padding'],
                         ['Full Width', 'full'],
                         ['Full Width Padding', 'full-padding']
                     ]
@@ -225,8 +224,9 @@ call_user_func(function () {
                     'size' => 10,
                 ],
                 'displayCond' => [
-                    'AND' => [
-                        'FIELD:container:=:full'
+                    'OR' => [
+                        'FIELD:container:=:full',
+                        'FIELD:container:=:full-padding'
                     ]
                 ]
             ],
@@ -240,8 +240,9 @@ call_user_func(function () {
                     'size' => 10,
                 ],
                 'displayCond' => [
-                    'AND' => [
-                        'FIELD:container:=:full'
+                    'OR' => [
+                        'FIELD:container:=:full',
+                        'FIELD:container:=:full-padding'
                     ]
                 ]
             ]
