@@ -17,6 +17,11 @@
     margin-left: 0;
     margin-right: 0;
   }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .full {
@@ -48,7 +53,7 @@
       padding-right: var(--container-margin);
     }
 
-    @media screen and (min-width: breakpoint('xl')) {
+    @media screen and (min-width: breakpoint('xxl')) {
       padding-left: 0;
       padding-right: 0;
     }
