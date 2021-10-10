@@ -15,6 +15,11 @@
   --flex-between: 0.5rem;
   --mobile-btn-color: #222222;
 }
+@media screen and (min-width: 48em) {
+  :root {
+    --flex-between: 1rem;
+  }
+}
 
 html {
   font-family: var(--font-family), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
