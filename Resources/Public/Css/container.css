@@ -1,11 +1,41 @@
 .content {
   width: 100%;
-  max-width: 86rem;
+  max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
 }
 
+.content-padding {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--container-margin) / 2);
+  padding-right: calc(var(--container-margin) / 2);
+}
+@media screen and (min-width: 48em) {
+  .content-padding {
+    padding-left: var(--container-margin);
+    padding-right: var(--container-margin);
+  }
+}
+
 .full {
+  width: calc(100% + var(--container-margin));
+  max-width: calc(100% + var(--container-margin));
+  margin-left: calc(0% - var(--container-margin) / 2);
+  margin-right: calc(0% - var(--container-margin) / 2);
+}
+@media screen and (min-width: 48em) {
+  .full {
+    width: calc(100% + var(--container-margin) * 2);
+    max-width: calc(100% + var(--container-margin) * 2);
+    margin-left: calc(0% - var(--container-margin));
+    margin-right: calc(0% - var(--container-margin));
+  }
+}
+
+.full-padding {
   width: calc(100% + var(--container-margin));
   max-width: calc(100% + var(--container-margin));
   margin-left: calc(0% - var(--container-margin) / 2);
@@ -14,7 +44,7 @@
   padding-right: calc(var(--container-margin) / 2);
 }
 @media screen and (min-width: 48em) {
-  .full {
+  .full-padding {
     width: calc(100% + var(--container-margin) * 2);
     max-width: calc(100% + var(--container-margin) * 2);
     margin-left: calc(0% - var(--container-margin));
