@@ -82,7 +82,7 @@
 			<table index="tt_content" type="array">
 				<rec index="1" type="array">
 					<uid>1</uid>
-					<pid>4</pid>
+					<pid>2</pid>
 					<title>## Footer</title>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
