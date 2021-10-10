@@ -53,7 +53,7 @@
       padding-right: var(--container-margin);
     }
 
-    @media screen and (min-width: breakpoint('xxl')) {
+    @media screen and (min-width: calc(var(--content-max-width) - var(--container-margin) * 2)px) {
       padding-left: 0;
       padding-right: 0;
     }
