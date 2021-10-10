@@ -3,6 +3,12 @@
   top: 0;
   left: 0;
   width: 100%;
+  padding: 0 calc(var(--container-margin) / 2);
+}
+@media screen and (min-width: 48em) {
+  .navigation {
+    padding: 0 var(--container-margin);
+  }
 }
 
 .fixed .navigation {
