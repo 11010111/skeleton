@@ -1,16 +1,27 @@
 /**
  * Module Imports
  */
-import {containerColors, mobileMenu, navigationFixed} from "./module.js";
+import {
+    containerColors,
+    mobileMenu,
+    navigationFixed,
+    convertImgSvg,
+    equalHeight, parallax
+} from "./module.js"
 
 /**
  * Module inits
  */
-containerColors.init();
-mobileMenu.init();
-navigationFixed.init();
+containerColors.init()
+mobileMenu.init()
+navigationFixed.init()
+convertImgSvg.init()
+equalHeight.init()
+//equalHeight.init('.equal-height', '.example-group')
+//equalHeight.init('.example-class', false)
+parallax.init()
 
 /**
  * ENDE
  */
-console.log('WE LOVE TYPO3');
+console.log('WE LOVE TYPO3')
