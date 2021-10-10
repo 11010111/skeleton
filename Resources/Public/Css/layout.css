@@ -27,6 +27,10 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
+.main {
+  min-height: 100vh;
+}
+
 .form-group {
   margin-bottom: 1.94rem;
 }
