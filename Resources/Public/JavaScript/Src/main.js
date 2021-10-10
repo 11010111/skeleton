@@ -1,14 +1,14 @@
 /**
- * Imports
+ * Module Imports
  */
-import {containerColors} from "./container-colors.js";
-import {mobileMenu} from "./mobile-menu.js";
+import {containerColors, mobileMenu, navigationFixed} from "./module.js";
 
 /**
- * Module
+ * Module init
  */
 containerColors.init();
 mobileMenu.init();
+navigationFixed.init();
 
 /**
  * END

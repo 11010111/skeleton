@@ -9,8 +9,8 @@ nav.desktop {
 nav.desktop .level1-menu {
   display: flex;
   justify-content: flex-end;
-  margin: 1.38rem 0 0;
-  padding: 0;
+  margin: 0;
+  padding: 1.38rem 0 0;
 }
 nav.desktop .level1-menu .desktop-level1 {
   position: relative;

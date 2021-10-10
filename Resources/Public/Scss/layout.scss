@@ -3,6 +3,19 @@
 @import 'variables';
 
 // layout.scss
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.fixed {
+  .navigation {
+    position: fixed;
+  }
+}
+
 .main {
 
 }
