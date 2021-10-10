@@ -211,7 +211,7 @@ input, textarea, select, datalist {
   border: 0;
   border-top: 1px solid transparent;
   border-bottom: 1px solid color('primary');
-  color: color('white');
+  color: var(--font-color);
 
   &:hover {
     border-bottom: 1px solid color('link-hover');
@@ -282,7 +282,7 @@ input[type=radio] {
   height: 1.6rem;
   border: 0;
   border-radius: 50%;
-  color: color('white');
+  color: var(--font-color);
   background-color: color('link');
   margin-right: 0.5rem;
   cursor: pointer;
@@ -314,7 +314,7 @@ input[type=checkbox] {
   height: 1.6rem;
   border: 0;
   border-radius: 5px;
-  color: color('white');
+  color: var(--font-color);
   background-color: color('link');
   margin-right: 0.5rem;
   cursor: pointer;
@@ -342,7 +342,7 @@ input[type=checkbox] {
 
 input[type=submit], input[type=button], input[type=reset] {
   background-color: color('link');
-  color: color('white');
+  color: var(--font-color);
   margin: 0.5rem 0;
   padding: 0.66rem 1.94rem;
   outline: none;
@@ -369,7 +369,7 @@ button {
   left: 0;
   font-family: var(--font-family);
   font-size: 1em;
-  color: color('white');
+  color: var(--font-color);
   background-color: color('link');
   margin: 0.5rem 0;
   padding: 0.66rem 1.94rem;

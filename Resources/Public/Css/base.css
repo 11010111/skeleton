@@ -203,7 +203,7 @@ input, textarea, select, datalist {
   border: 0;
   border-top: 1px solid transparent;
   border-bottom: 1px solid #299d9f;
-  color: #ffffff;
+  color: var(--font-color);
 }
 input:hover, textarea:hover, select:hover, datalist:hover {
   border-bottom: 1px solid #9c644f;
@@ -263,7 +263,7 @@ input[type=radio] {
   height: 1.6rem;
   border: 0;
   border-radius: 50%;
-  color: #ffffff;
+  color: var(--font-color);
   background-color: #6b8ec8;
   margin-right: 0.5rem;
   cursor: pointer;
@@ -291,7 +291,7 @@ input[type=checkbox] {
   height: 1.6rem;
   border: 0;
   border-radius: 5px;
-  color: #ffffff;
+  color: var(--font-color);
   background-color: #6b8ec8;
   margin-right: 0.5rem;
   cursor: pointer;
@@ -315,7 +315,7 @@ input[type=checkbox]:checked::before {
 
 input[type=submit], input[type=button], input[type=reset] {
   background-color: #6b8ec8;
-  color: #ffffff;
+  color: var(--font-color);
   margin: 0.5rem 0;
   padding: 0.66rem 1.94rem;
   outline: none;
@@ -340,7 +340,7 @@ button {
   left: 0;
   font-family: var(--font-family);
   font-size: 1em;
-  color: #ffffff;
+  color: var(--font-color);
   background-color: #6b8ec8;
   margin: 0.5rem 0;
   padding: 0.66rem 1.94rem;
