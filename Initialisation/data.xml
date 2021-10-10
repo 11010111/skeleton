@@ -15,7 +15,9 @@
 		<static_tables index="relStaticTables" type="array"></static_tables>
 		<excludeMap type="array"></excludeMap>
 		<softrefCfg type="array"></softrefCfg>
-		<extensionDependencies type="array"></extensionDependencies>
+		<extensionDependencies type="array">
+			<extkey index="0">container</extkey>
+		</extensionDependencies>
 		<charset>utf-8</charset>
 		<pagetree type="array">
 			<node index="1" type="array">
