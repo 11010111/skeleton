@@ -151,8 +151,7 @@ call_user_func(function () {
                     'renderType' => 'selectSingle',
                     'items' => [
                         ['Content', 'content'],
-                        ['Full Width', 'full'],
-                        ['Full without Padding', 'full-wp']
+                        ['Full Width', 'full']
                     ]
                 ],
                 'displayCond' => [
@@ -224,9 +223,8 @@ call_user_func(function () {
                     'size' => 10,
                 ],
                 'displayCond' => [
-                    'OR' => [
-                        'FIELD:container:=:full',
-                        'FIELD:container:=:full-wp'
+                    'AND' => [
+                        'FIELD:container:=:full'
                     ]
                 ]
             ],
@@ -240,9 +238,8 @@ call_user_func(function () {
                     'size' => 10,
                 ],
                 'displayCond' => [
-                    'OR' => [
-                        'FIELD:container:=:full',
-                        'FIELD:container:=:full-wp'
+                    'AND' => [
+                        'FIELD:container:=:full'
                     ]
                 ]
             ]
