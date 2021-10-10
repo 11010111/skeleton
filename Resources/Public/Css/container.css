@@ -10,6 +10,8 @@
   max-width: calc(100% + var(--container-margin));
   margin-left: calc(0% - var(--container-margin) / 2);
   margin-right: calc(0% - var(--container-margin) / 2);
+  padding-left: calc(var(--container-margin) / 2);
+  padding-right: calc(var(--container-margin) / 2);
 }
 @media screen and (min-width: 48em) {
   .full {
@@ -17,24 +19,22 @@
     max-width: calc(100% + var(--container-margin) * 2);
     margin-left: calc(0% - var(--container-margin));
     margin-right: calc(0% - var(--container-margin));
+    padding-left: var(--container-margin);
+    padding-right: var(--container-margin);
   }
 }
 
-.full-padding {
+.full-wp {
   width: calc(100% + var(--container-margin));
   max-width: calc(100% + var(--container-margin));
   margin-left: calc(0% - var(--container-margin) / 2);
   margin-right: calc(0% - var(--container-margin) / 2);
-  padding-left: calc(var(--container-margin) / 2);
-  padding-right: calc(var(--container-margin) / 2);
 }
 @media screen and (min-width: 48em) {
-  .full-padding {
+  .full-wp {
     width: calc(100% + var(--container-margin) * 2);
     max-width: calc(100% + var(--container-margin) * 2);
     margin-left: calc(0% - var(--container-margin));
     margin-right: calc(0% - var(--container-margin));
-    padding-left: var(--container-margin);
-    padding-right: var(--container-margin);
   }
 }
