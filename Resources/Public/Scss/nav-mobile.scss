@@ -63,10 +63,9 @@ nav.mobile-open {
 }
 
 .mobile-menu-btn {
-  position: fixed;
-  top: 1rem;
-  left: auto;
-  right: var(--container-margin);
+  position: relative;
+  top: 0;
+  left: 0;
   width: 2rem;
   height: 2rem;
   padding: 0;
