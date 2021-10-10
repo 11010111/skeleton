@@ -199,6 +199,28 @@ page {
 }
 
 
+#################
+### SITE LOGO ###
+#################
+lib.logo = IMAGE
+lib.logo {
+    file = EXT:skeleton/Resources/Public/Images/logo.svg
+    stdWrap.typolink.parameter = 1
+    #params = class="svg"
+}
+
+
+##############
+### FOOTER ###
+##############
+lib.footer = RECORDS
+lib.footer {
+  tables = tt_content
+  source = 7
+  wrap = |
+}
+
+
 ################
 #### CONFIG ####
 ################
