@@ -216,7 +216,7 @@ lib.logo {
 lib.footer = RECORDS
 lib.footer {
   tables = tt_content
-  source = 7
+  source = 1
   wrap = |
 }
 
