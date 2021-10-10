@@ -1,5 +1,6 @@
 /**
- * Set Full Width Container Colors
+ * Full Width Container
+ * Background und Foreground Farbe
  * @type {{init: containerColors.init}}
  */
 let containerColors = {
@@ -18,7 +19,7 @@ let containerColors = {
 }
 
 /**
- * Mobile Menu
+ * Mobiles Menü und Button
  * @type {{init: mobileMenu.init}}
  */
 let mobileMenu = {
@@ -36,26 +37,28 @@ let mobileMenu = {
 }
 
 /**
- * Navigation Fixed
+ * Navigation
+ * Fixed Klasse beim Scrollen zum Body hinzufügen
+ * @type {{init: navigationFixed.init}}
  */
 let navigationFixed = {
     init: function () {
-        let navigation = document.querySelector('.navigation')
-
-        if (!navigation) return
-
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 0 && !navigation.classList.contains('fixed')) {
-                navigation.classList.add('fixed')
+            if (window.scrollY > 0 && !document.body.classList.contains('fixed')) {
+                document.body.classList.add('fixed')
             } else if (window.scrollY === 0) {
-                navigation.classList.remove('fixed')
+                document.body.classList.remove('fixed')
             }
         })
     }
 }
 
 /**
- * END
+ * ENDE
  * Export Module (Functions, Variables)
  */
-export { containerColors, mobileMenu, navigationFixed };
+export {
+    containerColors,
+    mobileMenu,
+    navigationFixed
+};

@@ -4,13 +4,13 @@
 import {containerColors, mobileMenu, navigationFixed} from "./module.js";
 
 /**
- * Module init
+ * Module inits
  */
 containerColors.init();
 mobileMenu.init();
 navigationFixed.init();
 
 /**
- * END
+ * ENDE
  */
 console.log('WE LOVE TYPO3');
