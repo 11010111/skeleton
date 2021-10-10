@@ -4,8 +4,6 @@
 
 // layout.scss
 .navigation {
-  display: flex;
-  justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,6 +12,12 @@
 
   @media screen and (min-width: breakpoint('md')) {
     padding: 0 var(--container-margin);
+  }
+
+  .navigation-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 

@@ -5,23 +5,21 @@
 <f:section name="Navigation">
 
     <section class="navigation">
-        <div class="logo">
-            <f:cObject typoscriptObjectPath="lib.logo" />
-        </div>
+        <div class="content navigation-content">
+            <div class="logo">
+                <f:cObject typoscriptObjectPath="lib.logo" />
+            </div>
 
-        <nav class="desktop">
-            <div class="content desktop-content">
+            <nav class="desktop">
                 <f:render partial="Desktop" arguments="{_all}" />
-            </div>
-        </nav>
+            </nav>
 
-        <nav class="mobile">
-            <div class="content mobile-content">
+            <nav class="mobile">
                 <f:render partial="Mobile" arguments="{_all}" />
-            </div>
-        </nav>
+            </nav>
 
-        <button class="mobile-menu-btn"><span></span></button>
+            <button class="mobile-menu-btn"><span></span></button>
+        </div>
     </section>
 
 </f:section>
