@@ -16,8 +16,9 @@
   align-items: center;
 }
 .navigation .navigation-content .logo {
-  display: flex;
-  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .fixed .navigation {
