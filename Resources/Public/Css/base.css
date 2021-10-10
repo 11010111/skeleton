@@ -15,7 +15,6 @@
   --flex-between: 0.5rem;
   --mobile-btn-color: #222222;
   --content-max-width: 85.375rem;
-  --content-inline: calc(var(--content-max-width) - var(--container-margin) * 2);
 }
 @media screen and (min-width: 48em) {
   :root {
