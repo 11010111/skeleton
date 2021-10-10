@@ -12,7 +12,7 @@ call_user_func(function () {
             '1 Column Container',
             [
                 [
-                    ['name' => '100%', 'colSpan' => 1, 'colPos' => 201]
+                    ['name' => '100%', 'colspan' => 1, 'colPos' => 201]
                 ]
             ]
         )
@@ -26,8 +26,8 @@ call_user_func(function () {
             '2 Columns Container',
             [
                 [
-                    ['name' => '50%', 'colSpan' => 1, 'colPos' => 201],
-                    ['name' => '50%', 'colSpan' => 1, 'colPos' => 202]
+                    ['name' => '50%', 'colspan' => 1, 'colPos' => 201],
+                    ['name' => '50%', 'colspan' => 1, 'colPos' => 202]
                 ]
             ]
         )
@@ -41,8 +41,8 @@ call_user_func(function () {
             '2 Columns Container',
             [
                 [
-                    ['name' => '25%', 'colSpan' => 3, 'colPos' => 201],
-                    ['name' => '75%', 'colSpan' => 7, 'colPos' => 202]
+                    ['name' => '25%', 'colspan' => 3, 'colPos' => 201],
+                    ['name' => '75%', 'colspan' => 7, 'colPos' => 202]
                 ]
             ]
         )
@@ -56,8 +56,8 @@ call_user_func(function () {
             '2 Columns Container',
             [
                 [
-                    ['name' => '75%', 'colSpan' => 7, 'colPos' => 201],
-                    ['name' => '25%', 'colSpan' => 3, 'colPos' => 202]
+                    ['name' => '75%', 'colspan' => 7, 'colPos' => 201],
+                    ['name' => '25%', 'colspan' => 3, 'colPos' => 202]
                 ]
             ]
         )
@@ -71,8 +71,8 @@ call_user_func(function () {
             '2 Columns Container',
             [
                 [
-                    ['name' => '33%', 'colSpan' => 3, 'colPos' => 201],
-                    ['name' => '66%', 'colSpan' => 6, 'colPos' => 202]
+                    ['name' => '33%', 'colspan' => 3, 'colPos' => 201],
+                    ['name' => '66%', 'colspan' => 6, 'colPos' => 202]
                 ]
             ]
         )
@@ -86,8 +86,8 @@ call_user_func(function () {
             '2 Columns Container',
             [
                 [
-                    ['name' => '66%', 'colSpan' => 6, 'colPos' => 201],
-                    ['name' => '33%', 'colSpan' => 3, 'colPos' => 202]
+                    ['name' => '66%', 'colspan' => 6, 'colPos' => 201],
+                    ['name' => '33%', 'colspan' => 3, 'colPos' => 202]
                 ]
             ]
         )
@@ -101,9 +101,9 @@ call_user_func(function () {
             '3 Columns Container',
             [
                 [
-                    ['name' => '33%', 'colSpan' => 1, 'colPos' => 201],
-                    ['name' => '33%', 'colSpan' => 1, 'colPos' => 202],
-                    ['name' => '33%', 'colSpan' => 1, 'colPos' => 203]
+                    ['name' => '33%', 'colspan' => 1, 'colPos' => 201],
+                    ['name' => '33%', 'colspan' => 1, 'colPos' => 202],
+                    ['name' => '33%', 'colspan' => 1, 'colPos' => 203]
                 ]
             ]
         )
@@ -117,8 +117,8 @@ call_user_func(function () {
             '2 Columns Container',
             [
                 [
-                    ['name' => '20%', 'colSpan' => 2, 'colPos' => 201],
-                    ['name' => '80%', 'colSpan' => 8, 'colPos' => 202]
+                    ['name' => '20%', 'colspan' => 2, 'colPos' => 201],
+                    ['name' => '80%', 'colspan' => 8, 'colPos' => 202]
                 ]
             ]
         )
@@ -132,8 +132,8 @@ call_user_func(function () {
             '2 Columns Container',
             [
                 [
-                    ['name' => '80%', 'colSpan' => 8, 'colPos' => 201],
-                    ['name' => '20%', 'colSpan' => 2, 'colPos' => 202]
+                    ['name' => '80%', 'colspan' => 8, 'colPos' => 201],
+                    ['name' => '20%', 'colspan' => 2, 'colPos' => 202]
                 ]
             ]
         )
