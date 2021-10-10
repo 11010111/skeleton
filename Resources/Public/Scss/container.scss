@@ -10,6 +10,13 @@
   max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
+
+  .full, .full-wp {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .full {
@@ -41,5 +48,12 @@
     max-width: calc(100% + var(--container-margin) * 2);
     margin-left: calc(100% - 100% - var(--container-margin));
     margin-right: calc(100% - 100% - var(--container-margin));
+  }
+
+  .full, .full-wp {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
