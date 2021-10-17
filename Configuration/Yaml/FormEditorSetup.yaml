@@ -11,14 +11,16 @@ TYPO3:
                                         selectOptions:
                                             35:
                                                 value: 'SaveToDatabase'
-                                                label: 'Label 0'
+                                                label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
                                 propertyCollections:
                                     finishers:
                                         25:
                                             identifier: 'SaveToDatabase'
                                             editors:
+                                                __inheritances:
+                                                    10: ''
                                                 100:
-                                                    label: 'Label Finisher'
+                                                    label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
                                                 110:
                                                     identifier: 'firstname'
                                                     templateName: 'Inspector-TextEditor'
@@ -44,15 +46,15 @@ TYPO3:
                     finishersDefinition:
                         SaveToDatabase:
                             formEditor:
-                                iconIdentifier: 't3-form-inspector-finishers-editor-header'
-                                label: 'Label 1'
+                                iconIdentifier: 't3-form-icon-finisher'
+                                label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
                                 predefinedDefaults:
                                     options:
                                         firstname: ''
                                         lastname: ''
                                         email: ''
                             FormEngine:
-                                label: 'Lebel 2'
+                                label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
                                 elements:
                                     firstname:
                                         label: 'Firstname'
