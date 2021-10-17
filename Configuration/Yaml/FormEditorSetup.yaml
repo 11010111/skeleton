@@ -17,8 +17,6 @@ TYPO3:
                                         25:
                                             identifier: 'SaveToDatabase'
                                             editors:
-                                                __inheritances:
-                                                    10: 'TYPO3.CMS.Form.mixins.formElementMixins.BaseCollectionEditorsMixin'
                                                 100:
                                                     label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
                                                 110:
