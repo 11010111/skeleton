@@ -44,7 +44,7 @@ TYPO3:
                     finishersDefinition:
                         SaveToDatabase:
                             formEditor:
-                                iconIdentifier: 'form-finisher'
+                                iconIdentifier: 't3-form-inspector-finishers-editor-header'
                                 label: 'Label 1'
                                 predefinedDefaults:
                                     options:
