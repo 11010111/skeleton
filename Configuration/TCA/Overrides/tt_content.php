@@ -144,6 +144,7 @@ call_user_func(function () {
         [
             'container' => [
                 'exclude' => 1,
+                'onChange' => 'reload',
                 'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:container',
                 'description' => '',
                 'config' => [
