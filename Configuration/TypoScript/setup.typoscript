@@ -221,6 +221,22 @@ lib.footer {
 }
 
 
+##############################
+### FRONTEND CONFIGURATION ###
+##############################
+plugin.tx_form.settings.yamlConfigurations {
+	4985556478 = EXT:form_to_database/Configuration/Yaml/BaseSetup.yaml
+}
+
+#############################
+### BACKEND CONFIGURATION ###
+#############################
+module.tx_form.settings.yamlConfigurations {
+	4985556478 = EXT:form_to_database/Configuration/Yaml/BaseSetup.yaml
+	4985556479 = EXT:form_to_database/Configuration/Yaml/FormEditorSetup.yaml
+}
+
+
 ################
 #### CONFIG ####
 ################
