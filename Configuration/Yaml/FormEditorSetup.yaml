@@ -11,14 +11,14 @@ TYPO3:
                                         selectOptions:
                                             35:
                                                 value: 'SaveToDatabase'
-                                                label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
+                                                label: 'Label 0'
                                 propertyCollections:
                                     finishers:
                                         25:
                                             identifier: 'SaveToDatabase'
                                             editors:
                                                 100:
-                                                    label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
+                                                    label: 'Label Finisher'
                                                 110:
                                                     identifier: 'firstname'
                                                     templateName: 'Inspector-TextEditor'
@@ -44,15 +44,15 @@ TYPO3:
                     finishersDefinition:
                         SaveToDatabase:
                             formEditor:
-                                iconIdentifier: 't3-form-icon-finisher'
-                                label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
+                                iconIdentifier: 'form-finisher'
+                                label: 'Label 1'
                                 predefinedDefaults:
                                     options:
                                         firstname: ''
                                         lastname: ''
                                         email: ''
                             FormEngine:
-                                label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
+                                label: 'Lebel 2'
                                 elements:
                                     firstname:
                                         label: 'Firstname'
