@@ -311,7 +311,7 @@ let scrollToTop = {
             }
         })
 
-        document.appendChild(toTop)
+        document.body.appendChild(toTop)
     }
 }
 

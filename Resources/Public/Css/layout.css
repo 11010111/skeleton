@@ -36,6 +36,19 @@
   margin-bottom: 1.94rem;
 }
 
+.content-scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: -100%;
+  width: 2rem;
+  height: 2rem;
+  transition: right 0.25s;
+}
+
+.scroll-top-show {
+  right: 2rem;
+}
+
 .site_error {
   display: flex;
   justify-content: center;
