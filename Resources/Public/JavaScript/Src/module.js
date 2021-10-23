@@ -304,7 +304,7 @@ let scrollToTop = {
         })
 
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 500) {
+            if (window.scrollY > 250) {
                 toTop.classList.add('scroll-top-show')
             } else {
                 toTop.classList.remove('scroll-top-show')

@@ -46,15 +46,19 @@
 
 .content-scroll-top {
   position: fixed;
+  top: auto;
   bottom: 2rem;
+  left: auto;
   right: -100%;
   width: 2rem;
   height: 2rem;
+  padding: 0;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
   transition: right 0.25s;
 }
 
 .scroll-top-show {
-  right: 2rem;
+  right: 1rem;
 }
 
 .site_error {
