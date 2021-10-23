@@ -221,22 +221,6 @@ lib.footer {
 }
 
 
-##############################
-### FRONTEND CONFIGURATION ###
-##############################
-plugin.tx_form.settings.yamlConfigurations {
-	100 = EXT:skeleton/Configuration/Yaml/BaseSetup.yaml
-}
-
-#############################
-### BACKEND CONFIGURATION ###
-#############################
-module.tx_form.settings.yamlConfigurations {
-	100 = EXT:skeleton/Configuration/Yaml/BaseSetup.yaml
-	110 = EXT:skeleton/Configuration/Yaml/FormEditorSetup.yaml
-}
-
-
 ################
 #### CONFIG ####
 ################
