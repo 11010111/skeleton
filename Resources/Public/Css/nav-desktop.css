@@ -30,7 +30,7 @@ nav.desktop .level1-menu .desktop-level1 .level2-menu {
   right: 0;
   padding: 0;
   width: 12rem;
-  background-color: #ffffff;
+  background-color: color("white");
   border-radius: 0.27rem;
   box-shadow: 0 0 1.38rem rgba(0, 0, 0, 0.1);
 }
@@ -50,5 +50,5 @@ nav.desktop .level1-menu .desktop-level1:last-child {
 }
 nav.desktop .level1-menu .children {
   list-style: initial;
-  color: #ADB5BD;
+  color: color("link");
 }

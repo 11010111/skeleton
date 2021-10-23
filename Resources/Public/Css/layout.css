@@ -71,7 +71,7 @@
   margin: 0 0.5rem;
   width: 1px;
   height: 5rem;
-  background-color: #000000;
+  background-color: color("black");
 }
 .site_error .inline .site_error_msg {
   font-size: 1em;

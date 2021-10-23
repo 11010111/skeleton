@@ -29,7 +29,7 @@ nav.mobile .level1-menu .mobile-level1:hover .level2-menu {
 nav.mobile .level1-menu .mobile-level1 .level2-menu {
   margin: 1.38rem 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: color("white");
   border-radius: 0.27rem;
 }
 nav.mobile .level1-menu .mobile-level1 .level2-menu .mobile-level2 {
@@ -42,7 +42,7 @@ nav.mobile .level1-menu .mobile-level1 .level2-menu .mobile-level2:last-child {
 }
 nav.mobile .level1-menu .children {
   list-style: initial;
-  color: #ADB5BD;
+  color: color("link");
 }
 
 nav.mobile-open {

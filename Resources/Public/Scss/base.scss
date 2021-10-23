@@ -127,7 +127,7 @@ hr {
 }
 
 a {
-  color: color('link');
+  color: var(--font-color);
   text-decoration: none;
   font-weight: 600;
 
@@ -146,7 +146,7 @@ iframe {
   display: block;
   width: 100%;
   height: auto;
-  background-color: color('black');
+  background-color: var(--font-color);
   border: none;
 }
 
@@ -154,7 +154,7 @@ video {
   display: block;
   width: 100%;
   height: auto;
-  background-color: color('black');
+  background-color: var(--font-color);
   margin: 0;
 }
 
@@ -166,7 +166,7 @@ fieldset {
   position: relative;
   top: 0;
   left: 0;
-  border: 1px solid rgb(218 218 218 / 15%);
+  border: 1px solid var(--font-color);
 }
 
 table {
@@ -174,7 +174,7 @@ table {
   border-spacing: 0;
 
   tr:nth-child(2n) {
-    background-color: color('lightgrey');
+    background-color: var(--background-color);
   }
 
   th, td {
@@ -184,7 +184,7 @@ table {
   }
 
   th {
-    background-color: color('lightgrey');
+    background-color: var(--background-color);
   }
 }
 
@@ -211,20 +211,20 @@ input, textarea, select, datalist {
   border-radius: 0;
   border: 0;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid color('primary');
+  border-bottom: 1px solid var(--font-color);
   color: var(--font-color);
 
   &:hover {
-    border-bottom: 1px solid color('link-hover');
+    border-bottom: 1px solid var(--link-hover-color);
   }
 
   &:focus {
-    border-bottom: 1px solid color('link');
+    border-bottom: 1px solid var(--link-color);
   }
 
   &:disabled {
-    background-color: color('lightgrey');
-    border-bottom: 1px solid color('lightgrey');
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--background-color);
   }
 
   &:invalid {
@@ -268,13 +268,11 @@ option {
   appearance: none;
 
   &:hover {
-    background-color: color('lightgrey')!important;
-    box-shadow: 0 0 0.5rem rgba(color('link'), 0.15);
+    background-color: var(--background-color)!important;
   }
 
   &:checked {
-    background-color: color('lightgrey')!important;
-    box-shadow: 0 0 0.5rem rgba(color('link'), 0.15);
+    background-color: var(--background-color)!important;
   }
 }
 
@@ -284,7 +282,7 @@ input[type=radio] {
   border: 0;
   border-radius: 50%;
   color: var(--font-color);
-  background-color: color('link');
+  background-color: var(--link-color);
   margin-right: 0.5rem;
   cursor: pointer;
 
@@ -316,7 +314,7 @@ input[type=checkbox] {
   border: 0;
   border-radius: 5px;
   color: var(--font-color);
-  background-color: color('link');
+  background-color: var(--link-color);
   margin-right: 0.5rem;
   cursor: pointer;
 
@@ -342,7 +340,7 @@ input[type=checkbox] {
 }
 
 input[type=submit], input[type=button], input[type=reset] {
-  background-color: color('link');
+  background-color: var(--link-color);
   color: var(--font-color);
   margin: 0.5rem 0;
   padding: 0.66rem 1.94rem;
@@ -352,15 +350,14 @@ input[type=submit], input[type=button], input[type=reset] {
   appearance: none;
   border-radius: 5px;
   border: 0;
-  border-bottom: 1px solid color('link');
+  border-bottom: 1px solid var(--link-color);
   cursor: pointer;
 }
 
 input[type=checkbox], input[type=radio], input[type=submit], input[type=button], input[type=reset] {
   &:hover {
     transition: 0.5s;
-    background-color: color('link-hover');
-    box-shadow: 0 0 0.5rem rgba(color('link'), 0.15);
+    background-color: var(--link-hover-color);
   }
 }
 
@@ -371,20 +368,19 @@ button {
   font-family: var(--font-family);
   font-size: 1em;
   color: var(--font-color);
-  background-color: color('link');
+  background-color: var(--link-color);
   margin: 0.5rem 0;
   padding: 0.66rem 1.94rem;
   outline: none;
   border-radius: 5px;
   border: 0;
-  border-bottom: 1px solid color('link');
+  border-bottom: 1px solid var(--link-color);
   overflow: hidden;
   cursor: pointer;
 
   &:hover {
     transition: 0.5s;
-    box-shadow: 0 0 0.5rem rgba(color('link-hover'), 0.15);
-    background-color: color('link-hover');
+    background-color: var(--link-hover-color);
   }
 }
 
@@ -402,7 +398,7 @@ input[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  background: color('lightgrey');
+  background: var(--background-color);
   border: 0;
   border-radius: 5px;
   width: 100%;
@@ -414,8 +410,8 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -12.5px;
   width: 20px;
   height: 30px;
-  background: color('link');
-  border: 1px solid color('link');
+  background: var(--link-color);
+  border: 1px solid var(--link-color);
   border-radius: 5px;
   cursor: pointer;
   -webkit-appearance: none;
@@ -424,11 +420,11 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: color('lightgrey');
+  background-color: var(--background-color);
 }
 
 input[type=range]::-moz-range-track {
-  background: color('lightgrey');
+  background-color: var(--background-color);
   border: 0;
   border-radius: 5px;
   width: 100%;
@@ -439,8 +435,8 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 30px;
-  background: color('link');
-  border: 1px solid color('link');
+  background: var(--link-color);
+  border: 1px solid var(--link-color);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -456,13 +452,13 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-  background: color('lightgrey');
+  background-color: var(--background-color);
   border: 0;
   border-radius: 10px;
 }
 
 input[type=range]::-ms-fill-upper {
-  background: color('lightgrey');
+  background-color: var(--background-color);
   border: 0;
   border-radius: 10px;
 }
@@ -470,17 +466,17 @@ input[type=range]::-ms-fill-upper {
 input[type=range]::-ms-thumb {
   width: 20px;
   height: 30px;
-  background: color('link');
-  border: 1px solid color('link');
+  background: var(--link-color);
+  border: 1px solid var(--link-color);
   border-radius: 5px;
   cursor: pointer;
   margin-top: 0;
 }
 
 input[type=range]:focus::-ms-fill-lower {
-  background: color('lightgrey');
+  background-color: var(--background-color);
 }
 
 input[type=range]:focus::-ms-fill-upper {
-  background: color('lightgrey');
+  background-color: var(--background-color);
 }
