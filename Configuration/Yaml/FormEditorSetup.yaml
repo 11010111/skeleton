@@ -20,20 +20,6 @@ TYPO3:
                                                 100:
                                                     label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
                                                 110:
-                                                    identifier: 'firstname'
-                                                    templateName: 'Inspector-TextEditor'
-                                                    label: 'Firstname'
-                                                    propertyPath: 'options.firstname'
-                                                    propertyValidators:
-                                                        10: 'NotEmpty'
-                                                120:
-                                                    identifier: 'lastname'
-                                                    templateName: 'Inspector-TextEditor'
-                                                    label: 'Lastname'
-                                                    propertyPath: 'options.lastname'
-                                                    propertyValidators:
-                                                        10: 'NotEmpty'
-                                                130:
                                                     identifier: 'email'
                                                     templateName: 'Inspector-TextEditor'
                                                     label: 'E-Mail'
@@ -48,21 +34,11 @@ TYPO3:
                                 label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
                                 predefinedDefaults:
                                     options:
-                                        firstname: ''
-                                        lastname: ''
                                         email: ''
                             FormEngine:
                                 label: 'formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label'
                                 elements:
-                                    firstname:
-                                        label: 'Firstname'
-                                        config:
-                                            type: 'text'
-                                    lastname:
-                                        label: 'Lastname'
-                                        config:
-                                            type: 'text'
                                     email:
                                         label: 'E-Mail'
                                         config:
-                                            type: 'text'
+                                            type: 'int'
