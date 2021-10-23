@@ -53,6 +53,10 @@ let navigationFixed = {
     }
 }
 
+/**
+ * Convert Img to SVG
+ * @type {{init: convertImgSvg.init}}
+ */
 let convertImgSvg = {
     init: function () {
         let images = document.querySelectorAll('.svg')
@@ -78,6 +82,10 @@ let convertImgSvg = {
     }
 }
 
+/**
+ * Set all (group) elements to the same height
+ * @type {{init: equalHeight.init}}
+ */
 let equalHeight = {
     init: function (selector = '.equal-height', groupName = '', groups = true) {
         let allGroups
@@ -223,6 +231,10 @@ let equalHeight = {
     }
 }
 
+/**
+ * Image Parallax
+ * @type {{init: parallax.init}}
+ */
 let parallax = {
     init: function () {
         let elementTop = document.querySelectorAll('.parallax-top')
@@ -280,6 +292,30 @@ let parallax = {
 }
 
 /**
+ * Scroll to top
+ */
+let scrollToTop = {
+    init: function () {
+        let toTop = document.createElement('button')
+        toTop.className = 'content-scroll-top'
+
+        toTop.addEventListener('click', function () {
+            document.body.scrollIntoView({ 'behavior': 'smooth' })
+        })
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 500) {
+                toTop.classList.add('scroll-top-show')
+            } else {
+                toTop.classList.remove('scroll-top-show')
+            }
+        })
+
+        document.appendChild(toTop)
+    }
+}
+
+/**
  * ENDE
  * Export Module (Functions, Variables)
  */
@@ -289,5 +325,6 @@ export {
     navigationFixed,
     convertImgSvg,
     equalHeight,
-    parallax
+    parallax,
+    scrollToTop
 }

@@ -6,7 +6,9 @@ import {
     mobileMenu,
     navigationFixed,
     convertImgSvg,
-    equalHeight, parallax
+    equalHeight,
+    parallax,
+    scrollToTop
 } from "./module.js"
 
 /**
@@ -20,6 +22,7 @@ equalHeight.init()
 //equalHeight.init('.equal-height', '.example-group')
 //equalHeight.init('.example-class', false)
 parallax.init()
+scrollToTop.init()
 
 /**
  * ENDE
