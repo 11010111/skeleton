@@ -6,3 +6,8 @@ TYPO3:
                     finishersDefinition:
                         SaveToDatabase:
                             implementationClassName: TYPO3\CMS\Form\Domain\Finishers\SaveToDatabaseFinisher
+                            formEditor:
+                                iconIdentifier: form-finisher
+                                label: formEditor.elements.Form.finisher.SaveToDatabase.editor.header.label
+                                predefinedDefaults:
+                                    options: {  }
