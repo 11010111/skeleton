@@ -298,6 +298,7 @@ let scrollToTop = {
     init: function () {
         let toTop = document.createElement('button')
         toTop.className = 'content-scroll-top'
+        toTop.innerText = 'T'
 
         toTop.addEventListener('click', function () {
             window.scrollTo({ top: 0, left: 0, 'behavior': 'smooth' })

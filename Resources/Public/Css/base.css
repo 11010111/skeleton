@@ -2,18 +2,18 @@
 :root {
   --font-family: "Jura";
   --font-size: 1.125em;
-  --font-color: #000000;
-  --background-color: #eeeeee;
-  --headline-color: #299d9f;
+  --font-color: #212529;
+  --background-color: #F8F9FA;
+  --headline-color: #212529;
   --paragraph-line-height: 1.5;
-  --link-color: #6b8ec8;
-  --link-hover-color: #9c644f;
+  --link-color: #ADB5BD;
+  --link-hover-color: #DEE2E6;
   --error: #d42525;
   --warning: #e3ad40;
   --success: #88c433;
   --container-margin: 2rem;
   --flex-between: 0.5rem;
-  --mobile-btn-color: #222222;
+  --mobile-btn-color: #212529;
   --content-max-width: 85.375rem;
 }
 @media screen and (min-width: 48em) {
