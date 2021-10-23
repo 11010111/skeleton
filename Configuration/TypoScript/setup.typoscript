@@ -233,6 +233,7 @@ plugin.tx_form.settings.yamlConfigurations {
 #############################
 module.tx_form.settings.yamlConfigurations {
 	100 = EXT:skeleton/Configuration/Yaml/BaseSetup.yaml
+	110 = EXT:skeleton/Configuration/Yaml/FormEditorSetup.yaml
 }
 
 
