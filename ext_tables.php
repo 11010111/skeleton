@@ -13,5 +13,3 @@ if (!\TYPO3\CMS\Core\Core\Environment::getContext()->isProduction()) {
         ]
     ];
 }
-
-$GLOBALS['TCA']['tt_content']['ctrl']['previewRenderer'] = PreviewRenderer::class;
