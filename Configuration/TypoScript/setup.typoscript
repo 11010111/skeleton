@@ -17,7 +17,7 @@
 page = PAGE
 page {
     typeNum = 0
-    shortcutIcon = FILE:EXT:skeleton/Resources/Public/Icons/favicon.ico
+    shortcutIcon = EXT:skeleton/Resources/Public/Icons/favicon.ico
 
     # Add body class and id tags
     bodyTag >
@@ -28,7 +28,7 @@ page {
             field = uid
             if.isInList.field = uid
             if.value = 1
-            wrap = <body id="site_4|8" class="home">
+            wrap = <body id="site_4234|825" class="home">
         }
         20 = TEXT
         20 {
@@ -36,7 +36,7 @@ page {
             if.isInList.field = uid
             if.value = 1
             if.negate = 1
-            wrap = <body id="site_4|8" class="sequel">
+            wrap = <body id="site_4234|826" class="sequel">
         }
     }
 
