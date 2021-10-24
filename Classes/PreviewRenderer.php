@@ -19,7 +19,13 @@ class PreviewRenderer implements PreviewRendererInterface {
 
     public function renderPageModulePreviewFooter(GridColumnItem $item): string
     {
-        return $item['breakpoint'];
+        $row = '';
+
+        if ($item['breakpoint']) {
+            $row = '<strong>Breakpoint</strong> ' . $item['breakpoint'];
+        }
+
+        return $row;
     }
 
     public function wrapPageModulePreview(string $previewHeader, string $previewContent, GridColumnItem $item): string
