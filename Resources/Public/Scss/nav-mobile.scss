@@ -73,6 +73,7 @@ nav.mobile-open {
   background-color: transparent;
   border: 0;
   box-shadow: unset;
+  z-index: 1002;
 
   @media screen and (min-width: breakpoint('xl')) {
     display: none;
