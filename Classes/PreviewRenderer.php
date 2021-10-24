@@ -4,6 +4,7 @@ namespace Vendor\Skeleton;
 
 use TYPO3\CMS\Backend\Preview\PreviewRendererInterface;
 use TYPO3\CMS\Backend\View\BackendLayout\Grid\GridColumnItem;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class PreviewRenderer implements PreviewRendererInterface {
 
@@ -22,6 +23,7 @@ class PreviewRenderer implements PreviewRendererInterface {
         $row = '';
 
         if ($item['breakpoint']) {
+            DebuggerUtility::var_dump($item);
             $row = '<strong>Breakpoint</strong> ' . $item['breakpoint'];
         }
 
