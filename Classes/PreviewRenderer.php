@@ -22,11 +22,11 @@ class PreviewRenderer implements PreviewRendererInterface {
     {
         DebuggerUtility::var_dump($item);
 
-        return '';
+        return 'Test';
     }
 
     public function wrapPageModulePreview(string $previewHeader, string $previewContent, GridColumnItem $item): string
     {
-        return '';
+        return 'Test';
     }
 }
