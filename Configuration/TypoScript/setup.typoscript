@@ -17,7 +17,8 @@
 page = PAGE
 page {
     typeNum = 0
-    shortcutIcon = EXT:skeleton/Resources/Public/Icons/favicon.ico
+    #shortcutIcon = EXT:skeleton/Resources/Public/Icons/favicon.ico
+    shortcutIcon = typo3conf/ext/skeleton/Resources/Public/Icons/favicon.ico
 
     # Add body class and id tags
     bodyTag >
