@@ -24,21 +24,21 @@ page {
     bodyTag >
     bodyTagCObject = COA
     bodyTagCObject {
-        10 = TEXT
-        10 {
-            field = uid
-            if.isInList.field = uid
-            if.value = 1
-            wrap = <body class="home">
-        }
-        20 = TEXT
-        20 {
-            field = uid
-            if.isInList.field = uid
-            if.value = 1
-            if.negate = 1
-            wrap = <body class="sequel">
-        }
+        #10 = TEXT
+        #10 {
+        #    field = uid
+        #    if.isInList.field = uid
+        #    if.value = 1
+        #    wrap = <body class="home">
+        #}
+        #20 = TEXT
+        #20 {
+        #    field = uid
+        #    if.isInList.field = uid
+        #    if.value = 1
+        #    if.negate = 1
+        #    wrap = <body class="sequel">
+        #}
     }
 
     10 = FLUIDTEMPLATE
