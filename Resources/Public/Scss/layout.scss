@@ -9,12 +9,8 @@
   left: 0;
   width: 100%;
   max-width: 100vw;
-  padding: 0 calc(var(--container-margin) / 2);
+  padding: 0 var(--container-margin);
   z-index: 1000;
-
-  @media screen and (min-width: breakpoint('md')) {
-    padding: 0 var(--container-margin);
-  }
 
   .navigation-content {
     display: flex;
@@ -83,7 +79,7 @@
       margin: 0 0.5rem;
       width: 1px;
       height: 5rem;
-      background-color: color('black');
+      background-color: var(--black);
     }
 
     .site_error_msg {
@@ -93,6 +89,6 @@
   }
 }
 
-.hidden {
+.hidden, .js-hidden {
   display: none;
 }

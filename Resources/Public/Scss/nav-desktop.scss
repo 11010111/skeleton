@@ -37,7 +37,7 @@ nav.desktop {
         right: 0;
         padding: 0;
         width: 12rem;
-        background-color: color('white');
+        background-color: var(--white);
         border-radius: 0.27rem;
         box-shadow: 0 0 1.38rem rgb(0 0 0 / 10%);
 
@@ -63,7 +63,7 @@ nav.desktop {
 
     .children {
       list-style: initial;
-      color: color('link');
+      color: var(--link);
     }
   }
 }

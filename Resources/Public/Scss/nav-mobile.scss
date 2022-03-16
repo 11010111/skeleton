@@ -1,6 +1,5 @@
 // Imports
 @import "functions";
-@import "variables";
 
 // Nav Mobile
 nav.mobile {
@@ -37,7 +36,7 @@ nav.mobile {
       .level2-menu {
         margin: 1.38rem 0;
         padding: 0;
-        background-color: color('white');
+        background-color: var(--white);
         border-radius: 0.27rem;
 
         .mobile-level2 {
@@ -54,7 +53,7 @@ nav.mobile {
 
     .children {
       list-style: initial;
-      color: color('link');
+      color: var(--link);
     }
   }
 }
