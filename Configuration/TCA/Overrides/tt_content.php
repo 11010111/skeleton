@@ -7,9 +7,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '100',
+            'c100',
             '100%',
-            '1 Column Container',
+            '1 Column',
             [
                 [
                     ['name' => '100%', 'colspan' => 1, 'colPos' => 201]
@@ -21,9 +21,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '50-50',
+            'c50-50',
             '50% - 50%',
-            '2 Columns Container',
+            '2 Columns',
             [
                 [
                     ['name' => '50%', 'colspan' => 1, 'colPos' => 201],
@@ -36,9 +36,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '25-75',
+            'c25-75',
             '25% - 75%',
-            '2 Columns Container',
+            '2 Columns',
             [
                 [
                     ['name' => '25%', 'colspan' => 3, 'colPos' => 201],
@@ -51,9 +51,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '75-25',
+            'c75-25',
             '75% - 25%',
-            '2 Columns Container',
+            '2 Columns',
             [
                 [
                     ['name' => '75%', 'colspan' => 7, 'colPos' => 201],
@@ -66,9 +66,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '33-66',
+            'c33-66',
             '33% - 66%',
-            '2 Columns Container',
+            '2 Columns',
             [
                 [
                     ['name' => '33%', 'colspan' => 3, 'colPos' => 201],
@@ -81,9 +81,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '66-33',
+            'c66-33',
             '66% - 33%',
-            '2 Columns Container',
+            '2 Columns',
             [
                 [
                     ['name' => '66%', 'colspan' => 6, 'colPos' => 201],
@@ -96,9 +96,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '33-33-33',
+            'c33-33-33',
             '33% - 33% - 33%',
-            '3 Columns Container',
+            '3 Columns',
             [
                 [
                     ['name' => '33%', 'colspan' => 1, 'colPos' => 201],
@@ -112,9 +112,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '20-80',
+            'c20-80',
             '20% - 80%',
-            '2 Columns Container',
+            '2 Columns',
             [
                 [
                     ['name' => '20%', 'colspan' => 2, 'colPos' => 201],
@@ -127,9 +127,9 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \B13\Container\Tca\Registry::class)->configureContainer(
         new \B13\Container\Tca\ContainerConfiguration(
-            '80-20',
+            'c80-20',
             '80% - 20%',
-            '2 Columns Container',
+            '2 Columns',
             [
                 [
                     ['name' => '80%', 'colspan' => 8, 'colPos' => 201],
@@ -154,19 +154,6 @@ call_user_func(function () {
                         ['Content', 'content'],
                         ['Full Width', 'full']
                     ]
-                ],
-                'displayCond' => [
-                    'OR' => [
-                        'FIELD:CType:=:100',
-                        'FIELD:CType:=:50-50',
-                        'FIELD:CType:=:25-75',
-                        'FIELD:CType:=:75-25',
-                        'FIELD:CType:=:33-66',
-                        'FIELD:CType:=:66-33',
-                        'FIELD:CType:=:33-33-33',
-                        'FIELD:CType:=:20-80',
-                        'FIELD:CType:=:80-20'
-                    ]
                 ]
             ],
             'breakpoint' => [
@@ -176,18 +163,6 @@ call_user_func(function () {
                 'config' => [
                     'type' => 'select',
                     'renderType' => 'selectSingle'
-                ],
-                'displayCond' => [
-                    'OR' => [
-                        'FIELD:CType:=:50-50',
-                        'FIELD:CType:=:25-75',
-                        'FIELD:CType:=:75-25',
-                        'FIELD:CType:=:33-66',
-                        'FIELD:CType:=:66-33',
-                        'FIELD:CType:=:33-33-33',
-                        'FIELD:CType:=:20-80',
-                        'FIELD:CType:=:80-20'
-                    ]
                 ]
             ],
             'padding_top' => [
@@ -222,11 +197,6 @@ call_user_func(function () {
                     'type' => 'input',
                     'renderType' => 'colorpicker',
                     'size' => 10,
-                ],
-                'displayCond' => [
-                    'AND' => [
-                        'FIELD:container:=:full'
-                    ]
                 ]
             ],
             'foreground_color' => [
@@ -237,11 +207,6 @@ call_user_func(function () {
                     'type' => 'input',
                     'renderType' => 'colorpicker',
                     'size' => 10,
-                ],
-                'displayCond' => [
-                    'AND' => [
-                        'FIELD:container:=:full'
-                    ]
                 ]
             ]
         ]

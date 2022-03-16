@@ -54,7 +54,7 @@ buttons:
             enabled: false
         properties:
             class:
-                allowedClasses: 'link,btn-primary,btn-secondary,btn-next,btn-prev,link-download,link-folder,link-external,link-external-blank,link-mail'
+                allowedClasses: 'link,link-next,link-prev,link-download,link-folder,link-external,link-external-blank,link-mail,link-phone'
         page:
             properties.:
                 class.:
@@ -75,6 +75,10 @@ buttons:
             properties.:
                 class:
                     default: 'link-mail'
+        telephone:
+            properties.:
+                class:
+                    default: 'link-phone'
 
 # Classes config
 classesAnchor:
@@ -82,22 +86,14 @@ classesAnchor:
         class: 'link'
         type: 'page'
         titleText: 'Link'
-    btn-primary:
-        class: 'btn-primary'
+    link-next:
+        class: 'link-next'
         type: 'page'
-        titleText: 'Button (Primary)'
-    btn-secondary:
-        class: 'btn-secondary'
+        titleText: 'Link (Next)'
+    link-prev:
+        class: 'link-prev'
         type: 'page'
-        titleText: 'Button (Secondary)'
-    btn-next:
-        class: 'btn-next'
-        type: 'page'
-        titleText: 'Button (Next)'
-    btn-prev:
-        class: 'btn-prev'
-        type: 'page'
-        titleText: 'Button (Previous)'
+        titleText: 'Link (Previous)'
     link-download:
         class: 'link-download'
         type: 'file'
@@ -119,15 +115,15 @@ classesAnchor:
         class: 'link-mail'
         type: 'mail'
         titleText: 'Link (Mail)'
+    link-phone:
+        class: 'link-phone'
+        type: 'telephone'
+        titleText: 'Link (Phone)'
 
 classes:
     link:
         name: 'Link'
-    btn-primary:
-        name: 'Button (Primary)'
-    btn-secondary:
-        name: 'Button (Secondary)'
-    btn-next:
-        name: 'Button (Next)'
-    btn-prev:
-        name: 'Button (Previous)'
+    link-next:
+        name: 'Link (Next)'
+    link-prev:
+        name: 'Link (Previous)'

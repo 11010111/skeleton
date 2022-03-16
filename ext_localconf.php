@@ -13,10 +13,3 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['skeleton'] = 'EXT:skeleton/Config
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
     '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skeleton/Configuration/TsConfig/Page/All.tsconfig">'
 );
-
-/***************
- * Backend Css
- */
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \TYPO3\CMS\Core\Page\PageRenderer::class
-)->addCssFile('EXT:skeleton/Resources/Public/Css/backend.css');

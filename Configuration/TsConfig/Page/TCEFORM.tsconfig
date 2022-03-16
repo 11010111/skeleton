@@ -56,11 +56,6 @@ TCEFORM {
                 200 = 200
                 230 = 230
                 250 = 250
-                330 = 330
-                370 = 370
-                430 = 430
-                470 = 470
-                530 = 530
             }
         }
 
@@ -84,11 +79,6 @@ TCEFORM {
                 200 = 200
                 230 = 230
                 250 = 250
-                330 = 330
-                370 = 370
-                430 = 430
-                470 = 470
-                530 = 530
             }
         }
 
@@ -110,11 +100,6 @@ TCEFORM {
                 200 = 200
                 230 = 230
                 250 = 250
-                330 = 330
-                370 = 370
-                430 = 430
-                470 = 470
-                530 = 530
             }
         }
 
@@ -136,26 +121,75 @@ TCEFORM {
                 200 = 200
                 230 = 230
                 250 = 250
-                330 = 330
-                370 = 370
-                430 = 430
-                470 = 470
-                530 = 530
             }
-        }
-
-        imagewidth {
-          #disabled = 1
-        }
-
-        imageheight {
-          #disabled = 1
         }
     }
 
     sys_file_reference.crop.config.cropVariants {
-        default {
-            title = Alle (Standard)
+        desktop {
+            title = Desktop
+            selectedRatio = NaN
+            allowedAspectRatios {
+                NaN {
+                    title = Frei
+                    value = 0.0
+                }
+
+                1:1 {
+                    title = 1:1
+                    value = 1
+                }
+
+                2:3 {
+                    title = 2:3
+                    value = 0.666666
+                }
+
+                4:3 {
+                    title = 4:3
+                    value = 1.333333
+                }
+
+                16:9 {
+                    title = 16:9
+                    value = 1.777777778
+                }
+            }
+        }
+
+        tablet {
+            title = Tablet
+            selectedRatio = NaN
+            allowedAspectRatios {
+                NaN {
+                    title = Frei
+                    value = 0.0
+                }
+
+                1:1 {
+                    title = 1:1
+                    value = 1
+                }
+
+                2:3 {
+                    title = 2:3
+                    value = 0.666666
+                }
+
+                4:3 {
+                    title = 4:3
+                    value = 1.333333
+                }
+
+                16:9 {
+                    title = 16:9
+                    value = 1.777777778
+                }
+            }
+        }
+
+        mobile {
+            title = Mobile
             selectedRatio = NaN
             allowedAspectRatios {
                 NaN {

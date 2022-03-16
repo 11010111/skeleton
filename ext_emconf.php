@@ -5,7 +5,7 @@
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Skeleton',
-    'description' => 'Website Template Skeleton',
+    'description' => 'Website Template',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
@@ -28,5 +28,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Konstantin Schneider',
     'author_email' => 'schneider.konstantin@outlook.com',
     'author_company' => '',
-    'version' => '1.0.10',
+    'version' => '1.0.11',
 ];

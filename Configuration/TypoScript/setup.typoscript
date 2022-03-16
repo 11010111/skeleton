@@ -29,7 +29,7 @@ page {
             field = uid
             if.isInList.field = uid
             if.value = 1
-            wrap = <body id="site_4234|825" class="home">
+            wrap = <body class="home">
         }
         20 = TEXT
         20 {
@@ -37,7 +37,7 @@ page {
             if.isInList.field = uid
             if.value = 1
             if.negate = 1
-            wrap = <body id="site_4234|826" class="sequel">
+            wrap = <body class="sequel">
         }
     }
 

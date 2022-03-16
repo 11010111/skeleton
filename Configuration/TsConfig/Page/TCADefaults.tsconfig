@@ -4,3 +4,5 @@
 TCAdefaults.tt_content.header_layout = 100
 TCAdefaults.tt_content.container = content
 TCAdefaults.tt_content.breakpoint = md
+TCAdefaults.tt_content.padding_top = 50
+TCAdefaults.tt_content.padding_bottom = 50
