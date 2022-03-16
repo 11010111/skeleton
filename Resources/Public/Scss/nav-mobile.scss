@@ -91,7 +91,7 @@ nav.mobile-open {
     left: 0;
     width: 2rem;
     height: 2px;
-    background-color: var(--mobile-btn-color);
+    background-color: var(--mobile-btn);
     transition: 0.25s;
 
     &:before {
@@ -101,7 +101,7 @@ nav.mobile-open {
       left: 0;
       width: 2rem;
       height: 2px;
-      background-color: var(--mobile-btn-color);
+      background-color: var(--mobile-btn);
       transition: 0.25s;
     }
 
@@ -112,7 +112,7 @@ nav.mobile-open {
       left: 0;
       width: 2rem;
       height: 2px;
-      background-color: var(--mobile-btn-color);
+      background-color: var(--mobile-btn);
       transition: 0.25s;
     }
   }

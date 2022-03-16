@@ -1,24 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
 :root {
-  --font-family: "Jura";
-  --font-size: 1.125em;
-  --font-color: #212529;
-  --background-color: #F8F9FA;
-  --headline-color: #212529;
-  --paragraph-line-height: 1.5;
-  --link-color: #ADB5BD;
-  --link-hover-color: #DEE2E6;
+  --color: #212529;
+  --background: #F8F9FA;
+  --headline: #212529;
+  --link: #ADB5BD;
+  --link-hover: #DEE2E6;
+  --mobile-btn: #212529;
   --error: #d42525;
   --warning: #e3ad40;
   --success: #88c433;
+  --font-family: "Jura";
+  --font-size: 1.125em;
+  --paragraph-line-height: 1.5;
   --container-margin: 2rem;
   --flex-between: 0.5rem;
-  --mobile-btn-color: #212529;
   --content-max-width: 85.375rem;
 }
 @media screen and (min-width: 48em) {
   :root {
     --flex-between: 1rem;
+    --container-margin: 3rem;
+  }
+}
+@media screen and (min-width: 85.375em) {
+  :root {
+    --container-margin: 4rem;
   }
 }
 
@@ -35,26 +41,13 @@ body {
   margin: 0;
   padding: 0 calc(var(--container-margin) / 2);
   width: 100%;
-  background-color: var(--background-color);
-  color: var(--font-color);
+  background-color: var(--background);
+  color: var(--color);
 }
 @media screen and (min-width: 48em) {
   body {
     padding: 0 var(--container-margin);
   }
-}
-
-body::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: color("black");
-  border-radius: 10px;
-}
-body::-webkit-scrollbar-thumb:hover {
-  background-color: color("link-hover");
 }
 
 * {
@@ -63,12 +56,13 @@ body::-webkit-scrollbar-thumb:hover {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--headline-color);
-}
-
 p {
   line-height: var(--paragraph-line-height);
+  margin: 0 0 1rem;
+}
+
+p:last-child {
+  margin: 0;
 }
 
 h1 {
@@ -117,18 +111,18 @@ h6 {
 }
 
 hr {
-  border: 2px solid color("primary");
+  border: 2px solid var(--color);
   margin: 0 1rem;
   border-radius: 2px;
 }
 
 a {
-  color: var(--font-color);
+  color: var(--link);
   text-decoration: none;
   font-weight: 600;
 }
 a:hover {
-  color: color("link-hover");
+  color: var(--link-hover);
 }
 
 img {
@@ -141,7 +135,7 @@ iframe {
   display: block;
   width: 100%;
   height: auto;
-  background-color: var(--font-color);
+  background-color: var(--color);
   border: none;
 }
 
@@ -149,7 +143,7 @@ video {
   display: block;
   width: 100%;
   height: auto;
-  background-color: var(--font-color);
+  background-color: var(--color);
   margin: 0;
 }
 
@@ -161,7 +155,7 @@ fieldset {
   position: relative;
   top: 0;
   left: 0;
-  border: 1px solid var(--font-color);
+  border: 1px solid var(--color);
 }
 
 table {
@@ -169,7 +163,7 @@ table {
   border-spacing: 0;
 }
 table tr:nth-child(2n) {
-  background-color: var(--background-color);
+  background-color: var(--background);
 }
 table th, table td {
   text-align: left;
@@ -177,7 +171,7 @@ table th, table td {
   padding: 0.5rem;
 }
 table th {
-  background-color: var(--background-color);
+  background-color: var(--background);
 }
 
 label {
@@ -203,21 +197,21 @@ input, textarea, select, datalist {
   border-radius: 0;
   border: 0;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid var(--font-color);
-  color: var(--font-color);
+  border-bottom: 1px solid var(--color);
+  color: var(--color);
 }
 input:hover, textarea:hover, select:hover, datalist:hover {
-  border-bottom: 1px solid var(--link-hover-color);
+  border-bottom: 1px solid var(--link-hover);
 }
 input:focus, textarea:focus, select:focus, datalist:focus {
-  border-bottom: 1px solid var(--link-color);
+  border-bottom: 1px solid var(--link);
 }
 input:disabled, textarea:disabled, select:disabled, datalist:disabled {
-  background-color: var(--background-color);
-  border-bottom: 1px solid var(--background-color);
+  background-color: var(--background);
+  border-bottom: 1px solid var(--background);
 }
 input:invalid, textarea:invalid, select:invalid, datalist:invalid {
-  border-bottom: 1px solid color("error");
+  border-bottom: 1px solid var(--error);
 }
 
 input[type=file], input[type=range] {
@@ -251,10 +245,10 @@ option {
   appearance: none;
 }
 option:hover {
-  background-color: var(--background-color) !important;
+  background-color: var(--background) !important;
 }
 option:checked {
-  background-color: var(--background-color) !important;
+  background-color: var(--background) !important;
 }
 
 input[type=radio] {
@@ -262,8 +256,8 @@ input[type=radio] {
   height: 1.6rem;
   border: 0;
   border-radius: 50%;
-  color: var(--font-color);
-  background-color: var(--link-color);
+  color: var(--color);
+  background-color: var(--link);
   margin-right: 0.5rem;
   cursor: pointer;
 }
@@ -290,8 +284,8 @@ input[type=checkbox] {
   height: 1.6rem;
   border: 0;
   border-radius: 5px;
-  color: var(--font-color);
-  background-color: var(--link-color);
+  color: var(--color);
+  background-color: var(--link);
   margin-right: 0.5rem;
   cursor: pointer;
 }
@@ -313,8 +307,8 @@ input[type=checkbox]:checked::before {
 }
 
 input[type=submit], input[type=button], input[type=reset] {
-  background-color: var(--link-color);
-  color: var(--font-color);
+  background-color: var(--link);
+  color: var(--color);
   margin: 0.5rem 0;
   padding: 0.66rem 1.94rem;
   outline: none;
@@ -323,13 +317,13 @@ input[type=submit], input[type=button], input[type=reset] {
   appearance: none;
   border-radius: 5px;
   border: 0;
-  border-bottom: 1px solid var(--link-color);
+  border-bottom: 1px solid var(--link);
   cursor: pointer;
 }
 
 input[type=checkbox]:hover, input[type=radio]:hover, input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover {
   transition: 0.5s;
-  background-color: var(--link-hover-color);
+  background-color: var(--link-hover);
 }
 
 button {
@@ -338,20 +332,20 @@ button {
   left: 0;
   font-family: var(--font-family);
   font-size: 1em;
-  color: var(--font-color);
-  background-color: var(--link-color);
+  color: var(--color);
+  background-color: var(--link);
   margin: 0.5rem 0;
   padding: 0.66rem 1.94rem;
   outline: none;
   border-radius: 5px;
   border: 0;
-  border-bottom: 1px solid var(--link-color);
+  border-bottom: 1px solid var(--link);
   overflow: hidden;
   cursor: pointer;
 }
 button:hover {
   transition: 0.5s;
-  background-color: var(--link-hover-color);
+  background-color: var(--link-hover);
 }
 
 input[type=range] {
@@ -368,7 +362,7 @@ input[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  background: var(--background-color);
+  background: var(--background);
   border: 0;
   border-radius: 5px;
   width: 100%;
@@ -380,8 +374,8 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -12.5px;
   width: 20px;
   height: 30px;
-  background: var(--link-color);
-  border: 1px solid var(--link-color);
+  background: var(--link);
+  border: 1px solid var(--link);
   border-radius: 5px;
   cursor: pointer;
   -webkit-appearance: none;
@@ -390,11 +384,11 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background-color: var(--background-color);
+  background-color: var(--background);
 }
 
 input[type=range]::-moz-range-track {
-  background-color: var(--background-color);
+  background-color: var(--background);
   border: 0;
   border-radius: 5px;
   width: 100%;
@@ -405,8 +399,8 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 30px;
-  background: var(--link-color);
-  border: 1px solid var(--link-color);
+  background: var(--link);
+  border: 1px solid var(--link);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -422,13 +416,13 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-  background-color: var(--background-color);
+  background-color: var(--background);
   border: 0;
   border-radius: 10px;
 }
 
 input[type=range]::-ms-fill-upper {
-  background-color: var(--background-color);
+  background-color: var(--background);
   border: 0;
   border-radius: 10px;
 }
@@ -436,17 +430,17 @@ input[type=range]::-ms-fill-upper {
 input[type=range]::-ms-thumb {
   width: 20px;
   height: 30px;
-  background: var(--link-color);
-  border: 1px solid var(--link-color);
+  background: var(--link);
+  border: 1px solid var(--link);
   border-radius: 5px;
   cursor: pointer;
   margin-top: 0;
 }
 
 input[type=range]:focus::-ms-fill-lower {
-  background-color: var(--background-color);
+  background-color: var(--background);
 }
 
 input[type=range]:focus::-ms-fill-upper {
-  background-color: var(--background-color);
+  background-color: var(--background);
 }

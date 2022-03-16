@@ -152,7 +152,8 @@ call_user_func(function () {
                     'renderType' => 'selectSingle',
                     'items' => [
                         ['Content', 'content'],
-                        ['Full Width', 'full']
+                        ['Full Width', 'full'],
+                        ['Full Width (Padding)', 'full-padding']
                     ]
                 ]
             ],
