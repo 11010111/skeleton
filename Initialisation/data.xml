@@ -361,7 +361,7 @@
 				<field index="t3ver_wsid" type="integer">0</field>
 				<field index="t3ver_state" type="integer">0</field>
 				<field index="t3ver_stage" type="integer">0</field>
-				<field index="CType">100</field>
+				<field index="CType">c100</field>
 				<field index="header">## Footer</field>
 				<field index="header_position"></field>
 				<field index="bodytext" type="NULL"></field>

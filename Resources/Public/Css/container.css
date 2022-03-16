@@ -4,21 +4,49 @@
   margin-left: auto;
   margin-right: auto;
 }
-.content .full {
+.content .full, .content .full-padding {
   width: 100%;
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
 }
+.content .full-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .full {
-  width: 100%;
+  width: calc(100% + var(--container-margin) * 2);
   max-width: calc(100% + var(--container-margin) * 2);
   margin-left: calc(0% - var(--container-margin));
   margin-right: calc(0% - var(--container-margin));
 }
-.full .full {
+.full .full, .full .full-padding {
+  width: 100%;
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+.full .full-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.full-padding {
+  width: calc(100% + var(--container-margin) * 2);
+  max-width: calc(100% + var(--container-margin) * 2);
+  margin-left: calc(0% - var(--container-margin));
+  margin-right: calc(0% - var(--container-margin));
+  padding-left: var(--container-margin);
+  padding-right: var(--container-margin);
+}
+.full-padding .full, .full-padding .full-padding {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.full-padding .full-padding {
+  padding-left: 0;
+  padding-right: 0;
 }
