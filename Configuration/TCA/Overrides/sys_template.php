@@ -1,8 +1,8 @@
 <?php
-defined('TYPO3_MODE') || die();
 
-call_user_func(function()
-{
+defined('TYPO3') or die('Access denied.');
+
+call_user_func(function () {
     /**
      * Temporary variables
      */

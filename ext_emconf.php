@@ -5,13 +5,13 @@
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Skeleton',
-    'description' => 'Website Template',
+    'description' => 'Website Distribution',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'typo3' => '^10.2.0-11.9.99',
-            'fluid_styled_content' => '^10.2.0-11.9.99',
-            'rte_ckeditor' => '^10.2.0-11.9.99',
+            'typo3' => '^11.5',
+            'fluid_styled_content' => '^11.5',
+            'rte_ckeditor' => '^11.5'
         ],
         'conflicts' => [
         ],
@@ -28,5 +28,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Konstantin Schneider',
     'author_email' => 'schneider.konstantin@outlook.com',
     'author_company' => '',
-    'version' => '1.0.11',
+    'version' => '1.0.12',
 ];

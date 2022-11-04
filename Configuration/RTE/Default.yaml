@@ -50,33 +50,33 @@ processing:
 # Button config and defaults
 buttons:
     link:
-        relAttribute.:
+        relAttribute:
             enabled: false
         properties:
             class:
                 allowedClasses: 'link,link-next,link-prev,link-download,link-folder,link-external,link-external-blank,link-mail,link-phone'
         page:
-            properties.:
-                class.:
+            properties:
+                class:
                     default: 'link'
         file:
-            properties.:
+            properties:
                 class:
                     default: 'link-download'
         folder:
-            properties.:
+            properties:
                 class:
                     default: 'link-folder'
         url:
-            properties.:
+            properties:
                 class:
                     default: 'link'
         mail:
-            properties.:
+            properties:
                 class:
                     default: 'link-mail'
         telephone:
-            properties.:
+            properties:
                 class:
                     default: 'link-phone'
 

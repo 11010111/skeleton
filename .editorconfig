@@ -11,14 +11,14 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 # CSS-Files
-[*.css]
+[{*.css,*.scss}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # HTML-Files
-[*.html]
+[{*.html,*.svg}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # TMPL-Files
 [*.tmpl]
@@ -33,7 +33,7 @@ indent_size = 4
 # JS-Files
 [*.js]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # PHP-Files
 [*.php]
@@ -48,12 +48,12 @@ indent_size = 4
 # ReST-Files
 [*.rst]
 indent_style = space
-indent_size = 3
+indent_size = 4
 
 # TypoScript
-[*.typoscript]
+[{*.typoscript,*.tsconfig}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # YML-Files
 [{*.yml,*.yaml}]
