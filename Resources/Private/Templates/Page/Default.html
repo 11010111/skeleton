@@ -1,29 +1,36 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
 <f:layout name="Default" />
+
 <f:section name="Navigation">
-    <section class="navigation">
-        <div class="content navigation-content">
-            <div class="logo">
-                <f:cObject typoscriptObjectPath="lib.logo" />
-            </div>
-            <nav class="desktop">
-                <f:render partial="Desktop" arguments="{_all}" />
-            </nav>
-            <nav class="mobile">
-                <f:render partial="Mobile" arguments="{_all}" />
-            </nav>
-            <button class="mobile-menu-btn"><span></span></button>
-        </div>
-    </section>
+  <section class="navigation">
+    <nav class="navigation-wrapper">
+      <div class="navigation-brand">
+        <f:cObject typoscriptObjectPath="lib.logo" />
+      </div>
+
+      <div class="navigation-list">
+        <f:render partial="Navigation" arguments="{_all}" />
+      </div>
+    </nav>
+
+    <button class="navigation-btn" aria-hidden="true">
+      <span class="navigation-pl1"></span>
+      <span class="navigation-pl2"></span>
+    </button>
+  </section>
 </f:section>
+
 <f:section name="Main">
-    <main role="main" class="main">
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
-    </main>
+  <main role="main" class="main">
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+  </main>
 </f:section>
+
 <f:section name="Footer">
-    <footer>
-        <f:render partial="Footer" arguments="{_all}" />
-    </footer>
+  <footer>
+    <f:render partial="Footer" arguments="{_all}" />
+  </footer>
 </f:section>
+
 </html>

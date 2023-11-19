@@ -8,7 +8,6 @@
 #### HELPER ####
 ################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:skeleton/Configuration/TypoScript/Helper/DynamicContent.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skeleton/Configuration/TypoScript/Helper/Container.typoscript">
 
 
 ##############
@@ -16,188 +15,217 @@
 ##############
 page = PAGE
 page {
-    typeNum = 0
-    #shortcutIcon = EXT:skeleton/Resources/Public/Icons/favicon.ico
-    shortcutIcon = typo3conf/ext/skeleton/Resources/Public/Icons/favicon.ico
+  typeNum = 0
+  shortcutIcon = EXT:skeleton/Resources/Public/Icons/favicon.ico
 
-    # Add body class and id tags
-    bodyTag >
-    bodyTagCObject = COA
-    bodyTagCObject {
-        #10 = TEXT
-        #10 {
-        #    field = uid
-        #    if.isInList.field = uid
-        #    if.value = 1
-        #    wrap = <body class="home">
-        #}
-        #20 = TEXT
-        #20 {
-        #    field = uid
-        #    if.isInList.field = uid
-        #    if.value = 1
-        #    if.negate = 1
-        #    wrap = <body class="sequel">
-        #}
+  headerData {
+    200 = TEXT
+    200.wrap = <link rel="preload" href="EXT:skeleton/Resources/Public/Fonts/Inter/Inter-VariableFont.ttf" as="font" crossorigin>
+  }
+
+  10 = FLUIDTEMPLATE
+  10 {
+    # variables {
+    #   testVariable = TEXT
+    #   testVariable.value = 1
+    # }
+
+    templateName = TEXT
+    templateName {
+      cObject = TEXT
+      cObject {
+        data = pagelayout
+        required = 1
+        case = uppercamelcase
+        split {
+          token = pagets__
+          cObjNum = 1
+          1.current = 1
+        }
+      }
+
+      ifEmpty = Default
     }
 
-    10 = FLUIDTEMPLATE
-    10 {
-        # Template names will be generated automatically by converting the applied
-        # backend_layout, there is no explicit mapping necessary anymore.
-        #
-        # BackendLayout Key
-        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        #
-        # Backend Record
-        # uid: 1 -> 1.html
-        #
-        # Database Entry
-        # value: -1 -> None.html
-        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html ###
-        templateName = TEXT
-        templateName {
-            cObject = TEXT
-            cObject {
-                data = pagelayout
-                required = 1
-                case = uppercamelcase
-                split {
-                    token = pagets__
-                    cObjNum = 1
-                    1.current = 1
-                }
+    templateRootPaths {
+      0 = EXT:skeleton/Resources/Private/Templates/Page/
+      1 = {$page.fluidtemplate.templateRootPath}
+    }
+
+    partialRootPaths {
+      0 = EXT:skeleton/Resources/Private/Partials/Page/
+      1 = {$page.fluidtemplate.partialRootPath}
+    }
+
+    layoutRootPaths {
+      0 = EXT:skeleton/Resources/Private/Layouts/Page/
+      1 = {$page.fluidtemplate.layoutRootPath}
+    }
+
+    dataProcessing {
+      10 = files
+      10 {
+        references.fieldName = media
+      }
+
+      20 = menu
+      20 {
+        levels = 2
+        includeSpacer = 1
+        as = navigation
+      }
+
+      30 = language-menu
+      30 {
+        languages = auto
+        as = language
+      }
+
+      40 = menu
+      40 {
+        special = rootline
+        special.range = 0|-1
+        as = rootline
+      }
+    }
+  }
+
+  meta {
+    viewport = {$page.meta.viewport}
+    robots = {$page.meta.robots}
+    apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+
+    description = {$page.meta.description}
+    description {
+      override.field = description
+    }
+
+    author = {$page.meta.author}
+    author {
+      override.field = author
+    }
+
+    keywords = {$page.meta.keywords}
+    keywords {
+      override.field = keywords
+    }
+
+    og:title {
+      attribute = property
+      field = title
+    }
+
+    og:site_name {
+      attribute = property
+      data = TSFE:tmpl|setup|sitetitle
+    }
+
+    og:description = {$page.meta.description}
+    og:description {
+      attribute = property
+      field = description
+    }
+
+    og:image {
+      attribute = property
+      stdWrap.cObject = FILES
+      stdWrap.cObject {
+        references {
+          data = levelfield:-1, media, slide
+        }
+
+        maxItems = 1
+        renderObj = COA
+        renderObj {
+          10 = IMG_RESOURCE
+          10 {
+            file {
+              import.data = file:current:uid
+              treatIdAsReference = 1
+              width = 1280c
+              height = 720c
             }
-            ifEmpty = Default
-        }
-        templateRootPaths {
-            0 = EXT:skeleton/Resources/Private/Templates/Page/
-            1 = {$page.fluidtemplate.templateRootPath}
-        }
-        partialRootPaths {
-            0 = EXT:skeleton/Resources/Private/Partials/Page/
-            1 = {$page.fluidtemplate.partialRootPath}
-        }
-        layoutRootPaths {
-            0 = EXT:skeleton/Resources/Private/Layouts/Page/
-            1 = {$page.fluidtemplate.layoutRootPath}
-        }
-        dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            10 {
-                references.fieldName = media
+
+            stdWrap {
+              typolink {
+                parameter.data = TSFE:lastImgResourceInfo|3
+                returnLast = url
+                forceAbsoluteUrl = 1
+              }
             }
-            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            20 {
-                levels = 2
-                includeSpacer = 1
-                as = mainnavigation
-            }
-            30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
-            30 {
-                as = languagemenu
-            }
+          }
         }
-        variables {
-            testVariable = TEXT
-            testVariable.value = 1
-        }
+      }
     }
+  }
 
-    meta {
-        viewport = {$page.meta.viewport}
-        robots = {$page.meta.robots}
-        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
-        description = {$page.meta.description}
-        description {
-            override.field = description
-        }
-        author = {$page.meta.author}
-        author {
-            override.field = author
-        }
-        keywords = {$page.meta.keywords}
-        keywords {
-            override.field = keywords
-        }
+  includeCSSLibs {
 
-        # OpenGraph Tags
-        og:title {
-            attribute = property
-            field = title
-        }
-        og:site_name {
-            attribute = property
-            data = TSFE:tmpl|setup|sitetitle
-        }
-        og:description = {$page.meta.description}
-        og:description {
-            attribute = property
-            field = description
-        }
-        og:image {
-            attribute = property
-            stdWrap.cObject = FILES
-            stdWrap.cObject {
-                references {
-                    data = levelfield:-1, media, slide
-                }
-                maxItems = 1
-                renderObj = COA
-                renderObj {
-                    10 = IMG_RESOURCE
-                    10 {
-                        file {
-                            import.data = file:current:uid
-                            treatIdAsReference = 1
-                            width = 1280c
-                            height = 720c
-                        }
-                        stdWrap {
-                            typolink {
-                                parameter.data = TSFE:lastImgResourceInfo|3
-                                returnLast = url
-                                forceAbsoluteUrl = 1
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+  }
 
-    includeCSSLibs {
+  includeCSS {
+    tailwind = EXT:skeleton/Resources/Public/Out/main.bundle.css
+    globals = EXT:skeleton/Resources/Public/Css/globals.css
+  }
 
-    }
+  includeJSLibs {
 
-    includeCSS {
-        base = EXT:skeleton/Resources/Public/Css/base.css
-        container = EXT:skeleton/Resources/Public/Css/container.css
-        flex = EXT:skeleton/Resources/Public/Css/flex.css
-        gap = EXT:skeleton/Resources/Public/Css/gap.css
-        nav_desktop = EXT:skeleton/Resources/Public/Css/nav-desktop.css
-        nav_mobile = EXT:skeleton/Resources/Public/Css/nav-mobile.css
+  }
 
-        layout = EXT:skeleton/Resources/Public/Css/layout.css
-    }
+  includeJS {
 
-    includeJSLibs {
+  }
 
-    }
+  includeJSFooterlibs {
 
-    includeJS {
+  }
 
-    }
-
-    includeJSFooterlibs {
-
-    }
-
-    includeJSFooter {
-        main = EXT:skeleton/Resources/Public/JavaScript/Src/main.js
-        main.type = module
-    }
+  includeJSFooter {
+    main = EXT:skeleton/Resources/Public/Out/main.bundle.js
+    main.type = module
+  }
 }
+
+
+################################
+#### BACKEND TEMPLATE PATHS ####
+################################
+module.tx_backend.view.layoutRootPaths.100 = EXT:skeleton/Resources/Private/Backend/Layouts/
+module.tx_backend.view.partialRootPaths.100 = EXT:skeleton/Resources/Private/Backend/Partials/
+module.tx_backend.view.templateRootPaths.100 = EXT:skeleton/Resources/Private/Backend/Templates/
+
+
+#####################################
+### CUSTOM CONTENT TEMPLATE PATHS ###
+#####################################
+lib.contentElement {
+  layoutRootPaths.20 = EXT:skeleton/Resources/Private/Layouts/ContentElements/
+  partialRootPaths.20 = EXT:skeleton/Resources/Private/Partials/ContentElements/
+  templateRootPaths.20 = EXT:skeleton/Resources/Private/Templates/ContentElements/
+}
+
+
+######################################
+#### CUSTOM CONTENT TEMPLATE NAME ####
+######################################
+tt_content {
+  skeleton_text =< lib.contentElement
+  skeleton_text {
+    templateName = SkeletonText
+  }
+}
+
+
+####################
+#### BODY CLASS ####
+####################
+[traverse(page, "uid") in [1]]
+page.bodyTagAdd = class="home"
+[end]
+
+[traverse(page, "uid") not in [1]]
+page.bodyTagAdd = class="sequent"
+[end]
 
 
 #################
@@ -205,9 +233,31 @@ page {
 #################
 lib.logo = IMAGE
 lib.logo {
-    file = EXT:skeleton/Resources/Public/Images/logo.svg
-    stdWrap.typolink.parameter = 1
-    #params = class="svg"
+  file = EXT:skeleton/Resources/Public/Images/logo.svg
+  stdWrap.typolink.parameter = 1
+  stdWrap.typolink.title = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
+}
+
+
+########################
+### SITE LOGO AS SVG ###
+########################
+lib.logoSVG = SVG
+lib.logoSVG {
+  renderMode = inline
+  src.field = src
+  stdWrap.typolink.parameter = 1
+  stdWrap.typolink.title =  LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
+}
+
+
+#########################
+### RENDER INLINE SVG ###
+#########################
+lib.svg = SVG
+lib.svg {
+  renderMode = inline
+  src.field = src
 }
 
 
@@ -226,35 +276,51 @@ lib.footer {
 #### CONFIG ####
 ################
 config {
-    absRefPrefix = auto
-    no_cache = {$config.no_cache}
-    uniqueLinkVars = 1
-    pageTitleFirst = 1
-    linkVars = L
-    prefixLocalAnchors = {$config.prefixLocalAnchors}
-    renderCharset = utf-8
-    metaCharset = utf-8
-    doctype = html5
-    removeDefaultJS = {$config.removeDefaultJS}
-    inlineStyle2TempFile = 1
-    admPanel = {$config.admPanel}
-    debug = 0
-    cache_period = 86400
-    sendCacheHeaders = {$config.sendCacheHeaders}
-    intTarget =
-    extTarget =
-    disablePrefixComment = 1
-    index_enable = 1
-    index_externals = 1
-    index_metatags = 1
-    headerComment = {$config.headerComment}
+  absRefPrefix = auto
+  no_cache = {$config.no_cache}
+  uniqueLinkVars = 1
+  pageTitleFirst = 1
+  #pageTitleSeparator = |
+  #pageTitleSeparator.noTrimWrap = | | |
+  linkVars = L
+  prefixLocalAnchors = {$config.prefixLocalAnchors}
+  renderCharset = utf-8
+  metaCharset = utf-8
+  doctype = html5
+  removeDefaultJS = {$config.removeDefaultJS}
+  inlineStyle2TempFile = 1
+  admPanel = {$config.admPanel}
+  debug = 0
+  contentObjectExceptionHandler = 0
+  cache_period = 86400
+  sendCacheHeaders = {$config.sendCacheHeaders}
+  intTarget =
+  extTarget = _blank
+  fileTarget = _blank
+  disablePrefixComment = 1
+  index_enable = 1
+  index_externals = 1
+  index_metatags = 1
+  headerComment = {$config.headerComment}
+  typolinkLinkAccessRestrictedPages = 1
+  typolinkLinkAccessRestrictedPages_addParams = &redirect_url=###RETURN_URL###
 
-    // Disable Image Upscaling
-    noScaleUp = 1
+  // Disable Image Upscaling
+  noScaleUp = 1
 
-    // Compression and Concatenation of CSS and JS Files
-    compressJs = 0
-    compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
+  // Compression and Concatenation of CSS and JS Files
+  compressJs = 1
+  compressCss = 1
+  concatenateJs = 1
+  concatenateCss = 1
+
+  ## Header Policy
+  additionalHeaders {
+    10.header = Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self';
+    20.header = strict-transport-security: max-age=31536000
+    30.header = X-Frame-Options: sameorigin
+    40.header = X-Xss-Protection: 1; mode=block
+    50.header = X-Content-Type-Options: nosniff
+    60.header = Referrer-Policy: strict-origin
+  }
 }

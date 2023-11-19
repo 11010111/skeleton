@@ -2,7 +2,13 @@
 # TCAdefaults
 #
 TCAdefaults.tt_content.header_layout = 100
-TCAdefaults.tt_content.container = content
+TCAdefaults.tt_content.container = container
 TCAdefaults.tt_content.breakpoint = md
-TCAdefaults.tt_content.padding_top = 50
-TCAdefaults.tt_content.padding_bottom = 50
+TCAdefaults.tt_content.pt = 6
+TCAdefaults.tt_content.pb = 6
+TCAdefaults.tt_content.tablet_bp = md
+TCAdefaults.tt_content.tablet_pt = 10
+TCAdefaults.tt_content.tablet_pb = 10
+TCAdefaults.tt_content.desktop_bp = xl
+TCAdefaults.tt_content.desktop_pt = 20
+TCAdefaults.tt_content.desktop_pb = 20

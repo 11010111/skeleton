@@ -1,0 +1,4 @@
+#
+# WIZARDS
+#
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:skeleton/Configuration/TsConfig/Page/Mod/Wizards/NewContentElements" extensions="tsconfig">

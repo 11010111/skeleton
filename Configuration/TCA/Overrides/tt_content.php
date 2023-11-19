@@ -2,140 +2,6 @@
 
 defined('TYPO3') or die('Access denied.');
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c100',
-        '100%',
-        '1 Column',
-        [
-            [
-                ['name' => '100%', 'colspan' => 1, 'colPos' => 201]
-            ]
-        ]
-    )
-);
-
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c50-50',
-        '50% - 50%',
-        '2 Columns',
-        [
-            [
-                ['name' => '50%', 'colspan' => 1, 'colPos' => 201],
-                ['name' => '50%', 'colspan' => 1, 'colPos' => 202]
-            ]
-        ]
-    )
-);
-
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c25-75',
-        '25% - 75%',
-        '2 Columns',
-        [
-            [
-                ['name' => '25%', 'colspan' => 3, 'colPos' => 201],
-                ['name' => '75%', 'colspan' => 7, 'colPos' => 202]
-            ]
-        ]
-    )
-);
-
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c75-25',
-        '75% - 25%',
-        '2 Columns',
-        [
-            [
-                ['name' => '75%', 'colspan' => 7, 'colPos' => 201],
-                ['name' => '25%', 'colspan' => 3, 'colPos' => 202]
-            ]
-        ]
-    )
-);
-
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c33-66',
-        '33% - 66%',
-        '2 Columns',
-        [
-            [
-                ['name' => '33%', 'colspan' => 3, 'colPos' => 201],
-                ['name' => '66%', 'colspan' => 6, 'colPos' => 202]
-            ]
-        ]
-    )
-);
-
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c66-33',
-        '66% - 33%',
-        '2 Columns',
-        [
-            [
-                ['name' => '66%', 'colspan' => 6, 'colPos' => 201],
-                ['name' => '33%', 'colspan' => 3, 'colPos' => 202]
-            ]
-        ]
-    )
-);
-
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c33-33-33',
-        '33% - 33% - 33%',
-        '3 Columns',
-        [
-            [
-                ['name' => '33%', 'colspan' => 1, 'colPos' => 201],
-                ['name' => '33%', 'colspan' => 1, 'colPos' => 202],
-                ['name' => '33%', 'colspan' => 1, 'colPos' => 203]
-            ]
-        ]
-    )
-);
-
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c20-80',
-        '20% - 80%',
-        '2 Columns',
-        [
-            [
-                ['name' => '20%', 'colspan' => 2, 'colPos' => 201],
-                ['name' => '80%', 'colspan' => 8, 'colPos' => 202]
-            ]
-        ]
-    )
-);
-
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-    \B13\Container\Tca\Registry::class)->configureContainer(
-    new \B13\Container\Tca\ContainerConfiguration(
-        'c80-20',
-        '80% - 20%',
-        '2 Columns',
-        [
-            [
-                ['name' => '80%', 'colspan' => 8, 'colPos' => 201],
-                ['name' => '20%', 'colspan' => 2, 'colPos' => 202]
-            ]
-        ]
-    )
-);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
     'tt_content',
@@ -144,30 +10,28 @@ defined('TYPO3') or die('Access denied.');
             'exclude' => 1,
             'onChange' => 'reload',
             'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:container',
-            'description' => '',
+            'description' => 'Container',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['Content', 'content'],
-                    ['Full Width', 'full'],
-                    ['Full Width (Padding)', 'full-padding']
+                    ['Default', '']
                 ]
             ]
         ],
         'breakpoint' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:breakpoint',
-            'description' => '',
+            'description' => 'Container Breakpoint',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle'
             ]
         ],
-        'padding_top' => [
+        'alignment' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:padding_top',
-            'description' => '',
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:alignment',
+            'description' => 'Container Alignment',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -176,10 +40,10 @@ defined('TYPO3') or die('Access denied.');
                 ]
             ]
         ],
-        'padding_bottom' => [
+        'mt' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:padding_bottom',
-            'description' => '',
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mt',
+            'description' => 'Mobile',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -188,24 +52,186 @@ defined('TYPO3') or die('Access denied.');
                 ]
             ]
         ],
-        'background_color' => [
+        'mb' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:background_color',
-            'description' => '',
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mb',
+            'description' => 'Mobile',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'pt' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pt',
+            'description' => 'Mobile',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'pb' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pb',
+            'description' => 'Mobile',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'tablet_bp' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:breakpoint',
+            'description' => 'Tablet Breakpoint',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle'
+            ]
+        ],
+        'tablet_mt' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mt',
+            'description' => 'Tablet',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'tablet_mb' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mb',
+            'description' => 'Tablet',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'tablet_pt' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pt',
+            'description' => 'Tablet',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'tablet_pb' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pb',
+            'description' => 'Tablet',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'desktop_bp' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:breakpoint',
+            'description' => 'Desktop Breakpoint',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle'
+            ]
+        ],
+        'desktop_mt' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mt',
+            'description' => 'Desktop',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'desktop_mb' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mb',
+            'description' => 'Desktop',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'desktop_pt' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pt',
+            'description' => 'Desktop',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'desktop_pb' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pb',
+            'description' => 'Desktop',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
+            ]
+        ],
+        'background' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:background',
+            'description' => 'Background',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'colorpicker',
                 'size' => 10,
             ]
         ],
-        'foreground_color' => [
+        'color' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:foreground_color',
-            'description' => '',
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:color',
+            'description' => 'Color',
             'config' => [
                 'type' => 'input',
                 'renderType' => 'colorpicker',
                 'size' => 10,
+            ]
+        ],
+        'tag' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:tag',
+            'description' => 'HTML Tag',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['Default', '']
+                ]
             ]
         ]
     ]
@@ -213,7 +239,7 @@ defined('TYPO3') or die('Access denied.');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
-    'breakpoint, container, padding_top, padding_bottom, background_color, foreground_color',
+    'container, breakpoint, alignment, mt, mb, pt, pb, tablet_bp, tablet_mt, tablet_mb, tablet_pt, tablet_pb, desktop_bp, desktop_mt, desktop_mb, desktop_pt, desktop_pb, background, color, tag',
     'appearance',
     'after:space_after_class'
 );
@@ -221,5 +247,42 @@ defined('TYPO3') or die('Access denied.');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'frames',
-    'container, --linebreak--, breakpoint, padding_top, padding_bottom, --linebreak--, background_color, foreground_color'
+    'container, breakpoint, alignment, --linebreak--, mt, mb, pt, pb, --linebreak--, tablet_bp, --linebreak--, tablet_mt, tablet_mb, tablet_pt, tablet_pb, --linebreak--, desktop_bp, --linebreak--, desktop_mt, desktop_mb, desktop_pt, desktop_pb, --linebreak--, background, color, tag'
 );
+
+// CUSTOM CONTENT
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:skeleton_text.label',
+        'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:skeleton_text.description',
+        'value' => 'skeleton_text',
+        'icon' => 'content-text',
+        'group' => 'common'
+    ],
+    'textmedia',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_text'] = 'content-text';
+
+$GLOBALS['TCA']['tt_content']['types']['skeleton_text'] = [
+    'showitem' => '
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+            --palette--;;general,
+            header; Internal title (not displayed),
+            bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+            --palette--;;hidden,
+            --palette--;;access,
+    ',
+    'columnsOverrides' => [
+        'bodytext' => [
+            'config' => [
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ]
+        ]
+    ]
+];

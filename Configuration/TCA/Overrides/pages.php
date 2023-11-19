@@ -2,8 +2,7 @@
 
 defined('TYPO3') or die('Access denied.');
 
-call_user_func(function()
-{
+call_user_func(function() {
     /**
      * Temporary variables
      */
@@ -14,7 +13,7 @@ call_user_func(function()
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
-        'Configuration/TsConfig/Page/All.tsconfig',
+        'Configuration/TsConfig/Page/Default.tsconfig',
         'Skeleton'
     );
 });

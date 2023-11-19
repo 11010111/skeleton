@@ -6,7 +6,6 @@
             <authorEmail></authorEmail>
         </header>
         <body>
-
             <!-- Backend Layout -->
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
@@ -22,19 +21,30 @@
             <trans-unit id="breakpoint">
                 <source>Breakpoint</source>
             </trans-unit>
-            <trans-unit id="background_color">
-                <source>Background Color</source>
+            <trans-unit id="alignment">
+                <source>Alignment</source>
             </trans-unit>
-            <trans-unit id="foreground_color">
-                <source>Foreground Color</source>
+            <trans-unit id="mt">
+                <source>Margin Top</source>
             </trans-unit>
-            <trans-unit id="padding_top">
-                <source>Space Inline Before</source>
+            <trans-unit id="mb">
+                <source>Margin Bottom</source>
             </trans-unit>
-            <trans-unit id="padding_bottom">
-                <source>Space Inline After</source>
+            <trans-unit id="pt">
+                <source>Padding Top</source>
             </trans-unit>
-
+            <trans-unit id="pb">
+                <source>Padding Bottom</source>
+            </trans-unit>
+            <trans-unit id="background">
+                <source>Background</source>
+            </trans-unit>
+            <trans-unit id="color">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="tag">
+                <source>Tag</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

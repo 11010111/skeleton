@@ -1,61 +1,19 @@
-// _variables.scss
-
-// Flex Sizes
-$flex-sizes: (
-        'sm',
-        'md',
-        'lg',
-        'xl',
-        'xxl'
+// Sizes
+$sizes: (
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  2xl
 );
 
 // Breakpoints
 $breakpoints: (
-        // Ab 240px, based on 16px Browser's internal font-size
-        'xs': 15em,
-        // Ab 540px, based on 16px Browser's internal font-size
-        'sm': 33.75em,
-        // Ab 768px, based on 16px Browser's internal font-size
-        'md': 48em,
-        // Ab 1080px, based on 16px Browser's internal font-size
-        'lg': 67.5em,
-        // Ab 1366px, based on 16px Browser's internal font-size
-        'xl': 85.375em,
-        // Ab 1650px, based on 16px Browser's internal font-size
-        'xxl': 103.125em
-);
-
-// Flex Percentages
-$flex-percentages: (
-        '20',
-        '25',
-        '30',
-        '33',
-        '40',
-        '50',
-        '60',
-        '66',
-        '70',
-        '75',
-        '80'
-);
-
-// Gaps - TOP / BOTTOM
-$gaps: (
-        '10': 0.55rem,
-        '20': 1.11rem,
-        '30': 1.66rem,
-        '40': 2.22rem,
-        '50': 2.77rem,
-        '60': 3.33rem,
-        '70': 3.88rem,
-        '80': 4.44rem,
-        '90': 5.00rem,
-        '100': 5.55rem,
-        '125': 6.94rem,
-        '150': 8.33rem,
-        '180': 10.00rem,
-        '200': 11.11rem,
-        '230': 12.77rem,
-        '250': 13.88rem
+  xs: 15em,    // Ab 240px
+  sm: 40em,    // Ab 640px
+  md: 48em,    // Ab 768px
+  lg: 64em,    // Ab 1024px
+  xl: 80em,    // Ab 1280px
+  2xl: 96em    // Ab 1536px
 );

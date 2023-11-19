@@ -1,6 +1,5 @@
-/**
- * Module Imports
- */
+// Imports
+import "../../Css/tailwind.css"
 import {
     containerColors,
     mobileMenu,
@@ -9,7 +8,7 @@ import {
     equalHeight,
     parallax,
     scrollToTop
-} from "./module.js"
+} from "./modules.js"
 
 /**
  * Module inits
@@ -24,7 +23,4 @@ equalHeight.init()
 parallax.init()
 scrollToTop.init()
 
-/**
- * ENDE
- */
 console.log('WE LOVE TYPO3')

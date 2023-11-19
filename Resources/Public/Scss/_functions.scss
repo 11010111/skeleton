@@ -1,20 +1,16 @@
-// Imports
-@import "variables";
+@use "variables" as var;
 
-// _functions.scss
+// breakpoint
 @function breakpoint($key) {
-  @if map-has-key($breakpoints, $key) {
-    @return map-get($breakpoints, $key);
+  @if map-has-key(var.$breakpoints, $key) {
+    @return map-get(var.$breakpoints, $key);
   }
 
   @warn 'Unknown `#{$key}` in $breakpoints.';
   @return null;
 }
 
-@function gap($object, $style) {
-  @if map-has-key($gaps, $object) {
-    @return map-get(map-get($gaps, $object), $style);
-  }
-  @warn 'The key `#{$object}` is not available in the map.';
-  @return null;
+// pixel to rem
+@function rem($px, $base: 16) {
+  @return calc($px / $base) + rem;
 }

@@ -6,6 +6,9 @@
             <authorEmail></authorEmail>
         </header>
         <body>
+            <trans-unit id="example">
+                <source>Example</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,11 +1,6 @@
 #
 # TCEMAIN
 #
-
-# Setzen der Seitenbaumrechte
 TCEMAIN {
-  permissions.groupid = 2
-  permissions.user = show, editcontent, edit, delete, new
-  permissions.group = show, editcontent, edit, delete, new
-  permissions.everybody =
+
 }

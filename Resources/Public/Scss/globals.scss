@@ -1,0 +1,37 @@
+@import "fonts";
+@import "functions";
+
+:root {
+  /* Anchor Scroll Padding */
+  --scroll-pt: #{rem(72)};
+
+  /* Colors */
+  --glass-bg: rgba(234, 233, 227, 0.1);
+
+  /* Navigation */
+  --max-width-nav: #{rem(1640)};
+  --max-mx-nav: calc((100% - var(--max-width-nav)) / 2);
+  --min-mx-nav: #{rem(22)};
+  --max-x-nav: max(var(--min-mx-nav), var(--max-mx-nav));
+
+  @media screen and (min-width: breakpoint(md)) {
+    --min-mx-nav: #{rem(40)};
+  }
+
+  @media screen and (min-width: breakpoint(xl)) {
+    --scroll-pt: #{rem(92)};
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-pt);
+
+  @media screen and (min-width: 1921px) {
+    font-size: calc(1vw - 1.2px);
+  }
+}
+
+.navigation {
+  padding: rem(20) var(--max-x-nav);
+}

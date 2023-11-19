@@ -2,7 +2,7 @@
 #### RTE ####
 #############
 RTE {
-    default {
-        preset = skeleton
-    }
+  default {
+    preset = skeleton
+  }
 }

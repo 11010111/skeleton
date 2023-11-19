@@ -1,1 +1,8 @@
 // _fonts.scss
+@font-face {
+  font-family: Inter;
+  src: url('../Fonts/Inter/Inter-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 25% 150%;
+  font-display: swap;
+}

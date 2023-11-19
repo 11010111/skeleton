@@ -1,0 +1,22 @@
+{
+  "name": "skeleton",
+  "version": "0.0.0",
+  "description": "Skeleton Distribution Template",
+  "private": "true",
+  "type": "module",
+  "main": "./Resources/Public/JavaScript/Dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "sass": "sass --watch ./Resources/Public/Scss:./Resources/Public/Css --no-source-map",
+    "start": "vite build --watch & npm run sass"
+  },
+  "author": "Konstantin Schneider",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.5",
+    "vite": "^5.0.0"
+  }
+}
