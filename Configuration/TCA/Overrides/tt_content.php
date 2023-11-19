@@ -265,7 +265,7 @@ defined('TYPO3') or die('Access denied.');
     'after'
 );
 
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_text'] = 'content-text';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_text'] = 'skeleton-text';
 
 $GLOBALS['TCA']['tt_content']['types']['skeleton_text'] = [
     'showitem' => '
@@ -273,9 +273,11 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_text'] = [
             --palette--;;general,
             header; Internal title (not displayed),
             bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
+        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+            --palette--;;frames,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
             --palette--;;hidden,
-            --palette--;;access,
+            --palette--;;access
     ',
     'columnsOverrides' => [
         'bodytext' => [
