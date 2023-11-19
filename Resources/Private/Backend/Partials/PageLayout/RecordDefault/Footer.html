@@ -1,0 +1,122 @@
+<f:if condition="{item.footerInfo}">
+  <div class="t3-page-ce-footer">
+    <div class="t3-page-ce-info">
+      <div class="t3-page-ce-footer">
+        <strong>Frame Class:</strong>
+        <f:if condition="{item.record.frame_class}">
+          <f:then>
+            {item.record.frame_class}
+          </f:then>
+          <f:else>
+            default
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Container:</strong>
+        <f:if condition="{item.record.container}">
+          <f:then>
+            {item.record.container}
+          </f:then>
+          <f:else>
+            default
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Breakpoint:</strong>
+        <f:if condition="{item.record.breakpoint}">
+          {item.record.breakpoint}
+        </f:if>
+        <br>
+
+        <strong>Alignment:</strong>
+        <f:if condition="{item.record.alignment}">
+          <f:then>
+            {item.record.alignment}
+          </f:then>
+          <f:else>
+            default
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Margin Top:</strong>
+        <f:if condition="{item.record.mt}">
+          <f:then>
+            {item.record.mt}
+          </f:then>
+          <f:else>
+            0
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Margin Bottom:</strong>
+        <f:if condition="{item.record.mb}">
+          <f:then>
+            {item.record.mb}
+          </f:then>
+          <f:else>
+            0
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Padding Top:</strong>
+        <f:if condition="{item.record.pt}">
+          <f:then>
+            {item.record.pt}
+          </f:then>
+          <f:else>
+            0
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Padding Bottom:</strong>
+        <f:if condition="{item.record.pb}">
+          <f:then>
+            {item.record.pb}
+          </f:then>
+          <f:else>
+            0
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Background:</strong>
+        <f:if condition="{item.record.background}">
+          <f:then>
+            {item.record.background}
+          </f:then>
+          <f:else>
+            none
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Color:</strong>
+        <f:if condition="{item.record.color}">
+          <f:then>
+            {item.record.color}
+          </f:then>
+          <f:else>
+            none
+          </f:else>
+        </f:if>
+        <br>
+
+        <strong>Tag:</strong>
+        <f:if condition="{item.record.tag}">
+          <f:then>
+            {item.record.tag}
+          </f:then>
+          <f:else>
+            default
+          </f:else>
+        </f:if>
+      </div>
+    </div>
+  </div>
+</f:if>
