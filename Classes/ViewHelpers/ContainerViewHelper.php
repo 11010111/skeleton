@@ -13,7 +13,7 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper {
     /**
      * @var string
      */
-    protected string $tagName = 'div';
+    protected $tagName = 'div';
 
     public function initializeArguments() {
         parent::initializeArguments();
@@ -25,37 +25,39 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper {
 
     public function render() {
         if ($this->hasArgument('render')) {
-            addArgumentClass('container');
-            addArgumentClass('alignment', 'container-');
+            $this->addArgumentClass('container');
+            $this->addArgumentClass('alignment');
 
-            if ($this->arguments['wrap'] == 'true') {
-                addArgumentClass('frame_class');
+            if ($this->arguments['wrap'] == 'true' || (
+                $this->arguments['render']['frame_class'] === 'none' && $this->arguments['render']['container'] !== ''
+            )) {
+                $this->addArgumentClass('frame_class');
 
-                addArgumentClass('mt', 'mt-');
-                addArgumentClass('mb', 'mb-');
-                addArgumentClass('pt', 'pt-');
-                addArgumentClass('pb', 'pb-');
+                $this->addArgumentClass('mt', 'mt-');
+                $this->addArgumentClass('mb', 'mb-');
+                $this->addArgumentClass('pt', 'pt-');
+                $this->addArgumentClass('pb', 'pb-');
 
-                addArgumentClass('tablet_mt', 'mt-', 'tablet_bp');
-                addArgumentClass('tablet_mb', 'mb-', 'tablet_bp');
-                addArgumentClass('tablet_pt', 'pt-', 'tablet_bp');
-                addArgumentClass('tablet_pb', 'pb-', 'tablet_bp');
+                $this->addArgumentClass('tablet_mt', 'mt-', 'tablet_bp');
+                $this->addArgumentClass('tablet_mb', 'mb-', 'tablet_bp');
+                $this->addArgumentClass('tablet_pt', 'pt-', 'tablet_bp');
+                $this->addArgumentClass('tablet_pb', 'pb-', 'tablet_bp');
 
-                addArgumentClass('desktop_mt', 'mt-', 'desktop_bp');
-                addArgumentClass('desktop_mb', 'mb-', 'desktop_bp');
-                addArgumentClass('desktop_pt', 'pt-', 'desktop_bp');
-                addArgumentClass('desktop_pb', 'pb-', 'desktop_bp');
+                $this->addArgumentClass('desktop_mt', 'mt-', 'desktop_bp');
+                $this->addArgumentClass('desktop_mb', 'mb-', 'desktop_bp');
+                $this->addArgumentClass('desktop_pt', 'pt-', 'desktop_bp');
+                $this->addArgumentClass('desktop_pb', 'pb-', 'desktop_bp');
 
-                addArgumentStyle('background', 'background-color');
-                addArgumentStyle('color', 'color');
+                $this->addArgumentStyle('background', 'background-color');
+                $this->addArgumentStyle('color', 'color');
 
                 if ($this->arguments['render']['uid'] && !$this->tag->getAttribute('id')) {
-                    $this->tag->addAttribute('id',  'c' . $this->arguments['render']['uid']);
+                    $this->tag->addAttribute('id',  'c' . (array_key_exists('_LOCALIZED_UID', $this->arguments['render']) && !empty($this->arguments['render']['_LOCALIZED_UID']) ? $this->arguments['render']['_LOCALIZED_UID'] : $this->arguments['render']['uid']));
                 }
-            }
 
-            if ($this->arguments['render']['tag']) {
-                $this->tagName = $this->arguments['render']['tag'];
+                if ($this->arguments['render']['tag']) {
+                    $this->tagName = $this->arguments['render']['tag'];
+                }
             }
         }
 
@@ -74,11 +76,11 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper {
     }
 
     protected function addArgumentClass($argumentName, $classPrefix = '', $breakpoint = null): void {
-        if (!$this->argument['render'][$argumentName] && $this->argument['render'][$argumentName] !== '0') {
+        if (empty($this->arguments['render'][$argumentName]) && strlen($this->arguments['render'][$argumentName]) === 0) {
             return;
         }
 
-        $bp = $breakpoint ? $this->argument['render'][$breakpoint] . ':' : '';
+        $bp = $breakpoint ? $this->arguments['render'][$breakpoint] . ':' : '';
         $className = $bp . $classPrefix . $this->arguments['render'][$argumentName];
 
         if ($this->tag->getAttribute('class')) {
@@ -90,7 +92,7 @@ class ContainerViewHelper extends AbstractTagBasedViewHelper {
     }
 
     protected function addArgumentStyle($argumentName, $styleName): void {
-        if (!$this->argument['render'][$argumentName]) {
+        if (!$this->arguments['render'][$argumentName]) {
             return;
         }
 
