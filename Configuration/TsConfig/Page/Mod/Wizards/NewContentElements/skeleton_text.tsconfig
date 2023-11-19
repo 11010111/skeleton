@@ -5,8 +5,8 @@ mod.wizards.newContentElement.wizardItems {
   common {
     elements {
       skeleton_text {
-        iconIdentifier = content-text
-        title = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:skeleton_text.title
+        iconIdentifier = skeleton-text
+        title = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:skeleton_text.label
         description = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:skeleton_text.description
         tt_content_defValues {
           CType = skeleton_text

@@ -8,14 +8,28 @@
   /* Colors */
   --glass-bg: rgba(234, 233, 227, 0.1);
 
-  /* Navigation */
+  /* Navigation Container */
   --max-width-nav: #{rem(1640)};
   --max-mx-nav: calc((100% - var(--max-width-nav)) / 2);
   --min-mx-nav: #{rem(22)};
   --max-x-nav: max(var(--min-mx-nav), var(--max-mx-nav));
 
+  /* Container */
+  --max-width: #{rem(1380)};
+  --max-mx: calc((100% - var(--max-width)) / 2);
+  --min-mx: #{rem(24)};
+  --max-x: max(var(--min-mx), var(--max-mx));
+
+  /* Container-XL */
+  --max-width-xl: #{rem(1536)};
+  --max-mx-xl: calc((100% - var(--max-width-xl)) / 2);
+  --min-mx-xl: #{rem(8)};
+  --max-x-xl: max(var(--min-mx-xl), var(--max-mx-xl));
+
   @media screen and (min-width: breakpoint(md)) {
     --min-mx-nav: #{rem(40)};
+    --min-mx: #{rem(40)};
+    --min-mx-xl: #{rem(24)};
   }
 
   @media screen and (min-width: breakpoint(xl)) {
@@ -24,6 +38,7 @@
 }
 
 html {
+  font-family: Inter;
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-pt);
 
@@ -32,6 +47,19 @@ html {
   }
 }
 
-.navigation {
-  padding: rem(20) var(--max-x-nav);
+header.navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: rem(1) solid #eee;
+}
+
+main.content {
+  min-height: 100vh;
+}
+
+footer {
+  color: #eee;
+  background-color: #222;
 }

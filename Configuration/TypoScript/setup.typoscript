@@ -18,11 +18,6 @@ page {
   typeNum = 0
   shortcutIcon = EXT:skeleton/Resources/Public/Icons/favicon.ico
 
-  headerData {
-    200 = TEXT
-    200.wrap = <link rel="preload" href="EXT:skeleton/Resources/Public/Fonts/Inter/Inter-VariableFont.ttf" as="font" crossorigin>
-  }
-
   10 = FLUIDTEMPLATE
   10 {
     # variables {
@@ -190,9 +185,8 @@ page {
 ################################
 #### BACKEND TEMPLATE PATHS ####
 ################################
-module.tx_backend.view.layoutRootPaths.100 = EXT:skeleton/Resources/Private/Backend/Layouts/
-module.tx_backend.view.partialRootPaths.100 = EXT:skeleton/Resources/Private/Backend/Partials/
-module.tx_backend.view.templateRootPaths.100 = EXT:skeleton/Resources/Private/Backend/Templates/
+module.tx_backend.view.partialRootPaths.200 = EXT:skeleton/Resources/Private/Backend/Partials/
+module.tx_backend.view.templateRootPaths.200 = EXT:skeleton/Resources/Private/Backend/Templates/
 
 
 #####################################
@@ -235,7 +229,7 @@ lib.logo = IMAGE
 lib.logo {
   file = EXT:skeleton/Resources/Public/Images/logo.svg
   stdWrap.typolink.parameter = 1
-  stdWrap.typolink.title = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
+  stdWrap.typolink.title = Home
 }
 
 
@@ -247,7 +241,7 @@ lib.logoSVG {
   renderMode = inline
   src.field = src
   stdWrap.typolink.parameter = 1
-  stdWrap.typolink.title =  LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
+  stdWrap.typolink.title = Home
 }
 
 
@@ -316,7 +310,7 @@ config {
 
   ## Header Policy
   additionalHeaders {
-    10.header = Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self';
+    10.header = Content-Security-Policy: default-src 'self'; script-src 'self'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self';
     20.header = strict-transport-security: max-age=31536000
     30.header = X-Frame-Options: sameorigin
     40.header = X-Xss-Protection: 1; mode=block

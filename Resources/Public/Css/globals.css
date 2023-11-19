@@ -1,1 +1,68 @@
-@font-face{font-family:Inter;src:url("../Fonts/Inter/Inter-VariableFont.ttf") format("truetype");font-weight:100 900;font-stretch:25% 150%;font-display:swap}:root{--scroll-pt: 4.5rem;--glass-bg: rgba(234, 233, 227, 0.1);--max-width-nav: 102.5rem;--max-mx-nav: calc((100% - var(--max-width-nav)) / 2);--min-mx-nav: 1.375rem;--max-x-nav: max(var(--min-mx-nav), var(--max-mx-nav))}@media screen and (min-width: 48em){:root{--min-mx-nav: 2.5rem}}@media screen and (min-width: 80em){:root{--scroll-pt: 5.75rem}}html{scroll-behavior:smooth;scroll-padding-top:var(--scroll-pt)}@media screen and (min-width: 1921px){html{font-size:calc(1vw - 1.2px)}}.navigation{padding:1.25rem var(--max-x-nav)}
+@font-face {
+  font-family: Inter;
+  src: url("../Fonts/Inter/Inter-VariableFont.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 25% 150%;
+  font-display: swap;
+}
+:root {
+  /* Anchor Scroll Padding */
+  --scroll-pt: 4.5rem;
+  /* Colors */
+  --glass-bg: rgba(234, 233, 227, 0.1);
+  /* Navigation Container */
+  --max-width-nav: 102.5rem;
+  --max-mx-nav: calc((100% - var(--max-width-nav)) / 2);
+  --min-mx-nav: 1.375rem;
+  --max-x-nav: max(var(--min-mx-nav), var(--max-mx-nav));
+  /* Container */
+  --max-width: 86.25rem;
+  --max-mx: calc((100% - var(--max-width)) / 2);
+  --min-mx: 1.5rem;
+  --max-x: max(var(--min-mx), var(--max-mx));
+  /* Container-XL */
+  --max-width-xl: 96rem;
+  --max-mx-xl: calc((100% - var(--max-width-xl)) / 2);
+  --min-mx-xl: 0.5rem;
+  --max-x-xl: max(var(--min-mx-xl), var(--max-mx-xl));
+}
+@media screen and (min-width: 48em) {
+  :root {
+    --min-mx-nav: 2.5rem;
+    --min-mx: 2.5rem;
+    --min-mx-xl: 1.5rem;
+  }
+}
+@media screen and (min-width: 80em) {
+  :root {
+    --scroll-pt: 5.75rem;
+  }
+}
+
+html {
+  font-family: Inter;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-pt);
+}
+@media screen and (min-width: 1921px) {
+  html {
+    font-size: calc(1vw - 1.2px);
+  }
+}
+
+header.navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+main.content {
+  min-height: 100vh;
+}
+
+footer {
+  color: #eee;
+  background-color: #222;
+}
