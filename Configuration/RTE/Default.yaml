@@ -1,129 +1,163 @@
 imports:
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+  # - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:skeleton/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
 
 editor:
-    config:
-        contentsCss: "EXT:skeleton/Resources/Public/Css/rte.css"
+  config:
+    contentsCss: "EXT:skeleton/Resources/Public/Css/rte.css"
 
-        stylesSet:
-            - { name: "Schriftgröße 12", element: "p", attributes: { 'class': 'font-size-12' } }
-            - { name: "Schriftgröße 20", element: "p", attributes: { 'class': 'font-size-20' } }
+    style:
+      definitions:
+        - { name: "Orange title H2", element: "h2", classes: ["orange"] }
+        - { name: "Orange Paragraph", element: "p", classes: ["orange"] }
+        - { name: "Quote / Citation", element: "blockquote", classes: ["quote"] }
+        - { name: "Code block", element: "code", classes: ["code"] }
+        - { name: "Yellow marker", element: "span", classes: ["yellow"] }
 
-        toolbarGroups:
-            - { name: styles, groups: [ format, styles ] }
-            - { name: basicstyles, groups: [ basicstyles ] }
-            - { name: paragraph, groups: [ list, indent, blocks, align ] }
-            - "/"
-            - { name: links, groups: [ links ] }
-            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
-            - { name: editing, groups: [ spellchecker ] }
-            - { name: insert, groups: [ insert ] }
-            - { name: tools, groups: [ table, specialchar ] }
-            - { name: document, groups: [ mode ] }
+    heading:
+      options:
+        - { model: "paragraph", title: "Paragraph" }
+        - { model: "heading1", view: "h1", title: "Heading 1" }
+        - { model: "heading2", view: "h2", title: "Heading 2" }
+        - { model: "heading3", view: "h3", title: "Heading 3" }
+        - { model: "formatted", view: "pre", title: "Pre-Formatted Text" }
 
-        format_tags: "p;h1;h2;h3;h4;h5;pre"
+    toolbar:
+      items:
+        - style
+        - heading
+        - "|"
+        - clipboard
+        - removeFormat
+        - undo
+        - redo
+        # grouping separator
+        - "|"
+        - find
+        - selectAll
+        - "|"
+        - link
+        - insertTable
+        - tableColumn
+        - tableRow
+        - mergeTableCells
+        - "|"
+        - sourceEditing
+        - showBlocks
+        - horizontalLine
+        # line break
+        #- "-"
+        - bold
+        - italic
+        - underline
+        - strikethrough
+        - subscript
+        - superscript
+        - softhyphen
+        - "|"
+        - bulletedList
+        - numberedList
+        - blockQuote
+        - indent
+        - outdent
+        - alignment
+        - "|"
+        - specialCharacters
 
-        justifyClasses:
-            - text-left
-            - text-center
-            - text-right
-            - text-justify
+    alignment:
+      options:
+        - { name: "left", className: "text-start" }
+        - { name: "center", className: "text-center" }
+        - { name: "right", className: "text-end" }
+        - { name: "justify", className: "text-justify" }
 
-        extraPlugins:
-            - justify
-
-        removePlugins:
-            - image
-
-        removeButtons:
-            - Anchor
-            - Underline
-            - Strike
-            - Table
-
-processing:
-    allowTags:
-        - button
-
-# Button config and defaults
 buttons:
-    link:
-        relAttribute:
-            enabled: false
-        properties.:
-            class:
-                allowedClasses: 'link,link-next,link-prev,link-download,link-folder,link-external,link-external-blank,link-mail,link-phone'
-        page:
-            properties.:
-                class:
-                    default: 'link'
-        file:
-            properties.:
-                class:
-                    default: 'link-download'
-        folder:
-            properties.:
-                class:
-                    default: 'link-folder'
-        url:
-            properties.:
-                class:
-                    default: 'link'
-        mail:
-            properties.:
-                class:
-                    default: 'link-mail'
-        telephone:
-            properties.:
-                class:
-                    default: 'link-phone'
+  link:
+    relAttribute:
+      enabled: false
+    properties:
+      class:
+        allowedClasses: "link,link-next,link-prev,link-download,link-folder,link-external,link-external-blank,link-mail,link-phone"
+    page:
+      properties:
+        class:
+          default: "link"
+    file:
+      properties:
+        class:
+          default: "link-download"
+    folder:
+      properties:
+        class:
+          default: "link-folder"
+    url:
+      properties:
+        class:
+          default: "link-external"
+    mail:
+      properties:
+        class:
+          default: "link-mail"
+    telephone:
+      properties:
+        class:
+          default: "link-phone"
 
-# Classes config
 classesAnchor:
-    link:
-        class: 'link'
-        type: 'page'
-        titleText: 'Link'
-    link-next:
-        class: 'link-next'
-        type: 'page'
-        titleText: 'Link (Next)'
-    link-prev:
-        class: 'link-prev'
-        type: 'page'
-        titleText: 'Link (Previous)'
-    link-download:
-        class: 'link-download'
-        type: 'file'
-        titleText: 'Link (Download)'
-    link-folder:
-        class: 'link-folder'
-        type: 'folder'
-        titleText: 'Link (Folder)'
-    link-external:
-        class: 'link-external'
-        type: 'url'
-        titleText: 'Link (External)'
-    link-external-blank:
-        class: 'link-external-blank'
-        type: 'url'
-        target: '_blank'
-        titleText: 'Link (External Blank)'
-    link-mail:
-        class: 'link-mail'
-        type: 'mail'
-        titleText: 'Link (Mail)'
-    link-phone:
-        class: 'link-phone'
-        type: 'telephone'
-        titleText: 'Link (Phone)'
+  link:
+    class: "link"
+    type: "page"
+    titleText: "Link"
+  link-next:
+    class: "link-next"
+    type: "page"
+    titleText: "Link (Next)"
+  link-prev:
+    class: "link-prev"
+    type: "page"
+    titleText: "Link (Previous)"
+  link-download:
+    class: "link-download"
+    type: "file"
+    titleText: "Link (Download)"
+  link-folder:
+    class: "link-folder"
+    type: "folder"
+    titleText: "Link (Folder)"
+  link-external:
+    class: "link-external"
+    type: "url"
+    titleText: "Link (External)"
+  link-external-blank:
+    class: "link-external-blank"
+    type: "url"
+    target: "_blank"
+    titleText: "Link (External Blank)"
+  link-mail:
+    class: "link-mail"
+    type: "mail"
+    titleText: "Link (Mail)"
+  link-phone:
+    class: "link-phone"
+    type: "telephone"
+    titleText: "Link (Phone)"
 
 classes:
-    link:
-        name: 'Link'
-    link-next:
-        name: 'Link (Next)'
-    link-prev:
-        name: 'Link (Previous)'
+  link:
+    name: "Link"
+  link-next:
+    name: "Link Next"
+  link-prev:
+    name: "Link Previous"
+  link-download:
+    name: "Link Download"
+  link-folder:
+    name: "Link Folder"
+  link-external:
+    name: "Link External"
+  link-external-blank:
+    name: "Link External Blank"
+  link-phone:
+    name: "Link Phone"

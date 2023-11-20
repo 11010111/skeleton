@@ -5,4 +5,18 @@ RTE {
   default {
     preset = skeleton
   }
+
+  #config {
+  #  tt_content {
+  #    bodytext {
+  #      preset = skeleton
+  #
+  #      types {
+  #        skeleton_text {
+  #          preset = skeleton
+  #        }
+  #      }
+  #    }
+  #  }
+  #}
 }

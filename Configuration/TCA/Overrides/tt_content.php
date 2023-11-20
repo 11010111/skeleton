@@ -283,7 +283,7 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_text'] = [
         'bodytext' => [
             'config' => [
                 'enableRichtext' => true,
-                'richtextConfiguration' => 'default'
+                'richtextConfiguration' => 'skeleton'
             ]
         ]
     ]
