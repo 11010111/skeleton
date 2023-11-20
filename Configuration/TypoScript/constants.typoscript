@@ -56,7 +56,7 @@ config {
   no_cache = 0
   removePageCss = 1
   removeDefaultJS = 1
-  admPanel = 1
+  admPanel = 0
   prefixLocalAnchors = all
   headerComment = build by Konstantin Schneider
   sendCacheHeaders = 1
