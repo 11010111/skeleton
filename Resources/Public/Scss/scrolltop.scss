@@ -1,0 +1,28 @@
+@import "functions";
+
+.scroll-top {
+  position: fixed;
+  bottom: rem(128);
+  right: rem(16);
+  display: none;
+  background-color: var(--white);
+  border-radius: 50%;
+  border: rem(1) solid var(--glass-dark);
+  padding: rem(8);
+  cursor: pointer;
+  z-index: 5;
+
+  @media (min-width: breakpoint(md)) {
+    right: rem(24);
+  }
+
+  @media (min-width: breakpoint(xl)) {
+    right: rem(40);
+  }
+}
+
+.scroll-top-show {
+  @media (min-width: breakpoint(xl)) {
+    display: initial;
+  }
+}

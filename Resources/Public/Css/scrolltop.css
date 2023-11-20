@@ -1,0 +1,28 @@
+.scroll-top {
+  position: fixed;
+  bottom: 8rem;
+  right: 1rem;
+  display: none;
+  background-color: var(--white);
+  border-radius: 50%;
+  border: 0.0625rem solid var(--glass-dark);
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 5;
+}
+@media (min-width: 48em) {
+  .scroll-top {
+    right: 1.5rem;
+  }
+}
+@media (min-width: 80em) {
+  .scroll-top {
+    right: 2.5rem;
+  }
+}
+
+@media (min-width: 80em) {
+  .scroll-top-show {
+    display: initial;
+  }
+}
