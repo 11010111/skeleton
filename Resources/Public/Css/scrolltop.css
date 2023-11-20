@@ -4,8 +4,8 @@
   right: 1rem;
   display: none;
   background-color: var(--white);
-  border-radius: 50%;
-  border: 0.0625rem solid var(--glass-dark);
+  border-radius: 0.1875rem;
+  border: 0.0625rem solid var(--lightgrey);
   padding: 0.5rem;
   cursor: pointer;
   z-index: 5;
