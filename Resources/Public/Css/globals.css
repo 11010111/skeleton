@@ -9,7 +9,11 @@
   /* Anchor Scroll Padding */
   --scroll-pt: 4.5rem;
   /* Colors */
-  --glass-bg: rgba(234, 233, 227, 0.1);
+  --black: #000;
+  --white: #fff;
+  --lightgrey: #eee;
+  --glass-light: rgba(234, 233, 227, 0.1);
+  --glass-dark: rgba(0, 0, 0, 0.25);
   /* Navigation Container */
   --max-width-nav: 102.5rem;
   --max-mx-nav: calc((100% - var(--max-width-nav)) / 2);
@@ -51,18 +55,149 @@ html {
 }
 
 header.navigation {
-  position: sticky;
+  position: unset;
   top: 0;
   left: 0;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-bottom: 0.0625rem solid var(--lightgrey);
+  padding: 0.75rem var(--max-x-nav);
+}
+@media (min-width: 80em) {
+  header.navigation {
+    position: sticky;
+  }
+}
+header.navigation .navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+header.navigation .navigation-wrapper .navigation-brand a svg, header.navigation .navigation-wrapper .navigation-brand a img {
+  width: auto;
+  max-height: 1.75rem;
+}
+@media (min-width: 80em) {
+  header.navigation .navigation-wrapper .navigation-brand a svg, header.navigation .navigation-wrapper .navigation-brand a img {
+    max-height: unset;
+  }
+}
+header.navigation .navigation-wrapper .navigation-list {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  z-index: 100;
+}
+@media not (min-width: 80em) {
+  header.navigation .navigation-wrapper .navigation-list {
+    background-color: var(--white);
+    border-top: 0.0625rem solid var(--lightgrey);
+    padding: 0.375rem var(--max-x-nav);
+  }
+}
+@media (min-width: 80em) {
+  header.navigation .navigation-wrapper .navigation-list {
+    position: initial;
+    justify-content: flex-end;
+  }
+}
+header.navigation .navigation-wrapper .navigation-list .level1-menu {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 1.25rem;
+  width: 100%;
+}
+@media (min-width: 80em) {
+  header.navigation .navigation-wrapper .navigation-list .level1-menu {
+    justify-content: flex-end;
+    column-gap: 2.5rem;
+  }
+}
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu {
+  text-align: center;
+}
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-link svg,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-link img,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-more svg,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-more img,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-more-btn svg,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-more-btn img,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-link svg,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-link img,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more svg,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more img,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-btn svg,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@media (min-width: 80em) {
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-link svg,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-link img,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-more svg,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-more img,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-more-btn svg,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1 .level1-more-btn img,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-link svg,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-link img,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more svg,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more img,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-btn svg,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-btn img {
+    display: none;
+  }
+}
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu {
+  contain: layout;
+}
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-wrapper {
+  display: flex;
+  column-gap: 2.5rem;
+}
+@media not (min-width: 80em) {
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-wrapper {
+    position: fixed;
+    bottom: 3.5rem;
+    right: -1rem;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.75rem;
+    background: var(--white);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid var(--lightgrey);
+    width: max-content;
+  }
+}
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-wrapper .level1-more svg,
+header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-wrapper .level1-more img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@media (min-width: 80em) {
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-wrapper .level1-more svg,
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-wrapper .level1-more img {
+    display: none;
+  }
+}
+@media not (min-width: 80em) {
+  header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-open {
+    display: flex;
+  }
 }
 
 main.content {
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 footer {
-  color: #eee;
+  color: var(--lightgrey);
   background-color: #222;
 }

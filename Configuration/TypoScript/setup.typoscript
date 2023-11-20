@@ -20,10 +20,10 @@ page {
 
   10 = FLUIDTEMPLATE
   10 {
-    # variables {
-    #   testVariable = TEXT
-    #   testVariable.value = 1
-    # }
+    variables {
+      menuItems = TEXT
+      menuItems.value = 4
+    }
 
     templateName = TEXT
     templateName {
@@ -68,6 +68,11 @@ page {
         levels = 2
         includeSpacer = 1
         as = navigation
+        dataProcessing.10 = files
+        dataProcessing.10 {
+          references.fieldName = media
+          as = media
+        }
       }
 
       30 = language-menu
@@ -229,7 +234,7 @@ lib.logo = IMAGE
 lib.logo {
   file = EXT:skeleton/Resources/Public/Images/logo.svg
   stdWrap.typolink.parameter = 1
-  stdWrap.typolink.title = Home
+  stdWrap.typolink.title.data = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
 }
 
 
@@ -241,7 +246,7 @@ lib.logoSVG {
   renderMode = inline
   src.field = src
   stdWrap.typolink.parameter = 1
-  stdWrap.typolink.title = Home
+  stdWrap.typolink.title.data = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
 }
 
 

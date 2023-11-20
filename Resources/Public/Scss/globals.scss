@@ -6,7 +6,11 @@
   --scroll-pt: #{rem(72)};
 
   /* Colors */
-  --glass-bg: rgba(234, 233, 227, 0.1);
+  --black: #000;
+  --white: #fff;
+  --lightgrey: #eee;
+  --glass-light: rgba(234, 233, 227, 0.1);
+  --glass-dark: rgba(0, 0, 0, 0.25);
 
   /* Navigation Container */
   --max-width-nav: #{rem(1640)};
@@ -48,18 +52,141 @@ html {
 }
 
 header.navigation {
-  position: sticky;
+  position: unset;
   top: 0;
   left: 0;
-  background-color: #fff;
-  border-bottom: rem(1) solid #eee;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-bottom: rem(1) solid var(--lightgrey);
+  padding: rem(12) var(--max-x-nav);
+
+  @media (min-width: breakpoint(xl)) {
+    position: sticky;
+  }
+
+  .navigation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(40);
+    width: 100%;
+
+    .navigation-brand {
+      a {
+        svg, img {
+          width: auto;
+          max-height: rem(28);
+
+          @media (min-width: breakpoint(xl)) {
+            max-height: unset;
+          }
+        }
+      }
+    }
+
+    .navigation-list {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      z-index: 100;
+
+      @media not (min-width: breakpoint(xl)) {
+        background-color: var(--white);
+        border-top: rem(1) solid var(--lightgrey);
+        padding: rem(6) var(--max-x-nav);
+      }
+
+      @media (min-width: breakpoint(xl)) {
+        position: initial;
+        justify-content: flex-end;
+      }
+
+      .level1-menu {
+        display: flex;
+        justify-content: space-around;
+        column-gap: rem(20);
+        width: 100%;
+
+        @media (min-width: breakpoint(xl)) {
+          justify-content: flex-end;
+          column-gap: rem(40);
+        }
+
+        .level1,
+        .level1-more-menu {
+          text-align: center;
+
+          .level1-link,
+          .level1-more,
+          .level1-more-btn {
+
+            svg,
+            img {
+              width: rem(24);
+              height: rem(24);
+
+              @media (min-width: breakpoint(xl)) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .level1-more-menu {
+          contain: layout;
+
+          .level1-more-wrapper {
+            display: flex;
+            column-gap: rem(40);
+
+            @media not (min-width: breakpoint(xl)) {
+              position: fixed;
+              bottom: rem(56);
+              right: rem(-16);
+              display: none;
+              flex-direction: column;
+              align-items: flex-start;
+              row-gap: rem(12);
+              background: var(--white);
+              padding: rem(12) rem(16);
+              border-radius: rem(8);
+              border: rem(1) solid var(--lightgrey);
+              width: max-content;
+            }
+
+            .level1-more {
+
+              svg,
+              img {
+                width: rem(24);
+                height: rem(24);
+
+                @media (min-width: breakpoint(xl)) {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          .level1-more-open {
+            @media not (min-width: breakpoint(xl)) {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 main.content {
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 footer {
-  color: #eee;
+  color: var(--lightgrey);
   background-color: #222;
 }

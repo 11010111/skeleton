@@ -2,24 +2,103 @@
 
 <f:if condition="{navigation}">
   <ul class="level1-menu">
-    <f:for each="{navigation}" as="level1">
-      <li class="mobile-level1{f:if(condition:'{level1.children}',then:' children')}{f:if(condition:'{level1.active}',then:' active')}">
-        <a href="{level1.link}" target="{level1.target}" title="{level1.title}">
-          <span>{level1.title}</span>
-        </a>
+    <f:for each="{navigation}" as="level1" iteration="level1Iter">
+      <f:if condition="{level1Iter.index} < {menuItems}">
+        <f:then>
+          <li
+            class="level1{f:if(condition:'{level1.children}',then:' children')}{f:if(condition:'{level1.active}',then:' active')}">
+            <a href="{level1.link}" target="{level1.target}" title="{level1.title}"
+              class="level1-link flex flex-col justify-center items-center">
+              <f:if condition="{level1.media}">
+                <f:then>
+                  <f:for each="{level1.media}" as="file" iteration="iter">
+                    <f:if condition="{iter.isFirst}">
+                      <f:image image="{file}" />
+                    </f:if>
+                  </f:for>
+                </f:then>
+                <f:else>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path
+                      d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Zm120 480h200q17 0 28.5-11.5T560-320q0-17-11.5-28.5T520-360H320q-17 0-28.5 11.5T280-320q0 17 11.5 28.5T320-280Zm0-160h320q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440Zm0-160h320q17 0 28.5-11.5T680-640q0-17-11.5-28.5T640-680H320q-17 0-28.5 11.5T280-640q0 17 11.5 28.5T320-600Z" />
+                  </svg>
+                </f:else>
+              </f:if>
+              <span class="text-xs xl:text-sm">{level1.title}</span>
+            </a>
 
-        <f:if condition="{level1.children}">
-          <ul class="level2-menu">
-            <f:for each="{level1.children}" as="level2">
-              <li class="mobile-level2{f:if(condition:'{level2.active}',then:' active')}">
-                <a href="{level2.link}" target="{level2.target}" title="{level2.title}">
-                  <span>{level2.title}</span>
-                </a>
-              </li>
-            </f:for>
-          </ul>
-        </f:if>
-      </li>
+            <f:comment>
+              <f:if condition="{level1.children}">
+                <ul class="level2-menu">
+                  <f:for each="{level1.children}" as="level2">
+                    <li class="level2{f:if(condition:'{level2.active}',then:' active')}">
+                      <a href="{level2.link}" target="{level2.target}" title="{level2.title}">
+                        <span>{level2.title}</span>
+                      </a>
+                    </li>
+                  </f:for>
+                </ul>
+              </f:if>
+            </f:comment>
+          </li>
+        </f:then>
+        <f:else>
+          <f:if condition="{level1Iter.index} == {menuItems}">
+            <li class="level1-more-menu">
+              <button class="level1-more-btn text-xs xl:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                  <path
+                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                </svg>
+                <span class="text-xs xl:text-sm">More</span>
+              </button>
+              <ul class="level1-more-wrapper">
+                <f:for each="{navigation}" as="level1More" iteration="level1MoreIter">
+                  <f:if condition="{level1MoreIter.index} >= {menuItems}">
+                    <li
+                      class="level1-more{f:if(condition:'{level1More.children}',then:' children')}{f:if(condition:'{level1More.active}',then:' active')}">
+                      <a href="{level1More.link}" target="{level1More.target}" title="{level1More.title}"
+                        class="level1-more-link flex justify-center items-center gap-x-1">
+                        <f:if condition="{level1More.media}">
+                          <f:then>
+                            <f:for each="{level1More.media}" as="file" iteration="iter">
+                              <f:if condition="{iter.isFirst}">
+                                <f:image image="{file}" />
+                              </f:if>
+                            </f:for>
+                          </f:then>
+                          <f:else>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                              <path
+                                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Zm120 480h200q17 0 28.5-11.5T560-320q0-17-11.5-28.5T520-360H320q-17 0-28.5 11.5T280-320q0 17 11.5 28.5T320-280Zm0-160h320q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440Zm0-160h320q17 0 28.5-11.5T680-640q0-17-11.5-28.5T640-680H320q-17 0-28.5 11.5T280-640q0 17 11.5 28.5T320-600Z" />
+                            </svg>
+                          </f:else>
+                        </f:if>
+                        <span class="text-xs xl:text-sm">{level1More.title}</span>
+                      </a>
+
+                      <f:comment>
+                        <f:if condition="{level1More.children}">
+                          <ul class="level2-menu">
+                            <f:for each="{level1More.children}" as="level2">
+                              <li class="level2{f:if(condition:'{level2.active}',then:' active')}">
+                                <a href="{level2.link}" target="{level2.target}" title="{level2.title}">
+                                  <span>{level2.title}</span>
+                                </a>
+                              </li>
+                            </f:for>
+                          </ul>
+                        </f:if>
+                      </f:comment>
+                    </li>
+                  </f:if>
+                </f:for>
+              </ul>
+            </li>
+          </f:if>
+        </f:else>
+      </f:if>
+
     </f:for>
   </ul>
 </f:if>
