@@ -115,6 +115,7 @@ header.navigation .navigation-wrapper .navigation-list .level1-menu {
 @media (min-width: 80em) {
   header.navigation .navigation-wrapper .navigation-list .level1-menu {
     justify-content: flex-end;
+    align-items: center;
     column-gap: 2.5rem;
   }
 }
@@ -158,6 +159,7 @@ header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more
 }
 header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more-menu .level1-more-wrapper {
   display: flex;
+  align-items: center;
   column-gap: 2.5rem;
 }
 @media not (min-width: 80em) {

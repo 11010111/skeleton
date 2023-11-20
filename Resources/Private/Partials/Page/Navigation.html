@@ -58,7 +58,7 @@
                     <li
                       class="level1-more{f:if(condition:'{level1More.children}',then:' children')}{f:if(condition:'{level1More.active}',then:' active')}">
                       <a href="{level1More.link}" target="{level1More.target}" title="{level1More.title}"
-                        class="level1-more-link flex justify-center items-center gap-x-1">
+                        class="level1-more-link flex justify-center items-center gap-x-1{f:if(condition:'{level1MoreIter.isLast} && {level1More.data.shortcut}',then:' desktop-btn')}">
                         <f:if condition="{level1More.media}">
                           <f:then>
                             <f:for each="{level1More.media}" as="file" iteration="iter">

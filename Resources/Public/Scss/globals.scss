@@ -112,6 +112,7 @@ header.navigation {
 
         @media (min-width: breakpoint(xl)) {
           justify-content: flex-end;
+          align-items: center;
           column-gap: rem(40);
         }
 
@@ -140,6 +141,7 @@ header.navigation {
 
           .level1-more-wrapper {
             display: flex;
+            align-items: center;
             column-gap: rem(40);
 
             @media not (min-width: breakpoint(xl)) {

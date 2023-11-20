@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.desktop-btn {
+  @apply xl:px-3 xl:py-2 xl:bg-[var(--glass-light)] xl:border xl:border-gray-300 xl:rounded;
+}
