@@ -1,23 +1,27 @@
 {
-    "name": "konstantinschneider/skeleton",
-    "type": "typo3-cms-extension",
-    "description": "Website Distribution",
-    "homepage": "https://www.konstantinschneider.de",
-    "license": ["GPL-2.0-or-later"],
-    "keywords": ["TYPO3 CMS"],
-    "require": {
-        "typo3/cms-core": "^12.1",
-        "typo3/cms-rte-ckeditor": "^12.1",
-        "typo3/cms-fluid-styled-content": "^12.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "Konstantinschneider\\Skeleton\\": "Classes/"
-        }
-    },
-    "extra": {
-        "typo3/cms": {
-          "extension-key": "skeleton"
-        }
+  "name": "konstantinschneider/skeleton",
+  "type": "typo3-cms-extension",
+  "description": "Website Distribution",
+  "homepage": "https://www.konstantinschneider.de",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "keywords": [
+    "TYPO3 CMS"
+  ],
+  "require": {
+    "typo3/cms-core": "^12.1",
+    "typo3/cms-rte-ckeditor": "^12.1",
+    "typo3/cms-fluid-styled-content": "^12.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Konstantinschneider\\Skeleton\\": "Classes/"
     }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "skeleton"
+    }
+  }
 }
