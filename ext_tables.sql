@@ -23,7 +23,7 @@ CREATE TABLE tt_content
   color      VARCHAR(30) DEFAULT '' NOT NULL,
   background VARCHAR(30) DEFAULT '' NOT NULL,
   tag        VARCHAR(30) DEFAULT '' NOT NULL,
-  card       INT(11)     DEFAULT 0  NOT NULL
+  cards      INT(11)     DEFAULT 0  NOT NULL
 );
 
 CREATE TABLE tx_skeleton_domain_model_card
