@@ -2,5 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 .desktop-btn {
-  @apply xl:px-3 xl:py-2 xl:bg-[var(--glass-light)] xl:border xl:border-gray-300 xl:rounded;
+  @apply text-sm xl:px-3 xl:py-2 xl:bg-[var(--glass-light)] xl:border xl:border-gray-300 xl:rounded;
+}
+
+.primary-btn {
+  @apply text-sm text-white px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-500 border border-gray-300 rounded;
 }

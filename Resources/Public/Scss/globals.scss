@@ -10,7 +10,7 @@
   --white: #fff;
   --lightgrey: #eee;
   --glass-light: rgba(234, 233, 227, 0.1);
-  --glass-dark: rgba(0, 0, 0, 0.25);
+  --glass-dark: rgba(0, 0, 0, 0.65);
 
   /* Navigation Container */
   --max-width-nav: #{rem(1640)};
@@ -74,7 +74,9 @@ header.navigation {
 
     .navigation-brand {
       a {
-        svg, img {
+
+        svg,
+        img {
           width: auto;
           max-height: rem(28);
 
@@ -185,10 +187,90 @@ header.navigation {
 }
 
 main.content {
-  min-height: 200vh;
+  min-height: 100vh;
 }
 
 footer {
   color: var(--lightgrey);
   background-color: #222;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  line-height: 1.15;
+  margin: 0 0 rem(16);
+}
+
+h1,
+.h1 {
+  font-size: rem(34);
+  font-weight: 400;
+
+  @media (min-width: breakpoint(lg)) {
+    font-size: rem(60);
+  }
+}
+
+h2,
+.h2 {
+  font-size: rem(30);
+  font-weight: 400;
+
+  @media (min-width: breakpoint(lg)) {
+    font-size: rem(42);
+  }
+}
+
+h3,
+.h3 {
+  font-size: rem(24);
+  font-weight: 400;
+
+  @media (min-width: breakpoint(lg)) {
+    font-size: rem(32);
+  }
+}
+
+h4,
+.h4 {
+  font-size: rem(20);
+  font-weight: 300;
+}
+
+h5,
+.h5 {
+  font-size: rem(18);
+  font-weight: 300;
+}
+
+h6,
+.h6 {
+  font-size: rem(16);
+  font-weight: 300;
+}
+
+figure {
+  position: relative;
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--glass-dark);
+  }
 }

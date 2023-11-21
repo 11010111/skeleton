@@ -1,13 +1,49 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:comment>
-  <f:asset.css identifier="card" href="EXT:skeleton/Resources/Public/Css/card.css" />
-</f:comment>
+<f:asset.css identifier="cards" href="EXT:skeleton/Resources/Public/Css/cards.css" />
 
 <skeleton:wrapper render="{data}" class="cards">
   <skeleton:container render="{data}">
     <f:if condition="{data.bodytext}">
-      <div class="rte-content">{data.bodytext -> f:format.html()}</div>
+      <div class="cards-rte">
+        {data.bodytext -> f:format.html()}
+      </div>
+    </f:if>
+
+    <f:if condition="{tx_skeleton_content}">
+      <div class="cards-wrapper">
+        <f:for each="{tx_skeleton_content}" as="card">
+          <div class="card">
+            <div class="card-inner{f:if(condition:'{card.image}',else:' card-inner-not-image')}{f:if(condition:'{card.data.title} && {card.data.description} && {card.data.link}',then:' card-inner-not-content')}">
+              <f:for each="{card.image}" as="image">
+                <div class="card-image">
+                  <f:render partial="Picture" arguments="{file: image}" />
+                </div>
+              </f:for>
+
+              <f:if condition="{card.data.title} || {card.data.description} || {card.data.link}">
+                <div class="card-content">
+                  <f:if condition="{card.data.title}">
+                    <h3>{card.data.title}</h3>
+                  </f:if>
+
+                  <f:if condition="{card.data.description}">
+                    <div class="card-rte">
+                      {card.data.description -> f:format.html()}
+                    </div>
+                  </f:if>
+
+                  <f:if condition="{card.data.link}">
+                    <f:link.typolink class="primary-btn card-link" parameter="{card.data.link}" parts-as="link">
+                      <span>{link.title}</span>
+                    </f:link.typolink>
+                  </f:if>
+                </div>
+              </f:if>
+            </div>
+          </div>
+        </f:for>
+      </div>
     </f:if>
   </skeleton:container>
 </skeleton:wrapper>

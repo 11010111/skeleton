@@ -13,7 +13,7 @@
   --white: #fff;
   --lightgrey: #eee;
   --glass-light: rgba(234, 233, 227, 0.1);
-  --glass-dark: rgba(0, 0, 0, 0.25);
+  --glass-dark: rgba(0, 0, 0, 0.65);
   /* Navigation Container */
   --max-width-nav: 102.5rem;
   --max-mx-nav: calc((100% - var(--max-width-nav)) / 2);
@@ -76,12 +76,14 @@ header.navigation .navigation-wrapper {
   gap: 2.5rem;
   width: 100%;
 }
-header.navigation .navigation-wrapper .navigation-brand a svg, header.navigation .navigation-wrapper .navigation-brand a img {
+header.navigation .navigation-wrapper .navigation-brand a svg,
+header.navigation .navigation-wrapper .navigation-brand a img {
   width: auto;
   max-height: 1.75rem;
 }
 @media (min-width: 80em) {
-  header.navigation .navigation-wrapper .navigation-brand a svg, header.navigation .navigation-wrapper .navigation-brand a img {
+  header.navigation .navigation-wrapper .navigation-brand a svg,
+  header.navigation .navigation-wrapper .navigation-brand a img {
     max-height: unset;
   }
 }
@@ -196,10 +198,95 @@ header.navigation .navigation-wrapper .navigation-list .level1-menu .level1-more
 }
 
 main.content {
-  min-height: 200vh;
+  min-height: 100vh;
 }
 
 footer {
   color: var(--lightgrey);
   background-color: #222;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+h1,
+.h1 {
+  font-size: 2.125rem;
+  font-weight: 400;
+}
+@media (min-width: 64em) {
+  h1,
+  .h1 {
+    font-size: 3.75rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+@media (min-width: 64em) {
+  h2,
+  .h2 {
+    font-size: 2.625rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+@media (min-width: 64em) {
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+h5,
+.h5 {
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+figure {
+  position: relative;
+}
+figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: var(--white);
+  background-color: var(--glass-dark);
 }

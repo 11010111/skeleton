@@ -211,6 +211,21 @@ tt_content {
   skeleton_card =< lib.contentElement
   skeleton_card {
     templateName = SkeletonCard
+    
+    dataProcessing.10 = database-query
+    dataProcessing.10 {
+      if.isTrue.field = tx_skeleton_content
+      table = tx_skeleton_content
+      orderBy = sorting
+      uidInList.field = data.uid
+      as = tx_skeleton_content
+
+      dataProcessing.10 = files
+      dataProcessing.10 {
+        references.fieldName = image
+        as = image
+      }
+    }
   }
 }
 

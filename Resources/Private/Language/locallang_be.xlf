@@ -53,7 +53,7 @@
                 <source>Cards</source>
             </trans-unit>
             <trans-unit id="skeleton_card.description">
-                <source>Multiple Cards</source>
+                <source>Repeated Content</source>
             </trans-unit>
         </body>
     </file>

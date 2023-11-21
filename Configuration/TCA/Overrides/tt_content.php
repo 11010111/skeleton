@@ -233,12 +233,12 @@ defined('TYPO3') or die('Access denied.');
         ]
       ]
     ],
-    'cards' => [
+    'tx_skeleton_content' => [
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
       'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
       'config' => [
         'type' => 'inline',
-        'foreign_table' => 'tx_skeleton_domain_model_card',
+        'foreign_table' => 'tx_skeleton_content',
         'foreign_field' => 'uid_foreign',
         'foreign_table_field' => 'uid_local',
         'appearance' => [
@@ -283,7 +283,7 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
   'tt_content',
-  'cards',
+  'tx_skeleton_content',
   'general',
   'after:bodytext'
 );
@@ -291,7 +291,7 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
   'tt_content',
   'content',
-  'bodytext, --linebreak--, cards'
+  'bodytext, --linebreak--, tx_skeleton_content'
 );
 
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_card'] = 'skeleton-card';

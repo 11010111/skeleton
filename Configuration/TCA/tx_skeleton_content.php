@@ -2,7 +2,7 @@
 
 return [
   'ctrl' => [
-    'title' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_domain_model_card',
+    'title' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_content',
     'label' => 'title',
     'sortby' => 'sorting',
     'tstamp' => 'tstamp',
@@ -86,23 +86,41 @@ return [
     ],
     'title' => [
       'exclude' => 1,
-      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_domain_model_card.title',
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_content.title',
       'config' => [
         'type' => 'input',
         'size' => '50',
-        'eval' => 'trim,required'
+        'eval' => 'trim'
       ]
     ],
     'description' => [
       'exclude' => 1,
-      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_domain_model_card.description',
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_content.description',
       'config' => [
         'type' => 'text',
         'eval' => 'trim',
+        'enableRichtext' => true,
+        'richtextConfiguration' => 'skeleton'
+      ]
+    ],
+    'link' => [
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_content.link',
+      'config' => [
+        'type' => 'link',
+        'size' => 50,
+        'nullable' => 'true',
+        'default' => null,
+        // 'allowedTypes' => ['page', 'url', 'record'],
+        // 'appearance' => [
+        //   'enableBrowser' => false,
+        //   'browserTitle' => 'Browser title',
+        //   'allowedFileExtensions' => ['jpg', 'png', 'pdf'],
+        //   'allowedOptions' => ['params', 'rel', 'class', 'target', 'title']
+        // ]
       ]
     ]
   ],
   'types' => [
-    '0' => ['showitem' => 'image, assets, title, description']
+    '0' => ['showitem' => 'image, assets, title, description, link']
   ]
 ];
