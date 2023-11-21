@@ -234,8 +234,8 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'card' => [
-      'label' => 'Card',
-      'description' => 'Cards',
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
+      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
       'config' => [
         'type' => 'inline',
         'foreign_table' => 'tx_skeleton_domain_model_card',
