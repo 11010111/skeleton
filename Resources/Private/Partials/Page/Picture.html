@@ -1,0 +1,84 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{file.link}">
+  <f:then>
+    <f:if condition="{file.title} && {file.extension} == svg">
+      <f:then>
+        <f:link.typolink parameter="{file.link}" title="{file.title}" additionalParams="{aria-label: file.alternative}">
+          <f:render section="Picture" arguments="{_all}" />
+        </f:link.typolink>
+      </f:then>
+      <f:else>
+        <f:link.typolink parameter="{file.link}">
+          <f:render section="Picture" arguments="{_all}" />
+        </f:link.typolink>
+      </f:else>
+    </f:if>
+  </f:then>
+  <f:else>
+    <f:render section="Picture" arguments="{_all}" />
+  </f:else>
+</f:if>
+
+<f:section name="Picture">
+  <f:if condition="{file.description}">
+    <f:then>
+      <figure>
+        <f:render section="File" arguments="{_all}" />
+
+        <f:if condition="{file.description}">
+          <figcaption>{file.description}</figcaption>
+        </f:if>
+      </figure>
+    </f:then>
+    <f:else>
+      <f:render section="File" arguments="{_all}" />
+    </f:else>
+  </f:if>
+</f:section>
+
+<f:section name="File">
+  <f:if condition="{file.extension} == svg">
+    <f:then>
+      <f:cObject typoscriptObjectPath="lib.svg"
+        data="{src: '{skeleton:replace(search: \'/fileadmin\', replace: \'fileadmin\', subject: file.publicUrl)}'}" />
+    </f:then>
+    <f:else>
+      <picture>
+        <source media="(min-width: 1536px)"
+          srcset="{f:uri.image(image: file, maxWidth: 1920, cropVariant: 'default', treatIdAsReference: true, fileExtension: 'webp')}"
+          type="image/webp"
+        />
+        <source media="(min-width: 1280px)"
+          srcset="{f:uri.image(image: file, maxWidth: 1536, cropVariant: 'default', treatIdAsReference: true, fileExtension: 'webp')}"
+          type="image/webp"
+        />
+        <source media="(min-width: 1024px)"
+          srcset="{f:uri.image(image: file, maxWidth: 1280, cropVariant: 'tablet', treatIdAsReference: true, fileExtension: 'webp')}"
+          type="image/webp"
+        />
+        <source media="(min-width: 640px)"
+          srcset="{f:uri.image(image: file, maxWidth: 1024, cropVariant: 'tablet', treatIdAsReference: true, fileExtension: 'webp')}"
+          type="image/webp"
+        />
+        <source
+          srcset="{f:uri.image(image: file, maxWidth: 640, cropVariant: 'mobile', treatIdAsReference: true, fileExtension: 'webp')}"
+          type="image/webp"
+        />
+
+        <f:image
+          image="{file}"
+          title="{file.title}"
+          alt="{file.alternative}"
+          maxWidth="{f:if(condition:'{maxWidth}',then:'{maxWidth}',else:'640')}"
+          maxHeight="{f:if(condition:'{maxHeight}',then:'{maxHeight}',else:'304')}"
+          loading="{f:if(condition:'{loading}',then:'{loading}',else:'{settings.media.lazyLoading}')}"
+          width="{f:if(condition:'{width}',then:'{width}',else:'auto')}"
+          height="{f:if(condition:'{height}',then:'{height}',else:'auto')}"
+        />
+      </picture>
+    </f:else>
+  </f:if>
+</f:section>
+
+</html>
