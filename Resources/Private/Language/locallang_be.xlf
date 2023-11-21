@@ -15,6 +15,9 @@
             </trans-unit>
 
             <!-- tt_content fields -->
+            <trans-unit id="frame_class.description">
+                <source>Frame Class</source>
+            </trans-unit>
             <trans-unit id="container">
                 <source>Container</source>
             </trans-unit>
@@ -44,6 +47,13 @@
             </trans-unit>
             <trans-unit id="tag">
                 <source>Tag</source>
+            </trans-unit>
+
+            <trans-unit id="skeleton_card.label">
+                <source>Cards</source>
+            </trans-unit>
+            <trans-unit id="skeleton_card.description">
+                <source>Multiple Cards</source>
             </trans-unit>
         </body>
     </file>

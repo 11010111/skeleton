@@ -208,9 +208,9 @@ lib.contentElement {
 #### CUSTOM CONTENT TEMPLATE NAME ####
 ######################################
 tt_content {
-  skeleton_text =< lib.contentElement
-  skeleton_text {
-    templateName = SkeletonText
+  skeleton_card =< lib.contentElement
+  skeleton_card {
+    templateName = SkeletonCard
   }
 }
 

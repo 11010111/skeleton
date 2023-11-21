@@ -6,8 +6,17 @@
             <authorEmail></authorEmail>
         </header>
         <body>
-            <trans-unit id="example">
-                <source>Example</source>
+            <trans-unit id="tx_skeleton_domain_model_card">
+                <source>Cards</source>
+            </trans-unit>
+            <trans-unit id="tx_skeleton_domain_model_card.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tx_skeleton_domain_model_card.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_skeleton_domain_model_card.description">
+                <source>Description</source>
             </trans-unit>
         </body>
     </file>

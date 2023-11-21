@@ -10,14 +10,6 @@
                 <source>Home</source>
                 <target state="translated">Startseite</target>
             </trans-unit>
-            <trans-unit id="skeleton_text.label">
-                <source>Text</source>
-                <target state="translated">Text</target>
-            </trans-unit>
-            <trans-unit id="skeleton_text.description">
-                <source>Write text for your content</source>
-                <target state="translated">Schreib deinen Text Inhalt</target>
-            </trans-unit>
         </body>
     </file>
 </xliff>

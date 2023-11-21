@@ -9,12 +9,6 @@
             <trans-unit id="home">
                 <source>Home</source>
             </trans-unit>
-            <trans-unit id="skeleton_text.label">
-                <source>Text</source>
-            </trans-unit>
-            <trans-unit id="skeleton_text.description">
-                <source>Write text for your content</source>
-            </trans-unit>
         </body>
     </file>
 </xliff>

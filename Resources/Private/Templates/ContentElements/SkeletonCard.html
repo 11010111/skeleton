@@ -1,10 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:comment>
-  <f:asset.css identifier="text" href="EXT:skeleton/Resources/Public/Css/text.css" />
+  <f:asset.css identifier="card" href="EXT:skeleton/Resources/Public/Css/card.css" />
 </f:comment>
 
-<skeleton:wrapper render="{data}" class="text">
+<skeleton:wrapper render="{data}" class="cards">
   <skeleton:container render="{data}">
     <f:if condition="{data.bodytext}">
       <div class="rte-content">{data.bodytext -> f:format.html()}</div>
