@@ -5,7 +5,7 @@ mod.wizards.newContentElement.wizardItems {
   common {
     elements {
       skeleton_card {
-        iconIdentifier = skeleton-card
+        iconIdentifier = content-menu-card
         title = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label
         description = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description
         tt_content_defValues {

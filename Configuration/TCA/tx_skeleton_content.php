@@ -18,7 +18,7 @@ return [
     'enablecolumns' => [
       'disabled' => 'hidden'
     ],
-    'iconfile' => 'EXT:skeleton/Resources/Public/Icons/Extension.svg'
+    'iconfile' => 'EXT:skeleton/Resources/Public/Icons/content-menu-card.svg'
   ],
   'interface' => [
     'showRecordFieldList' => 'image, title, description'

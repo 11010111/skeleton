@@ -274,7 +274,7 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
     'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
     'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
     'value' => 'skeleton_card',
-    'icon' => 'skeleton-card',
+    'icon' => 'content-menu-card',
     'group' => 'common'
   ],
   'textmedia',
@@ -294,7 +294,7 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
   'bodytext, --linebreak--, tx_skeleton_content'
 );
 
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_card'] = 'skeleton-card';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_card'] = 'content-menu-card';
 
 $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
   'showitem' => '
