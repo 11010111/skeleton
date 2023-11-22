@@ -23,6 +23,7 @@ CREATE TABLE tt_content
   color               VARCHAR(30) DEFAULT '' NOT NULL,
   background          VARCHAR(30) DEFAULT '' NOT NULL,
   tag                 VARCHAR(30) DEFAULT '' NOT NULL,
+  rte_width           VARCHAR(30) DEFAULT '' NOT NULL,
   tx_skeleton_content INT(11)     DEFAULT 0  NOT NULL
 );
 

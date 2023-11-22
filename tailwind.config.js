@@ -57,7 +57,7 @@ export default {
     "container-xl",
     "text-left",
     "text-center",
-    "text-right",
+    "text-end",
     "text-justify",
     "ml-0",
     "mr-0",

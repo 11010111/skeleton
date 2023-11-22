@@ -10,11 +10,14 @@ editor:
 
     style:
       definitions:
-        - { name: "Orange title H2", element: "h2", classes: ["orange"] }
-        - { name: "Orange Paragraph", element: "p", classes: ["orange"] }
+        - { name: "Font Size 12", element: "p", classes: ["font-size-12"] }
+        - { name: "Font Size 14", element: "p", classes: ["font-size-14"] }
+        - { name: "Font Size 18", element: "p", classes: ["font-size-18"] }
+        - { name: "Font Size 20", element: "p", classes: ["font-size-20"] }
         - { name: "Quote / Citation", element: "blockquote", classes: ["quote"] }
         - { name: "Code block", element: "code", classes: ["code"] }
-        - { name: "Yellow marker", element: "span", classes: ["yellow"] }
+        - { name: "Yellow marker", element: "span", classes: ["yellow-marker"] }
+        - { name: "Yellow marker 1/2", element: "span", classes: ["yellow-marker-half"] }
 
     heading:
       options:

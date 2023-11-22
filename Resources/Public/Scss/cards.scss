@@ -1,21 +1,6 @@
 @import "functions";
 
 .cards {
-  .cards-rte {
-    width: 100%;
-    max-width: rem(800);
-
-    p,
-    ul,
-    ol {
-      width: 100%;
-
-      @media (min-width: breakpoint(xl)) {
-        max-width: 90%;
-      }
-    }
-  }
-
   .cards-wrapper {
     display: grid;
     column-gap: rem(20);

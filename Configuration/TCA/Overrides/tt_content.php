@@ -233,6 +233,18 @@ defined('TYPO3') or die('Access denied.');
         ]
       ]
     ],
+    'rte_width' => [
+      'exclude' => 1,
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:rte_width',
+      'description' => '',
+      'config' => [
+        'type' => 'select',
+        'renderType' => 'selectSingle',
+        'items' => [
+          ['Default', '']
+        ]
+      ]
+    ],
     'tx_skeleton_content' => [
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
       'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
@@ -264,6 +276,20 @@ defined('TYPO3') or die('Access denied.');
   'container, breakpoint, alignment, --linebreak--, mt, mb, pt, pb, --linebreak--, tablet_bp, --linebreak--, tablet_mt, tablet_mb, tablet_pt, tablet_pb, --linebreak--, desktop_bp, --linebreak--, desktop_mt, desktop_mb, desktop_pt, desktop_pb, --linebreak--, background, color, --linebreak--, tag'
 );
 
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+  'tt_content',
+  'rte_width',
+  'general',
+  'after:date'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'headers',
+  'rte_width',
+  'after:date'
+);
+
 $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:frame_class.description';
 
 // CUSTOM CONTENT
@@ -290,8 +316,26 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
   'tt_content',
+  'text',
+  'bodytext'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'categories',
+  'categories'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'description',
+  'rowDescription'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
   'content',
-  'bodytext, --linebreak--, tx_skeleton_content'
+  'tx_skeleton_content'
 );
 
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_card'] = 'content-menu-card';
@@ -300,13 +344,20 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
   'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
       --palette--;;general,
-      --palette--;;header,
+      --palette--;;headers,
+      --palette--;;text,
       --palette--;;content,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
       --palette--;;frames,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
       --palette--;;hidden,
-      --palette--;;access
+      --palette--;;access,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+      --palette--;;language,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+      --palette--;;categories,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+      --palette--;;description,
   ',
   'columnsOverrides' => [
     'bodytext' => [

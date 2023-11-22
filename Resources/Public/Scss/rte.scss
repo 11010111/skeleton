@@ -6,6 +6,57 @@
   font-size: rem(12);
 }
 
+.font-size-14 {
+  font-size: rem(14);
+}
+
+.font-size-18 {
+  font-size: rem(18);
+}
+
 .font-size-20 {
   font-size: rem(20);
+}
+
+.w-400 {
+  display: block;
+  width: 100%;
+  max-width: rem(400);
+}
+
+.w-600 {
+  display: block;
+  width: 100%;
+  max-width: rem(600);
+}
+
+.w-800 {
+  display: block;
+  width: 100%;
+  max-width: rem(800);
+}
+
+.yellow-marker {
+  padding: 0 rem(2);
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.yellow-marker-half {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0 rem(2);
+  color: var(--black);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--yellow);
+    z-index: -1;
+  }
 }

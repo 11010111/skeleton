@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{data.header} || {data.subheader} || {data.date} || {data.bodytext}">
+  <div class="rte-wrapper{f:if(condition:'{data.header_position}',then:' rte-{data.header_position}')}">
+    <f:if condition="{data.rte_width}">
+      <f:then>
+        <div class="rte{f:if(condition:'{data.rte_width}',then:' {data.rte_width}')}">
+          <f:render section="RTE" arguments="{_all}" />
+        </div>
+      </f:then>
+      <f:else>
+        <f:render section="RTE" arguments="{_all}" />
+      </f:else>
+    </f:if>
+  </div>
+</f:if>
+
+<f:section name="RTE">
+  <f:render section="Header" optional="true">
+    <f:render partial="Header/All" arguments="{_all}" />
+  </f:render>
+  {data.bodytext -> f:format.html()}
+</f:section>
+
+</html>

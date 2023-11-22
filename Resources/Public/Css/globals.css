@@ -5,6 +5,64 @@
   font-stretch: 25% 150%;
   font-display: swap;
 }
+.font-size-12 {
+  font-size: 0.75rem;
+}
+
+.font-size-14 {
+  font-size: 0.875rem;
+}
+
+.font-size-18 {
+  font-size: 1.125rem;
+}
+
+.font-size-20 {
+  font-size: 1.25rem;
+}
+
+.w-400 {
+  display: block;
+  width: 100%;
+  max-width: 25rem;
+}
+
+.w-600 {
+  display: block;
+  width: 100%;
+  max-width: 37.5rem;
+}
+
+.w-800 {
+  display: block;
+  width: 100%;
+  max-width: 50rem;
+}
+
+.yellow-marker {
+  padding: 0 0.125rem;
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.yellow-marker-half {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0 0.125rem;
+  color: var(--black);
+}
+.yellow-marker-half::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--yellow);
+  z-index: -1;
+}
+
 :root {
   /* Anchor Scroll Padding */
   --scroll-pt: 4.5rem;
@@ -12,6 +70,7 @@
   --black: #000;
   --white: #fff;
   --lightgrey: #eee;
+  --yellow: #ffff00;
   --glass-light: rgba(234, 233, 227, 0.1);
   --glass-dark: rgba(0, 0, 0, 0.65);
   --gradient: linear-gradient(to right, #f15757, #3b82f6);
@@ -390,4 +449,50 @@ figure figcaption {
   to {
     rotate: 360deg;
   }
+}
+time {
+  display: block;
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+}
+
+.header-headings h1, .header-headings h2, .header-headings h3, .header-headings h4, .header-headings h5, .header-headings h6 {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--gradient);
+  width: fit-content;
+}
+
+.rte-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rte-center {
+  display: flex;
+  justify-content: center;
+}
+
+.rte-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headline-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

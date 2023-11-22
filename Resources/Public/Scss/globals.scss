@@ -1,5 +1,6 @@
 @import "fonts";
 @import "functions";
+@import "rte";
 
 :root {
   /* Anchor Scroll Padding */
@@ -9,6 +10,7 @@
   --black: #000;
   --white: #fff;
   --lightgrey: #eee;
+  --yellow: #ffff00;
   --glass-light: rgba(234, 233, 227, 0.1);
   --glass-dark: rgba(0, 0, 0, 0.65);
   --gradient: linear-gradient(to right, #f15757, #3b82f6);
@@ -386,4 +388,53 @@ figure {
   to {
     rotate: 360deg;
   }
+}
+
+time {
+  display: block;
+  margin: 0 0 rem(16);
+  font-size: rem(12);
+}
+
+.header-headings {
+  h1, h2, h3, h4, h5, h6 {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: var(--gradient);
+    width: fit-content;
+  }
+}
+
+.rte-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rte-center {
+  display: flex;
+  justify-content: center;
+}
+
+.rte-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headline-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

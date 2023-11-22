@@ -545,6 +545,14 @@ TCEFORM {
         section = Section
       }
     }
+
+    rte_width {
+      addItems {
+        w-400 = 400px
+        w-600 = 600px
+        w-800 = 800px
+      }
+    }
   }
 
   sys_file_reference.crop.config.cropVariants {

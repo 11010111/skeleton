@@ -48,6 +48,9 @@
             <trans-unit id="tag">
                 <source>Tag</source>
             </trans-unit>
+            <trans-unit id="rte_width">
+                <source>RTE Width</source>
+            </trans-unit>
 
             <trans-unit id="skeleton_card.label">
                 <source>Cards</source>
