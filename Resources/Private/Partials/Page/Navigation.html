@@ -13,7 +13,17 @@
                 <f:then>
                   <f:for each="{level1.media}" as="file" iteration="iter">
                     <f:if condition="{iter.isFirst}">
-                      <f:image image="{file}" />
+                      <f:if condition="{file.extension} == svg">
+                        <f:then>
+                          <f:cObject
+                            typoscriptObjectPath="lib.svg"
+                            data="{src: '{skeleton:replace(search: \'/fileadmin\', replace: \'fileadmin\', subject: file.publicUrl)}'}"
+                          />
+                        </f:then>
+                        <f:else>
+                          <f:image image="{file}" />
+                        </f:else>
+                      </f:if>
                     </f:if>
                   </f:for>
                 </f:then>
