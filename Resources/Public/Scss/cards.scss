@@ -39,36 +39,24 @@
       position: relative;
       border-radius: rem(8);
       padding: rem(2);
-      box-shadow: 0 rem(10) rem(10) rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.1);
       overflow: hidden;
 
       &::before {
         content: '';
         position: absolute;
-        top: -50%;
-        left: -50%;
-        background: var(--lightgrey);
-        width: 200%;
-        height: 200%;
+        top: -300%;
+        left: -100%;
+        right: -100%;
+        bottom: -300%;
+        background: var(--white);
         z-index: -2;
       }
 
       &:hover {
         &::before {
-          background: linear-gradient(to right, #f15757, #0361f9);
-          animation: card-anim 5s infinite;
-        }
-      }
-
-      @keyframes card-anim {
-        from {
-          transform: rotate(0);
-          transform-origin: center;
-        }
-
-        to {
-          transform: rotate(360deg);
-          transform-origin: center;
+          background: var(--gradient);
+          animation: gradient-anim 5s infinite;
         }
       }
 
@@ -81,7 +69,7 @@
         .card-image {
           border-top-left-radius: rem(6);
           border-top-right-radius: rem(6);
-          background-color: var(--lightgrey);
+          background-color: var(--white);
 
           figure {
             figcaption {
@@ -139,7 +127,9 @@
 
       .card-inner-not-content {
         .card-image {
-          img, svg {
+
+          img,
+          svg {
             aspect-ratio: initial;
           }
         }

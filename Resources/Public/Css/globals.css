@@ -14,6 +14,7 @@
   --lightgrey: #eee;
   --glass-light: rgba(234, 233, 227, 0.1);
   --glass-dark: rgba(0, 0, 0, 0.65);
+  --gradient: linear-gradient(to right, #f15757, #3b82f6);
   /* Navigation Container */
   --max-width-nav: 102.5rem;
   --max-mx-nav: calc((100% - var(--max-width-nav)) / 2);
@@ -289,4 +290,104 @@ figure figcaption {
   width: 100%;
   color: var(--white);
   background-color: var(--glass-dark);
+}
+
+@media (min-width: 80em) {
+  .desktop-btn {
+    position: relative;
+    color: var(--black);
+    background: transparent;
+    border-radius: 0.25rem;
+    border: 0;
+    overflow: hidden;
+    transition: color 0.3s;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    z-index: 2;
+  }
+  .desktop-btn::before {
+    content: "";
+    position: absolute;
+    top: -300%;
+    left: -25%;
+    right: -25%;
+    bottom: -300%;
+    background: var(--gradient);
+    border-radius: 0.25rem;
+    z-index: -2;
+  }
+  .desktop-btn::after {
+    content: "";
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    background: var(--white);
+    border-radius: 0.125rem;
+    transition: background-color 0.3s;
+    z-index: -1;
+  }
+  .desktop-btn:hover {
+    color: var(--white);
+  }
+  .desktop-btn:hover::before {
+    animation: gradient-anim 5s infinite;
+  }
+  .desktop-btn:hover::after {
+    background: transparent;
+  }
+}
+.primary-btn {
+  position: relative;
+  color: var(--black);
+  background: transparent;
+  border-radius: 0.25rem;
+  border: 0;
+  overflow: hidden;
+  transition: color 0.3s;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  z-index: 2;
+}
+.primary-btn::before {
+  content: "";
+  position: absolute;
+  top: -300%;
+  left: -25%;
+  right: -25%;
+  bottom: -300%;
+  background: var(--gradient);
+  border-radius: 0.25rem;
+  z-index: -2;
+}
+.primary-btn::after {
+  content: "";
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  background: var(--white);
+  border-radius: 0.125rem;
+  transition: background-color 0.3s;
+  z-index: -1;
+}
+.primary-btn:hover {
+  color: var(--white);
+}
+.primary-btn:hover::before {
+  animation: gradient-anim 5s infinite;
+}
+.primary-btn:hover::after {
+  background: transparent;
+}
+
+@keyframes gradient-anim {
+  from {
+    rotate: 0;
+  }
+  to {
+    rotate: 360deg;
+  }
 }
