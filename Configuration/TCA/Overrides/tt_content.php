@@ -7,7 +7,6 @@ defined('TYPO3') or die('Access denied.');
   [
     'container' => [
       'exclude' => 1,
-      'onChange' => 'reload',
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:container',
       'description' => 'Container',
       'config' => [
