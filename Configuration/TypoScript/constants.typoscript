@@ -13,11 +13,6 @@ styles {
     partialRootPath = EXT:skeleton/Resources/Private/Partials/ContentElements/
     templateRootPath = EXT:skeleton/Resources/Private/Templates/ContentElements/
   }
-
-  content {
-    textmedia.maxW = 1280
-    textmedia.maxWInText = 640
-  }
 }
 
 
@@ -37,7 +32,7 @@ page {
     keywords =
     viewport = width=device-width, initial-scale=1
     robots = index,follow
-    apple-mobile-web-app-capable = no
+    apple-mobile-web-app-capable = yes
   }
 
   tracking {
