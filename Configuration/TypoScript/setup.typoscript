@@ -68,6 +68,7 @@ page {
         levels = 2
         includeSpacer = 1
         as = navigation
+        
         dataProcessing.10 = files
         dataProcessing.10 {
           references.fieldName = media
