@@ -367,3 +367,12 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
     ]
   ]
 ];
+
+if (isset($GLOBALS['TCA']['tt_content']['types']['tx_powermail'])) {
+  $GLOBALS['TCA']['tt_content']['types']['tx_powermail']['showitem'] = implode([
+    $GLOBALS['TCA']['tt_content']['types']['tx_powermail']['showitem'] . '
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+      --palette--;;frames,
+    '
+  ]);
+}
