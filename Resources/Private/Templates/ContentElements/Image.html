@@ -7,12 +7,7 @@
   <skeleton:container render="{data}">
     <f:render partial="Rte" arguments="{_all}" />
 
-    <f:variable name="style">
-
-    </f:variable>
-
-    <div
-      class="image-wrapper{f:if(condition:'{gallery.position.horizontal}',then:' image-{gallery.position.horizontal}')}">
+    <div class="image-wrapper{f:if(condition:'{gallery.position.horizontal}',then:' image-{gallery.position.horizontal}')}">
       <f:render section="Files" arguments="{_all}" />
     </div>
   </skeleton:container>
