@@ -344,6 +344,14 @@ h6,
   font-weight: 300;
 }
 
+p {
+  margin: 0 0 1rem;
+}
+
+p:last-of-type {
+  margin: 0;
+}
+
 figure {
   position: relative;
 }
