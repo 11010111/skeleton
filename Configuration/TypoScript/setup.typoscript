@@ -182,6 +182,7 @@ page {
   }
 
   includeJSFooter {
+    lightbox = EXT:skeleton/Resources/Public/JavaScript/Dist/fslightbox.js
     main = EXT:skeleton/Resources/Public/Out/main.bundle.js
     main.type = module
   }
@@ -202,6 +203,17 @@ lib.contentElement {
   layoutRootPaths.20 = EXT:skeleton/Resources/Private/Layouts/ContentElements/
   partialRootPaths.20 = EXT:skeleton/Resources/Private/Partials/ContentElements/
   templateRootPaths.20 = EXT:skeleton/Resources/Private/Templates/ContentElements/
+
+  settings {
+    media {
+      popup {
+        linkParams.ATagParams.dataWrap = class="lightbox" rel="lightbox[{field:uid}]" data-fslightbox="lightbox[{field:uid}]"
+        directImageLink = 1
+        JSwindow = 0
+        wrap >
+      }
+    }
+  }
 }
 
 

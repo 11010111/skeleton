@@ -1,0 +1,23 @@
+.image .image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+}
+.image .image-wrapper img {
+  width: initial;
+  height: initial;
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+.image .image-wrapper a {
+  width: fit-content;
+}
+.image .image-left {
+  justify-content: flex-start;
+}
+.image .image-center {
+  justify-content: center;
+}
+.image .image-right {
+  justify-content: flex-end;
+}

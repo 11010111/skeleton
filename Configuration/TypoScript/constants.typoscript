@@ -13,6 +13,10 @@ styles {
     partialRootPath = EXT:skeleton/Resources/Private/Partials/ContentElements/
     templateRootPath = EXT:skeleton/Resources/Private/Templates/ContentElements/
   }
+
+  content {
+    textmedia.linkWrap.lightboxEnabled = 1
+  }
 }
 
 

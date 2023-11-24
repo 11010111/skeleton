@@ -1,0 +1,32 @@
+@import "functions";
+
+.image {
+  .image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(20);
+
+    img {
+      width: initial;
+      height: initial;
+      max-width: 100%;
+      border-radius: rem(8);
+    }
+
+    a {
+      width: fit-content;
+    }
+  }
+
+  .image-left {
+    justify-content: flex-start;
+  }
+
+  .image-center {
+    justify-content: center;
+  }
+
+  .image-right {
+    justify-content: flex-end;
+  }
+}

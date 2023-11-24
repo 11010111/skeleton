@@ -553,6 +553,22 @@ TCEFORM {
         w-800 = 800px
       }
     }
+
+    imagewidth {
+      disabled = 1
+    }
+
+    imageheight {
+      disabled = 1
+    }
+
+    imagecols {
+      disabled = 1
+    }
+
+    imageborder {
+      disabled = 1
+    }
   }
 
   sys_file_reference.crop.config.cropVariants {
