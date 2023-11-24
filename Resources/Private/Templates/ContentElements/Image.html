@@ -1,4 +1,5 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:asset.css identifier="image" href="EXT:skeleton/Resources/Public/Css/image.css" />
 
@@ -6,8 +7,12 @@
   <skeleton:container render="{data}">
     <f:render partial="Rte" arguments="{_all}" />
 
-    <div class="image-wrapper{f:if(condition:'{gallery.position.horizontal}',then:' image-{gallery.position.horizontal}')}"
-      style="{f:if(condition: '{gallery.columnSpacing}', then: 'gap: {gallery.columnSpacing / 16}rem;')}">
+    <f:variable name="style">
+
+    </f:variable>
+
+    <div
+      class="image-wrapper{f:if(condition:'{gallery.position.horizontal}',then:' image-{gallery.position.horizontal}')}">
       <f:render section="Files" arguments="{_all}" />
     </div>
   </skeleton:container>
@@ -15,16 +20,18 @@
 
 <f:section name="Files">
   <f:for each="{files}" as="file">
-    <f:if condition="{data.image_zoom} && !{file.link}">
-      <f:then>
-        <ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
+    <div class="grid-item">
+      <f:if condition="{data.image_zoom} && !{file.link}">
+        <f:then>
+          <ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
+            <f:render partial="Picture" arguments="{_all}" />
+          </ce:link.clickEnlarge>
+        </f:then>
+        <f:else>
           <f:render partial="Picture" arguments="{_all}" />
-        </ce:link.clickEnlarge>
-      </f:then>
-      <f:else>
-        <f:render partial="Picture" arguments="{_all}" />
-      </f:else>
-    </f:if>
+        </f:else>
+      </f:if>
+    </div>
   </f:for>
 </f:section>
 

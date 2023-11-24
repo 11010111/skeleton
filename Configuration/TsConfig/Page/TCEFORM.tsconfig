@@ -3,12 +3,22 @@
 #
 TCEFORM {
   tt_content {
-    CType {
-      #removeItems = image,textpic
-    }
+    #CType {
+    #  removeItems = image,textpic
+    #}
 
     layout {
       disabled = 1
+    }
+
+    header_layout {
+      altLabels {
+        1 = Heading 1
+        2 = Heading 2
+        3 = Heading 3
+        4 = Heading 4
+        5 = Heading 5
+      }
     }
 
     space_before_class {
@@ -568,6 +578,14 @@ TCEFORM {
 
     imageborder {
       disabled = 1
+    }
+
+    imageorient {
+      types {
+        image {
+          disabled = 1
+        }
+      }
     }
   }
 

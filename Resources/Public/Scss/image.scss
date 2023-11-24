@@ -1,20 +1,44 @@
 @import "functions";
 
 .image {
-  .image-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: rem(20);
+  overflow: hidden;
 
-    img {
-      width: initial;
-      height: initial;
-      max-width: 100%;
-      border-radius: rem(8);
+  .image-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: dense;
+    gap: rem(10);
+
+    .grid-item {
+      grid-row: span 2;
     }
 
-    a {
-      width: fit-content;
+    .grid-item:nth-child(even) {
+      grid-column: span 4;
+    }
+
+    .grid-item:nth-child(odd) {
+      grid-column: span 6;
+    }
+
+    .grid-item:nth-child(3n) {
+      grid-column: span 2;
+    }
+
+    .grid-item:nth-child(4n) {
+      grid-column: span 8;
+    }
+
+    img {
+      width: 100%;
+      height: rem(200);
+      max-width: 100%;
+      border-radius: rem(8);
+      object-fit: cover;
+
+      @media (min-width: breakpoint(xl)) {
+        height: rem(400);
+      }
     }
   }
 
