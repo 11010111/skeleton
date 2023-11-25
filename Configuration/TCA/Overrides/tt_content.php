@@ -6,7 +6,6 @@ defined('TYPO3') or die('Access denied.');
   'tt_content',
   [
     'container' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:container',
       'description' => 'Container',
       'config' => [
@@ -18,7 +17,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'breakpoint' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:breakpoint',
       'description' => 'Container Breakpoint',
       'config' => [
@@ -27,7 +25,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'alignment' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:alignment',
       'description' => 'Container Alignment',
       'config' => [
@@ -39,7 +36,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'mt' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mt',
       'description' => 'Mobile',
       'config' => [
@@ -51,7 +47,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'mb' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mb',
       'description' => 'Mobile',
       'config' => [
@@ -63,7 +58,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'pt' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pt',
       'description' => 'Mobile',
       'config' => [
@@ -75,7 +69,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'pb' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pb',
       'description' => 'Mobile',
       'config' => [
@@ -87,7 +80,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'tablet_bp' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:breakpoint',
       'description' => 'Tablet Breakpoint',
       'config' => [
@@ -96,7 +88,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'tablet_mt' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mt',
       'description' => 'Tablet',
       'config' => [
@@ -108,7 +99,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'tablet_mb' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mb',
       'description' => 'Tablet',
       'config' => [
@@ -120,7 +110,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'tablet_pt' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pt',
       'description' => 'Tablet',
       'config' => [
@@ -132,7 +121,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'tablet_pb' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pb',
       'description' => 'Tablet',
       'config' => [
@@ -144,7 +132,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'desktop_bp' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:breakpoint',
       'description' => 'Desktop Breakpoint',
       'config' => [
@@ -153,7 +140,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'desktop_mt' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mt',
       'description' => 'Desktop',
       'config' => [
@@ -165,7 +151,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'desktop_mb' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:mb',
       'description' => 'Desktop',
       'config' => [
@@ -177,7 +162,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'desktop_pt' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pt',
       'description' => 'Desktop',
       'config' => [
@@ -189,7 +173,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'desktop_pb' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:pb',
       'description' => 'Desktop',
       'config' => [
@@ -201,7 +184,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'background' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:background',
       'description' => 'Background',
       'config' => [
@@ -211,7 +193,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'color' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:color',
       'description' => 'Color',
       'config' => [
@@ -221,7 +202,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'tag' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:tag',
       'description' => 'HTML Tag',
       'config' => [
@@ -233,7 +213,6 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'rte_width' => [
-      'exclude' => 1,
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:rte_width',
       'description' => '',
       'config' => [
