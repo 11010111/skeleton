@@ -587,6 +587,14 @@ TCEFORM {
         }
       }
     }
+
+    pi_flexform {
+      types {
+        skeleton_card {
+          label = Card Options
+        }
+      }
+    }
   }
 
   sys_file_reference.crop.config.cropVariants {
