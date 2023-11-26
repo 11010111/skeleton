@@ -1,6 +1,6 @@
 <?php
 
-namespace Konstantinschneider\Skeleton\ViewHelpers;
+namespace KSNC\Skeleton\ViewHelpers;
 
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
@@ -8,7 +8,7 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 /**
  * Class WrapperViewHelper
  *
- * @package Konstantinschneider\Skeleton\ViewHelpers
+ * @package KSNC\Skeleton\ViewHelpers
  */
 class WrapperViewHelper extends AbstractTagBasedViewHelper
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Konstantinschneider\Skeleton\ViewHelpers;
+namespace KSNC\Skeleton\ViewHelpers;
 
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 /**
  * Class ContainerViewHelper
  *
- * @package Konstantinschneider\Skeleton\ViewHelpers
+ * @package KSNC\Skeleton\ViewHelpers
  */
 class ContainerViewHelper extends AbstractTagBasedViewHelper
 {

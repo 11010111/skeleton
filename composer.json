@@ -1,5 +1,5 @@
 {
-  "name": "konstantinschneider/skeleton",
+  "name": "ksnc/skeleton",
   "type": "typo3-cms-extension",
   "description": "Website Distribution",
   "homepage": "https://www.konstantinschneider.de",
@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Konstantinschneider\\Skeleton\\": "Classes/"
+      "KSNC\\Skeleton\\": "Classes/"
     }
   },
   "extra": {

@@ -4,5 +4,5 @@ services:
     autoconfigure: true
     public: false
 
-  Konstantinschneider\Skeleton\:
+  KSNC\Skeleton\:
     resource: '../Classes/*'

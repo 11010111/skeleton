@@ -1,6 +1,6 @@
 <?php
 
-namespace Konstantinschneider\Skeleton\ViewHelpers;
+namespace KSNC\Skeleton\ViewHelpers;
 
 use Closure;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
@@ -9,7 +9,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class ReplaceViewHelper
  *
- * @package Konstantinschneider\Skeleton\ViewHelpers
+ * @package KSNC\Skeleton\ViewHelpers
  */
 class ReplaceViewHelper extends AbstractViewHelper
 {

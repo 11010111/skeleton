@@ -18,7 +18,7 @@ $EM_CONF[$_EXTKEY] = [
   ],
   'autoload' => [
     'psr-4' => [
-      'Konstantinschneider\\Skeleton\\' => 'Classes',
+      'KSNC\\Skeleton\\' => 'Classes',
     ],
   ],
   'state' => 'stable',
@@ -27,6 +27,6 @@ $EM_CONF[$_EXTKEY] = [
   'clearCacheOnLoad' => 1,
   'author' => 'Konstantin Schneider',
   'author_email' => 'schneider.konstantin@outlook.com',
-  'author_company' => '',
+  'author_company' => 'Private',
   'version' => '2.0.0',
 ];
