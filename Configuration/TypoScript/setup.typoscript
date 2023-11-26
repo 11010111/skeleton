@@ -329,6 +329,7 @@ config {
   renderCharset = utf-8
   metaCharset = utf-8
   doctype = html5
+  removePageCss = {$config.removePageCss}
   removeDefaultJS = {$config.removeDefaultJS}
   inlineStyle2TempFile = 1
   admPanel = {$config.admPanel}
