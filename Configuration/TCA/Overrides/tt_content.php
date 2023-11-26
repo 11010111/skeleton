@@ -270,21 +270,9 @@ defined('TYPO3') or die('Access denied.');
 
 $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:frame_class.description';
 
-// CUSTOM CONTENT
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-  'tt_content',
-  'CType',
-  [
-    'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
-    'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
-    'value' => 'skeleton_card',
-    'icon' => 'content-menu-card',
-    'group' => 'common'
-  ],
-  'textmedia',
-  'after'
-);
-
+######################
+### CUSTOM CONTENT ###
+######################
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
   'tt_content',
   'tx_skeleton_content',
@@ -313,10 +301,22 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
   'tt_content',
   'content',
-  'tx_skeleton_content'
+  'tx_skeleton_content, --linebreak--, pi_flexform'
 );
 
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_card'] = 'content-menu-card';
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+  'tt_content',
+  'CType',
+  [
+    'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
+    'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
+    'value' => 'skeleton_card',
+    'icon' => 'content-menu-card',
+    'group' => 'common'
+  ]
+);
 
 $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
   'showitem' => '
@@ -346,6 +346,12 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
     ]
   ]
 ];
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+  '*',
+  'FILE:EXT:skeleton/Configuration/FlexForm/skeleton_card.xml',
+  'skeleton_card'
+);
 
 if (isset($GLOBALS['TCA']['tt_content']['types']['tx_powermail'])) {
   $GLOBALS['TCA']['tt_content']['types']['tx_powermail']['showitem'] = implode([

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+  <meta>
+    <langDisable>0</langDisable>
+  </meta>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>Cards</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <!-- Add settings here ... -->
+          <border>
+            <TCEforms>
+              <label>Border</label>
+              <config>
+                <type>check</type>
+                <default>0</default>
+              </config>
+            </TCEforms>
+          </border>
+
+          <!-- <cards_inline>
+            <TCEforms>
+              <label>Cards</label>
+              <config>
+                <type>inline</type>
+                <foreign_table>tx_skeleton_content</foreign_table>
+                <foreign_field>uid_foreign</foreign_field>
+                <foreign_table_field>uid_local</foreign_table_field>
+                <appearance>
+                    <showSynchronizationLink>true</showSynchronizationLink>
+                    <showAllLocalizationLink>true</showAllLocalizationLink>
+                    <showPossibleLocalizationRecords>true</showPossibleLocalizationRecords>
+                </appearance>
+              </config>
+            </TCEforms>
+          </cards_inline> -->
+          <!-- end of settings -->
+        </el>
+      </ROOT>
+    </sDEF>
+  </sheets>
+</T3DataStructure>
