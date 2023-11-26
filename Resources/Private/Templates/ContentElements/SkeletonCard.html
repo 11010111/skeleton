@@ -9,7 +9,7 @@
     <f:if condition="{tx_skeleton_content}">
       <div class="cards-wrapper">
         <f:for each="{tx_skeleton_content}" as="card">
-          <div class="card">
+          <div class="card{f:if(condition:'{flexForm.border}',then:' card-border')}">
             <div
               class="card-inner{f:if(condition:'{card.image}',else:' card-inner-not-image')}{f:if(condition:'{card.data.title} && {card.data.description} && {card.data.link}',then:' card-inner-not-content')}">
               <f:for each="{card.image}" as="image">

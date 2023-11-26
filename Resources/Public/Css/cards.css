@@ -23,7 +23,6 @@
 .cards .cards-wrapper .card {
   position: relative;
   border-radius: 0.5rem;
-  padding: 0.125rem;
   box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -36,10 +35,6 @@
   bottom: -300%;
   background: var(--white);
   z-index: -2;
-}
-.cards .cards-wrapper .card:hover::before {
-  background: var(--gradient);
-  animation: gradient-anim 5s infinite;
 }
 .cards .cards-wrapper .card .card-inner {
   width: 100%;
@@ -97,4 +92,11 @@
 .cards .cards-wrapper .card .card-inner-not-content .card-image img,
 .cards .cards-wrapper .card .card-inner-not-content .card-image svg {
   aspect-ratio: initial;
+}
+.cards .cards-wrapper .card-border {
+  padding: 0.125rem;
+}
+.cards .cards-wrapper .card-border:hover::before {
+  background: var(--gradient);
+  animation: gradient-anim 5s infinite;
 }

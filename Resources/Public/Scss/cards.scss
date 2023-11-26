@@ -23,7 +23,6 @@
     .card {
       position: relative;
       border-radius: rem(8);
-      padding: rem(2);
       box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.1);
       overflow: hidden;
 
@@ -36,13 +35,6 @@
         bottom: -300%;
         background: var(--white);
         z-index: -2;
-      }
-
-      &:hover {
-        &::before {
-          background: var(--gradient);
-          animation: gradient-anim 5s infinite;
-        }
       }
 
       .card-inner {
@@ -117,6 +109,17 @@
           svg {
             aspect-ratio: initial;
           }
+        }
+      }
+    }
+
+    .card-border {
+      padding: rem(2);
+
+      &:hover {
+        &::before {
+          background: var(--gradient);
+          animation: gradient-anim 5s infinite;
         }
       }
     }
