@@ -182,11 +182,21 @@ page {
   }
 
   includeJSFooter {
-    lightbox = EXT:skeleton/Resources/Public/JavaScript/Dist/fslightbox.js
     main = EXT:skeleton/Resources/Public/Out/main.bundle.js
     main.type = module
   }
 }
+
+################################
+#### ENLARGE CLICK LIGHTBOX ####
+################################
+[{$styles.content.textmedia.linkWrap.lightboxEnabled} == 1]
+page {
+  includeJSFooter {
+    lightbox = EXT:skeleton/Resources/Public/JavaScript/Dist/fslightbox.js
+  }
+}
+[end]
 
 
 ################################
@@ -208,9 +218,6 @@ lib.contentElement {
     media {
       popup {
         linkParams.ATagParams.dataWrap = class="lightbox" rel="lightbox[{field:uid}]" data-fslightbox="lightbox[{field:uid}]"
-        directImageLink = 1
-        JSwindow = 0
-        wrap >
       }
     }
   }
@@ -225,18 +232,26 @@ tt_content {
   skeleton_card {
     templateName = SkeletonCard
     
-    dataProcessing.10 = database-query
-    dataProcessing.10 {
-      if.isTrue.field = tx_skeleton_content
-      table = tx_skeleton_content
-      orderBy = sorting
-      uidInList.field = data.uid
-      as = tx_skeleton_content
+    dataProcessing {
+      10 = database-query
+      10 {
+        if.isTrue.field = tx_skeleton_content
+        table = tx_skeleton_content
+        orderBy = sorting
+        uidInList.field = data.uid
+        as = tx_skeleton_content
 
-      dataProcessing.10 = files
-      dataProcessing.10 {
-        references.fieldName = image
-        as = image
+        dataProcessing.10 = files
+        dataProcessing.10 {
+          references.fieldName = image
+          as = image
+        }
+      }
+
+      20 = flex-form
+      20 {
+        fieldName = pi_flexform
+        as = flexForm
       }
     }
   }
