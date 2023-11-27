@@ -301,7 +301,13 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
   'tt_content',
   'content',
-  'tx_skeleton_content, --linebreak--, pi_flexform'
+  'tx_skeleton_content'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'flexform',
+  'pi_flexform'
 );
 
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_card'] = 'content-menu-card';
@@ -325,6 +331,7 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
       --palette--;;headers,
       --palette--;;text,
       --palette--;;content,
+      --palette--;;flexform,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
       --palette--;;frames,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -343,6 +350,17 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
         'enableRichtext' => true,
         'richtextConfiguration' => 'skeleton'
       ]
+    ],
+    'tx_skeleton_content' => [
+      'config' => [
+        'overrideChildTca' => [
+          'types' => [
+            '1' => [
+              'showitem' => 'image, title, description, link'
+            ]
+          ]
+        ]
+      ]
     ]
   ]
 ];
@@ -352,12 +370,3 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
   'FILE:EXT:skeleton/Configuration/FlexForm/skeleton_card.xml',
   'skeleton_card'
 );
-
-if (isset($GLOBALS['TCA']['tt_content']['types']['tx_powermail'])) {
-  $GLOBALS['TCA']['tt_content']['types']['tx_powermail']['showitem'] = implode([
-    $GLOBALS['TCA']['tt_content']['types']['tx_powermail']['showitem'] . '
-    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-      --palette--;;frames,
-    '
-  ]);
-}

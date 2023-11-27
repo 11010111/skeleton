@@ -2,26 +2,28 @@
 
 return [
   'ctrl' => [
+    'iconfile' => 'EXT:skeleton/Resources/Public/Icons/content-menu-card.svg',
     'title' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_content',
     'label' => 'title',
     'sortby' => 'sorting',
     'tstamp' => 'tstamp',
     'crdate' => 'crdate',
     'editlock' => 'editlock',
+    'type' => '',
     'languageField' => 'sys_language_uid',
     'transOrigPointerField' => 'l18n_parent',
     'transOrigDiffSourceField'  => 'l18n_diffsource',
     'prependAtCopy' => 'LLL:EXT:lang/locallang_general.xlf:LGL.prependAtCopy',
     'copyAfterDuplFields' => 'sys_language_uid',
     'useColumnsForDefaultValues' => 'sys_language_uid',
+    'searchFields' => 'title, description',
     'delete' => 'deleted',
     'enablecolumns' => [
       'disabled' => 'hidden'
-    ],
-    'iconfile' => 'EXT:skeleton/Resources/Public/Icons/content-menu-card.svg'
+    ]
   ],
   'interface' => [
-    'showRecordFieldList' => 'image, title, description'
+    'showRecordFieldList' => 'title, description'
   ],
   'columns' => [
     'editlock' => [
@@ -29,8 +31,8 @@ return [
       'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:editlock',
       'config' => [
         'type' => 'check',
-        'renderType' => 'checkboxToggle',
-      ],
+        'renderType' => 'checkboxToggle'
+      ]
     ],
     'hidden' => [
       'exclude' => true,
@@ -41,17 +43,17 @@ return [
         'items' => [
           [
             'label' => '',
-            'invertStateDisplay' => true,
-          ],
-        ],
-      ],
+            'invertStateDisplay' => true
+          ]
+        ]
+      ]
     ],
     'sys_language_uid' => [
       'exclude' => true,
       'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
       'config' => [
-        'type' => 'language',
-      ],
+        'type' => 'language'
+      ]
     ],
     'l18n_parent' => [
       'displayCond' => 'FIELD:sys_language_uid:>:0',
@@ -60,17 +62,17 @@ return [
         'type' => 'select',
         'renderType' => 'selectSingle',
         'items' => [
-          ['label' => '', 'value' => 0],
+          ['label' => '', 'value' => 0]
         ],
         'foreign_table' => 'tt_content',
         'foreign_table_where' => 'AND {#tt_content}.{#pid}=###CURRENT_PID### AND {#tt_content}.{#sys_language_uid} IN (-1,0)',
-        'default' => 0,
-      ],
+        'default' => 0
+      ]
     ],
     'l18n_diffsource' => [
       'config' => [
-        'type' => 'passthrough',
-      ],
+        'type' => 'passthrough'
+      ]
     ],
     'image' => [
       'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.images',
@@ -81,8 +83,8 @@ return [
           'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
           'showPossibleLocalizationRecords' => true,
         ],
-        'maxitems' => '1',
-      ],
+        'maxitems' => '1'
+      ]
     ],
     'title' => [
       'exclude' => 1,
@@ -121,6 +123,6 @@ return [
     ]
   ],
   'types' => [
-    '0' => ['showitem' => 'image, assets, title, description, link']
+    '1' => ['showitem' => 'title, description']
   ]
 ];
