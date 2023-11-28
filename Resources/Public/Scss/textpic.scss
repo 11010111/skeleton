@@ -7,6 +7,12 @@
     column-gap: rem(20);
     row-gap: rem(24);
 
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
     @media (min-width: breakpoint(md)) {
       row-gap: rem(32);
     }
