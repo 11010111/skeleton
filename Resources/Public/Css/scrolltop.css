@@ -3,9 +3,7 @@
   bottom: 8rem;
   right: 1rem;
   display: none;
-  background-color: var(--white);
-  border-radius: 0.1875rem;
-  border: 0.0625rem solid var(--lightgrey);
+  border-radius: 0.25rem;
   padding: 0.5rem;
   cursor: pointer;
   z-index: 5;
@@ -19,6 +17,9 @@
   .scroll-top {
     right: 2.5rem;
   }
+}
+.scroll-top:hover svg {
+  fill: var(--white);
 }
 
 @media (min-width: 80em) {

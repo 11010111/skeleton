@@ -5,9 +5,7 @@
   bottom: rem(128);
   right: rem(16);
   display: none;
-  background-color: var(--white);
-  border-radius: rem(3);
-  border: rem(1) solid var(--lightgrey);
+  border-radius: rem(4);
   padding: rem(8);
   cursor: pointer;
   z-index: 5;
@@ -18,6 +16,12 @@
 
   @media (min-width: breakpoint(xl)) {
     right: rem(40);
+  }
+
+  &:hover {
+    svg {
+      fill: var(--white);
+    }
   }
 }
 
