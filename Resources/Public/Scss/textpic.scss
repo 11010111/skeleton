@@ -237,7 +237,6 @@
 
       img,
       svg {
-        width: 100%;
         max-height: rem(200);
         object-fit: cover;
       }
@@ -249,11 +248,11 @@
       .textpic-images {
         float: left;
         margin-right: rem(20);
+        max-width: 33vw;
 
         img,
         svg {
-          width: 33vw;
-          max-height: initial;
+          max-height: rem(400);
         }
       }
 
@@ -284,11 +283,11 @@
       .textpic-images {
         float: right;
         margin-left: rem(20);
+        max-width: 33vw;
 
         img,
         svg {
-          width: 33vw;
-          max-height: initial;
+          max-height: rem(400);
         }
       }
 
