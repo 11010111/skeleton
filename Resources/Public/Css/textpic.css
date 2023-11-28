@@ -4,6 +4,11 @@
   column-gap: 1.25rem;
   row-gap: 1.5rem;
 }
+.textpic .textpic-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 @media (min-width: 48em) {
   .textpic .textpic-wrapper {
     row-gap: 2rem;

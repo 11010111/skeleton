@@ -1,0 +1,98 @@
+.lightbox-container {
+  contain: layout;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+  z-index: 200;
+}
+.lightbox-container .lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  z-index: 5;
+}
+.lightbox-container .lightbox-close::after {
+  background: #000 url("../Icons/lightbox/close.svg") no-repeat center center;
+}
+.lightbox-container .lightbox-wrapper {
+  position: relative;
+  left: 0;
+  display: flex;
+  width: max-content;
+  height: 100%;
+  transition: left 300ms;
+}
+.lightbox-container .lightbox-wrapper .lightbox-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  max-width: 100dvw;
+  max-height: 100dvh;
+  padding: 0.75rem;
+  user-select: none;
+}
+.lightbox-container .lightbox-wrapper .lightbox-item img, .lightbox-container .lightbox-wrapper .lightbox-item svg, .lightbox-container .lightbox-wrapper .lightbox-item video, .lightbox-container .lightbox-wrapper .lightbox-item iframe {
+  width: initial;
+  height: initial;
+  max-width: 95dvw;
+  max-height: 95dvh;
+  border-radius: 0.5rem;
+}
+.lightbox-container .lightbox-prev {
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  z-index: 5;
+}
+.lightbox-container .lightbox-prev::after {
+  background: #000 url("../Icons/lightbox/back.svg") no-repeat center center;
+}
+.lightbox-container .lightbox-next {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  z-index: 5;
+}
+.lightbox-container .lightbox-next::after {
+  background: #000 url("../Icons/lightbox/forward.svg") no-repeat center center;
+}
+.lightbox-container .lightbox-action-disabled {
+  display: none;
+}
+
+.lightbox-show {
+  display: block;
+}
+.lightbox-show .lightbox-wrapper {
+  animation: fadeIn 300ms forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

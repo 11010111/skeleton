@@ -11,6 +11,7 @@ export default defineConfig({
     lib: {
       entry: [
         resolve(__dirname, 'Resources/Public/JavaScript/Src/main.js'),
+        resolve(__dirname, 'Resources/Public/JavaScript/Src/lightbox.js'),
       ],
       name: 'skeleton',
       fileName: '[name].bundle',

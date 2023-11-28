@@ -1,0 +1,112 @@
+@import "functions";
+
+.lightbox-container {
+  contain: layout;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+  z-index: 200;
+
+  .lightbox-close {
+    position: fixed;
+    top: rem(16);
+    right: rem(16);
+    width: rem(40);
+    height: rem(40);
+    border-radius: rem(4);
+    cursor: pointer;
+    z-index: 5;
+
+    &::after {
+      background: #000 url('../Icons/lightbox/close.svg') no-repeat center center;
+    }
+  }
+
+  .lightbox-wrapper {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: max-content;
+    height: 100%;
+    transition: left 300ms;
+
+    .lightbox-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100dvw;
+      height: 100dvh;
+      max-width: 100dvw;
+      max-height: 100dvh;
+      padding: rem(12);
+      user-select: none;
+
+      img, svg, video, iframe {
+        width: initial;
+        height: initial;
+        max-width: 95dvw;
+        max-height: 95dvh;
+        border-radius: rem(8);
+      }
+    }
+  }
+
+  .lightbox-prev {
+    position: fixed;
+    top: 50%;
+    left: rem(16);
+    transform: translateY(-50%);
+    width: rem(40);
+    height: rem(40);
+    border-radius: rem(4);
+    cursor: pointer;
+    z-index: 5;
+
+    &::after {
+      background: #000 url('../Icons/lightbox/back.svg') no-repeat center center;
+    }
+  }
+
+  .lightbox-next {
+    position: fixed;
+    top: 50%;
+    right: rem(16);
+    transform: translateY(-50%);
+    width: rem(40);
+    height: rem(40);
+    border-radius: rem(4);
+    cursor: pointer;
+    z-index: 5;
+
+    &::after {
+      background: #000 url('../Icons/lightbox/forward.svg') no-repeat center center;
+    }
+  }
+
+  .lightbox-action-disabled {
+    display: none;
+  }
+}
+
+.lightbox-show {
+  display: block;
+  
+  .lightbox-wrapper {
+    animation: fadeIn 300ms forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

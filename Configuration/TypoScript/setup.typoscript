@@ -192,8 +192,12 @@ page {
 ################################
 [{$styles.content.textmedia.linkWrap.lightboxEnabled} == 1]
 page {
+  includeCSS {
+    lightbox = EXT:skeleton/Resources/Public/Css/lightbox.css
+  }
+  
   includeJSFooter {
-    lightbox = EXT:skeleton/Resources/Public/JavaScript/Dist/fslightbox.js
+    lightbox = EXT:skeleton/Resources/Public/Out/lightbox.bundle.js
   }
 }
 [end]
@@ -213,14 +217,6 @@ lib.contentElement {
   layoutRootPaths.20 = EXT:skeleton/Resources/Private/Layouts/ContentElements/
   partialRootPaths.20 = EXT:skeleton/Resources/Private/Partials/ContentElements/
   templateRootPaths.20 = EXT:skeleton/Resources/Private/Templates/ContentElements/
-
-  settings {
-    media {
-      popup {
-        linkParams.ATagParams.dataWrap = class="lightbox" rel="lightbox[{field:uid}]" data-fslightbox="lightbox[{field:uid}]"
-      }
-    }
-  }
 }
 
 
