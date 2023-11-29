@@ -224,8 +224,8 @@ defined('TYPO3') or die('Access denied.');
       ]
     ],
     'tx_skeleton_content' => [
-      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
-      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_content.label',
+      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_content.description',
       'config' => [
         'type' => 'inline',
         'foreign_table' => 'tx_skeleton_content',
@@ -352,8 +352,72 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
       ]
     ],
     'tx_skeleton_content' => [
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
+      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
       'config' => [
         'overrideChildTca' => [
+          'ctrl' => [
+            'iconfile' => 'content-menu-card',
+          ],
+          'types' => [
+            '1' => [
+              'showitem' => 'image, title, description, link'
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+];
+
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_accordion'] = 'content-accordion';
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+  'tt_content',
+  'CType',
+  [
+    'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.label',
+    'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.description',
+    'value' => 'skeleton_accordion',
+    'icon' => 'content-accordion',
+    'group' => 'common'
+  ]
+);
+
+$GLOBALS['TCA']['tt_content']['types']['skeleton_accordion'] = [
+  'showitem' => '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+      --palette--;;general,
+      --palette--;;headers,
+      --palette--;;text,
+      --palette--;;content,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+      --palette--;;frames,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+      --palette--;;hidden,
+      --palette--;;access,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+      --palette--;;language,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+      --palette--;;categories,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+      --palette--;;description,
+  ',
+  'columnsOverrides' => [
+    'bodytext' => [
+      'config' => [
+        'enableRichtext' => true,
+        'richtextConfiguration' => 'skeleton'
+      ]
+    ],
+    'tx_skeleton_content' => [
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.label',
+      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.description',
+      'config' => [
+        'overrideChildTca' => [
+          'ctrl' => [
+            'iconfile' => 'content-accrodion',
+          ],
           'types' => [
             '1' => [
               'showitem' => 'image, title, description, link'

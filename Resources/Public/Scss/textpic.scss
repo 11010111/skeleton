@@ -7,12 +7,6 @@
     column-gap: rem(20);
     row-gap: rem(24);
 
-    &::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-
     @media (min-width: breakpoint(md)) {
       row-gap: rem(32);
     }
@@ -30,337 +24,30 @@
         height: initial;
         border-radius: rem(8);
       }
+
+      .video {
+        width: 100%;
+        height: 100%;
+
+        iframe, video {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 16 / 9;
+          border-radius: rem(8);
+        }
+      }
     }
   }
 
-  .textpic-above-center {
+  .textpic-above-center, .textpic-below-center {
     .textpic-images {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
 
-      a {
-        width: 100%;
-
-        @media (min-width: breakpoint(md)) {
-          width: 50%;
-        }
-      }
-
       picture {
         display: flex;
-      }
-
-      img,
-      svg {
-        width: 100%;
-        height: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-
-        @media (min-width: breakpoint(xl)) {
-          max-height: rem(400);
-        }
-      }
-    }
-  }
-
-  .textpic-above-right {
-    .textpic-images {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-
-      a {
-        width: 100%;
-
-        @media (min-width: breakpoint(md)) {
-          width: 50%;
-        }
-      }
-
-      picture {
-        display: flex;
-      }
-
-      img,
-      svg {
-        width: 100%;
-        height: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-
-        @media (min-width: breakpoint(xl)) {
-          max-height: rem(400);
-        }
-      }
-    }
-  }
-
-  .textpic-above-left {
-    .textpic-images {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      a {
-        width: 100%;
-
-        @media (min-width: breakpoint(md)) {
-          width: 50%;
-        }
-      }
-
-      picture {
-        display: flex;
-      }
-
-      img,
-      svg {
-        width: 100%;
-        height: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-
-        @media (min-width: breakpoint(xl)) {
-          max-height: rem(400);
-        }
-      }
-    }
-  }
-
-  .textpic-below-center {
-    .textpic-images {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      a {
-        width: 100%;
-
-        @media (min-width: breakpoint(md)) {
-          width: 50%;
-        }
-      }
-
-      picture {
-        display: flex;
-      }
-
-      img,
-      svg {
-        width: 100%;
-        height: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-
-        @media (min-width: breakpoint(xl)) {
-          width: initial;
-          height: initial;
-        }
-
-        @media (min-width: breakpoint(xl)) {
-          max-height: rem(400);
-        }
-      }
-    }
-  }
-
-  .textpic-below-right {
-    .textpic-images {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-
-      a {
-        width: 100%;
-
-        @media (min-width: breakpoint(md)) {
-          width: 50%;
-        }
-      }
-
-      picture {
-        display: flex;
-      }
-
-      img,
-      svg {
-        width: 100%;
-        height: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-
-        @media (min-width: breakpoint(xl)) {
-          max-height: rem(400);
-        }
-      }
-    }
-  }
-
-  .textpic-below-left {
-    .textpic-images {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      a {
-        width: 100%;
-
-        @media (min-width: breakpoint(md)) {
-          width: 50%;
-        }
-      }
-
-      picture {
-        display: flex;
-      }
-
-      img,
-      svg {
-        width: 100%;
-        height: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-
-        @media (min-width: breakpoint(xl)) {
-          max-height: rem(400);
-        }
-      }
-    }
-  }
-
-  .textpic-intext-left {
-    grid-template-columns: 1fr;
-
-    .textpic-images {
-
-      img,
-      svg {
-        max-height: rem(200);
-        object-fit: cover;
-      }
-    }
-
-    @media (min-width: breakpoint(md)) {
-      display: block;
-
-      .textpic-images {
-        float: left;
-        margin-right: rem(20);
-        max-width: 33vw;
-
-        img,
-        svg {
-          max-height: rem(400);
-        }
-      }
-
-      .rte-wrapper {
-        .header-headings {
-          overflow: hidden;
-        }
-      }
-    }
-  }
-
-  .textpic-intext-right {
-    grid-template-columns: 1fr;
-
-    .textpic-images {
-
-      img,
-      svg {
-        width: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-      }
-    }
-
-    @media (min-width: breakpoint(md)) {
-      display: block;
-
-      .textpic-images {
-        float: right;
-        margin-left: rem(20);
-        max-width: 33vw;
-
-        img,
-        svg {
-          max-height: rem(400);
-        }
-      }
-
-      .rte-wrapper {
-        .header-headings {
-          overflow: hidden;
-        }
-      }
-    }
-  }
-
-  .textpic-intext-right-flex {
-    @media (min-width: breakpoint(md)) {
-      flex-direction: row;
-    }
-
-    .textpic-images {
-      display: flex;
-      flex-direction: column;
-
-      @media (min-width: breakpoint(md)) {
-        width: calc(100% / 3);
-      }
-
-      img, svg {
-        width: 100%;
-        height: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-
-        @media (min-width: breakpoint(md)) {
-          height: rem(400);
-          max-height: rem(400);
-        }
-      }
-    }
-
-    .rte-wrapper {
-      @media (min-width: breakpoint(md)) {
-        width: calc(100% / 3 * 2);
-      }
-    }
-  }
-
-  .textpic-intext-left-flex {
-    @media (min-width: breakpoint(md)) {
-      flex-direction: row-reverse;
-    }
-
-    .textpic-images {
-      display: flex;
-      flex-direction: column;
-
-      @media (min-width: breakpoint(md)) {
-        width: calc(100% / 3);
-      }
-
-      img, svg {
-        width: 100%;
-        height: 100%;
-        max-height: rem(200);
-        object-fit: cover;
-
-        @media (min-width: breakpoint(md)) {
-          height: rem(400);
-          max-height: rem(400);
-        }
-      }
-    }
-
-    .rte-wrapper {
-      @media (min-width: breakpoint(md)) {
-        width: calc(100% / 3 * 2);
       }
     }
   }

@@ -22,7 +22,7 @@
 
     .card {
       position: relative;
-      border-radius: rem(8);
+      border-radius: rem(6);
       box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.1);
       overflow: hidden;
 
@@ -41,7 +41,7 @@
         width: 100%;
         height: 100%;
         background-color: var(--white);
-        border-radius: rem(6);
+        border-radius: rem(4);
 
         .card-image {
           border-top-left-radius: rem(6);
@@ -76,7 +76,7 @@
 
         .card-content {
           background-color: var(--white);
-          border-radius: rem(6);
+          border-radius: rem(4);
           padding: rem(12);
 
           @media (min-width: breakpoint(md)) {

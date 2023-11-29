@@ -233,9 +233,9 @@ tt_content {
       10 {
         if.isTrue.field = tx_skeleton_content
         table = tx_skeleton_content
-        orderBy = sorting
-        uidInList.field = data.uid
-        as = tx_skeleton_content
+        pidInList.data = {field:pid}
+        where.data = field:uid
+        where.wrap = {#uid_foreign}=|
 
         dataProcessing.10 = files
         dataProcessing.10 {
@@ -246,6 +246,36 @@ tt_content {
 
       20 = flex-form
       20 {
+        if.isTrue.field = pi_flexform
+        fieldName = pi_flexform
+        as = flexForm
+      }
+    }
+  }
+
+  skeleton_accordion =< lib.contentElement
+  skeleton_accordion {
+    templateName = SkeletonAccordion
+    
+    dataProcessing {
+      10 = database-query
+      10 {
+        if.isTrue.field = tx_skeleton_content
+        table = tx_skeleton_content
+        pidInList.data = {field:pid}
+        where.data = field:uid
+        where.wrap = {#uid_foreign}=|
+
+        dataProcessing.10 = files
+        dataProcessing.10 {
+          references.fieldName = image
+          as = image
+        }
+      }
+
+      20 = flex-form
+      20 {
+        if.isTrue.field = pi_flexform
         fieldName = pi_flexform
         as = flexForm
       }
@@ -355,7 +385,7 @@ config {
 
   ## Header Policy
   additionalHeaders {
-    10.header = Content-Security-Policy: default-src 'self'; script-src 'self'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self';
+    10.header = Content-Security-Policy: default-src 'self'; script-src 'self'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self' https://www.youtube-nocookie.com;
     20.header = strict-transport-security: max-age=31536000
     30.header = X-Frame-Options: sameorigin
     40.header = X-Xss-Protection: 1; mode=block

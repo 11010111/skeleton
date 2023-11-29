@@ -1,4 +1,4 @@
-; (() => {
+;(() => {
   let currentIndex = 0
   let currentGroup = []
 

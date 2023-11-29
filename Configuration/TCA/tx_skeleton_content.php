@@ -2,14 +2,13 @@
 
 return [
   'ctrl' => [
-    'iconfile' => 'EXT:skeleton/Resources/Public/Icons/content-menu-card.svg',
+    'iconfile' => 'EXT:skeleton/Resources/Public/Icons/content/content-default.svg',
     'title' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_content',
     'label' => 'title',
     'sortby' => 'sorting',
     'tstamp' => 'tstamp',
     'crdate' => 'crdate',
     'editlock' => 'editlock',
-    'type' => '',
     'languageField' => 'sys_language_uid',
     'transOrigPointerField' => 'l18n_parent',
     'transOrigDiffSourceField'  => 'l18n_diffsource',

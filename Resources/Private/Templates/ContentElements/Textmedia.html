@@ -25,17 +25,31 @@
 
 <f:section name="Files">
   <f:for each="{files}" as="file">
-    <f:if condition="{data.image_zoom} && !{file.link}">
+    <f:if condition="{data.image_zoom} && !{file.link} && {file.type} != 3 && {file.type} != 4">
       <f:then>
         <ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
-          <f:render partial="Picture" arguments="{_all}" />
+          <f:render section="Type" arguments="{_all}" />
         </ce:link.clickEnlarge>
       </f:then>
       <f:else>
-        <f:render partial="Picture" arguments="{_all}" />
+        <f:render section="Type" arguments="{_all}" />
       </f:else>
     </f:if>
   </f:for>
+</f:section>
+
+<f:section name="Type">
+  <f:switch expression="{file.type}">
+    <f:case value="3">
+      <f:render partial="Media/Type/Audio" arguments="{file: file, dimensions: dimensions, data: data, settings: settings}" />
+    </f:case>
+    <f:case value="4">
+      <f:render partial="Media/Type/Video" arguments="{file: file, dimensions: dimensions, data: data, settings: settings}" />
+    </f:case>
+    <f:defaultCase>
+      <f:render partial="Picture" arguments="{_all}" />
+    </f:defaultCase>
+  </f:switch>
 </f:section>
 
 </html>
