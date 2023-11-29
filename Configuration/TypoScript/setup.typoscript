@@ -224,6 +224,20 @@ lib.contentElement {
 #### CUSTOM CONTENT TEMPLATE NAME ####
 ######################################
 tt_content {
+  skeleton_header =< lib.contentElement
+  skeleton_header {
+    templateName = SkeletonHeader
+
+    dataProcessing {
+      10 = files
+      10 {
+        if.isTrue.field = image
+        references.fieldName = image
+        as = files
+      }
+    }
+  }
+
   skeleton_card =< lib.contentElement
   skeleton_card {
     templateName = SkeletonCard
@@ -239,6 +253,7 @@ tt_content {
 
         dataProcessing.10 = files
         dataProcessing.10 {
+          if.isTrue.field = image
           references.fieldName = image
           as = image
         }
@@ -268,6 +283,7 @@ tt_content {
 
         dataProcessing.10 = files
         dataProcessing.10 {
+          if.isTrue.field = image
           references.fieldName = image
           as = image
         }

@@ -65,7 +65,7 @@
 
 :root {
   /* Anchor Scroll Padding */
-  --scroll-pt: 4.5rem;
+  --scroll-pt: 4.125rem;
   /* Colors */
   --black: #000;
   --white: #fff;
@@ -97,16 +97,15 @@
     --min-mx-xl: 1.5rem;
   }
 }
-@media screen and (min-width: 80em) {
-  :root {
-    --scroll-pt: 5.75rem;
-  }
-}
 
 html {
   font-family: Inter;
   scroll-behavior: smooth;
-  scroll-padding-top: var(--scroll-pt);
+}
+@media (min-width: 80em) {
+  html {
+    scroll-padding-top: var(--scroll-pt);
+  }
 }
 @media screen and (min-width: 1921px) {
   html {

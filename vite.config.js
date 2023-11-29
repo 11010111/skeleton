@@ -13,6 +13,7 @@ export default defineConfig({
         resolve(__dirname, 'Resources/Public/JavaScript/Src/main.js'),
         resolve(__dirname, 'Resources/Public/JavaScript/Src/lightbox.js'),
         resolve(__dirname, 'Resources/Public/JavaScript/Src/accordion.js'),
+        resolve(__dirname, 'Resources/Public/JavaScript/Src/header.js'),
       ],
       name: 'skeleton',
       fileName: '[name].bundle',

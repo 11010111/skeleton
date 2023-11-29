@@ -52,6 +52,13 @@
                 <source>RTE Width</source>
             </trans-unit>
 
+            <trans-unit id="skeleton_header.label">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="skeleton_header.description">
+                <source>Page Header</source>
+            </trans-unit>
+
             <trans-unit id="skeleton_content.label">
                 <source>Content</source>
             </trans-unit>

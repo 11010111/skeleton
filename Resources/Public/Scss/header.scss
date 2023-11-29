@@ -1,0 +1,90 @@
+@import "functions";
+
+.header {
+  contain: layout;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 53px);
+
+  @media (min-width: breakpoint(xl)) {
+    min-height: calc(100vh - 66px);
+  }
+
+  .content-header-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: rem(20);
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    @media (min-width: breakpoint(xl)) {
+      gap: rem(40);
+    }
+
+    .header-left {
+      margin: 0;
+    }
+
+    .header-right {
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: rem(8);
+        min-height: rem(200);
+        object-fit: cover;
+
+        @media (min-width: breakpoint(xl)) {
+          min-width: rem(400);
+        }
+      }
+    }
+  }
+
+  .header-scroll-down {
+    position: sticky;
+    left: 0;
+    bottom: rem(69);
+    display: grid;
+    justify-items: center;
+    margin: rem(27) 0 0;
+    padding: rem(8) rem(8) 0;
+    background-color: var(--white);
+    mix-blend-mode: screen;
+    z-index: 10;
+
+    @media (min-width: breakpoint(xl)) {
+      bottom: rem(0);
+    }
+
+    button {
+      display: grid;
+      row-gap: rem(8);
+      justify-items: center;
+
+      .header-scroll-down-text {
+        font-size: rem(12);
+      }
+
+      .header-scroll-down-icon {
+        width: rem(24);
+        height: rem(24);
+        overflow: hidden;
+
+        svg {
+          animation: fadeInOut 3000ms infinite;
+        }
+      }
+    }
+
+    @keyframes fadeInOut {
+      from {
+        transform: translateY(-100%);
+      }
+
+      to {
+        transform: translateY(100%);
+      }
+    }
+  }
+}

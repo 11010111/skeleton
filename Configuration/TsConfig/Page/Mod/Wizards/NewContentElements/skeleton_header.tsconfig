@@ -1,0 +1,18 @@
+##############################
+#### NEW CONTENT ELEMENTS ####
+##############################
+mod.wizards.newContentElement.wizardItems {
+  common {
+    elements {
+      skeleton_header {
+        iconIdentifier = content-accordion
+        title = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_header.label
+        description = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_header.description
+        tt_content_defValues {
+          CType = skeleton_header
+        }
+      }
+    }
+    show := addToList(skeleton_header)
+  }
+}

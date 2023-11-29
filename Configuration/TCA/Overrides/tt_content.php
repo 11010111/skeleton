@@ -280,10 +280,19 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
   'after:bodytext'
 );
 
+################
+### PALETTES ###
+################
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
   'tt_content',
   'text',
   'bodytext'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content',
+  'image',
+  'image'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
@@ -310,6 +319,9 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_class']['description'] = 'LLL:EX
   'pi_flexform'
 );
 
+#####################
+### SKELETON CARD ###
+#####################
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_card'] = 'content-menu-card';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -370,6 +382,15 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
   ]
 ];
 
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+  '*',
+  'FILE:EXT:skeleton/Configuration/FlexForm/skeleton_card.xml',
+  'skeleton_card'
+);
+
+##########################
+### SKELETON ACCORDION ###
+##########################
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_accordion'] = 'content-accordion';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -429,8 +450,54 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_accordion'] = [
   ]
 ];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-  '*',
-  'FILE:EXT:skeleton/Configuration/FlexForm/skeleton_card.xml',
-  'skeleton_card'
+#######################
+### SKELETON HEADER ###
+#######################
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_header'] = 'content-header';
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+  'tt_content',
+  'CType',
+  [
+    'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_header.label',
+    'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_header.description',
+    'value' => 'skeleton_header',
+    'icon' => 'content-header',
+    'group' => 'common'
+  ]
 );
+
+$GLOBALS['TCA']['tt_content']['types']['skeleton_header'] = [
+  'showitem' => '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+      --palette--;;general,
+      --palette--;;headers,
+      --palette--;;image,
+      --palette--;;text,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+      --palette--;;frames,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+      --palette--;;hidden,
+      --palette--;;access,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+      --palette--;;language,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+      --palette--;;categories,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+      --palette--;;description,
+  ',
+  'columnsOverrides' => [
+    'image' => [
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:image',
+      'config' => [
+        'maxitems' => 1
+      ]
+    ],
+    'bodytext' => [
+      'config' => [
+        'enableRichtext' => true,
+        'richtextConfiguration' => 'skeleton'
+      ]
+    ]
+  ]
+];

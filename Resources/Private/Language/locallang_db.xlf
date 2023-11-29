@@ -6,6 +6,9 @@
             <authorEmail></authorEmail>
         </header>
         <body>
+            <trans-unit id="image">
+                <source>Image</source>
+            </trans-unit>
             <trans-unit id="tx_skeleton_content">
                 <source>Content</source>
             </trans-unit>
