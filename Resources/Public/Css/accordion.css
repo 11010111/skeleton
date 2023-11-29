@@ -22,13 +22,13 @@
   background-color: var(--white);
   border: 0.0625rem solid var(--lightgrey);
   border-radius: 0.25rem;
-  padding: 1rem;
 }
 .accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-headline {
   display: grid;
   grid-template-columns: 1fr 1.5rem;
   column-gap: 1.25rem;
   align-items: center;
+  padding: 1rem;
   cursor: pointer;
 }
 .accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-headline .headline {
@@ -51,7 +51,7 @@
 .accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content {
   display: grid;
   grid-template-rows: 0fr;
-  padding: 0;
+  padding: 0 1rem;
   transition: grid-template-rows 300ms, padding-top 300ms;
 }
 .accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content .accordion-content-anim {
@@ -78,5 +78,5 @@
 }
 .accordion .accordion-wrapper .accordion-item-wrapper .accordion-item-show .accordion-content {
   grid-template-rows: 1fr;
-  padding: 1rem 0 0;
+  padding: 1rem;
 }

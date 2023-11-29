@@ -23,13 +23,13 @@
         background-color: var(--white);
         border: rem(1) solid var(--lightgrey);
         border-radius: rem(4);
-        padding: rem(16);
 
         .accordion-headline {
           display: grid;
           grid-template-columns: 1fr rem(24);
           column-gap: rem(20);
           align-items: center;
+          padding: rem(16);
           cursor: pointer;
 
           .headline {
@@ -56,7 +56,7 @@
         .accordion-content {
           display: grid;
           grid-template-rows: 0fr;
-          padding: 0;
+          padding: 0 rem(16);
           transition: grid-template-rows 300ms, padding-top 300ms;
           
           .accordion-content-anim {
@@ -93,7 +93,7 @@
         }
         .accordion-content {
           grid-template-rows: 1fr;
-          padding: rem(16) 0 0;
+          padding: rem(16);
         }
       }
     }
