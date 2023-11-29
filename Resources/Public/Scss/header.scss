@@ -21,22 +21,22 @@
     @media (min-width: breakpoint(xl)) {
       gap: rem(40);
     }
+  }
 
-    .header-left {
-      margin: 0;
-    }
+  .header-image {
+    display: flex;
+    justify-content: center;
+    padding: 0 var(--min-mx);
 
-    .header-right {
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: rem(8);
-        min-height: rem(200);
-        object-fit: cover;
+    img, svg {
+      width: 100%;
+      height: 100%;
+      border-radius: rem(8);
+      min-height: rem(200);
+      object-fit: cover;
 
-        @media (min-width: breakpoint(xl)) {
-          min-width: rem(400);
-        }
+      @media (min-width: breakpoint(xl)) {
+        min-width: rem(400);
       }
     }
   }

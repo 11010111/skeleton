@@ -5,16 +5,16 @@
 
 <skeleton:wrapper render="{data}" class="header">
   <skeleton:container render="{data}" class="content-header-wrapper">
-    <div class="header-left">
+    <div class="header-text">
       <f:render partial="Rte" arguments="{_all}" />
     </div>
-
-    <div class="header-right">
-      <f:for each="{files}" as="file">
-        <f:render partial="Picture" arguments="{file: file, loading: 'eager'}" />
-      </f:for>
-    </div>
   </skeleton:container>
+
+  <div class="header-image">
+    <f:for each="{files}" as="file">
+      <f:render partial="Picture" arguments="{file: file, loading: 'eager'}" />
+    </f:for>
+  </div>
 
   <div class="header-scroll-down">
     <button>

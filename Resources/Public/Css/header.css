@@ -22,10 +22,12 @@
     gap: 2.5rem;
   }
 }
-.header .content-header-wrapper .header-left {
-  margin: 0;
+.header .header-image {
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--min-mx);
 }
-.header .content-header-wrapper .header-right img {
+.header .header-image img, .header .header-image svg {
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
@@ -33,7 +35,7 @@
   object-fit: cover;
 }
 @media (min-width: 80em) {
-  .header .content-header-wrapper .header-right img {
+  .header .header-image img, .header .header-image svg {
     min-width: 25rem;
   }
 }
