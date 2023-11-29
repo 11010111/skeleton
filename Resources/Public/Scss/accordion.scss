@@ -1,0 +1,101 @@
+@import "functions";
+
+.accordion {
+  .accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+    column-gap: rem(20);
+    row-gap: rem(24);
+
+    @media (min-width: breakpoint(md)) {
+      row-gap: rem(32);
+    }
+
+    @media (min-width: breakpoint(xl)) {
+      row-gap: rem(40);
+    }
+
+    .accordion-item-wrapper {
+      display: grid;
+      row-gap: rem(8);
+
+      .accordion-item {
+        background-color: var(--white);
+        border: rem(1) solid var(--lightgrey);
+        border-radius: rem(4);
+        padding: rem(16);
+
+        .accordion-headline {
+          display: grid;
+          grid-template-columns: 1fr rem(24);
+          column-gap: rem(20);
+          align-items: center;
+          cursor: pointer;
+
+          .headline {
+            margin: 0;
+          }
+
+          .accordion-headline-icon {
+            display: grid;
+            grid-template-rows: rem(24) rem(24);
+            row-gap: rem(4);
+            width: rem(24);
+            height: rem(24);
+            overflow: hidden;
+
+            .accordion-headline-icon-wrapper {
+              position: relative;
+              top: 0;
+              left: 0;
+              transition: top 300ms;
+            }
+          }
+        }
+
+        .accordion-content {
+          display: grid;
+          grid-template-rows: 0fr;
+          padding: 0;
+          transition: grid-template-rows 300ms, padding-top 300ms;
+          
+          .accordion-content-anim {
+            display: grid;
+            overflow: hidden;
+
+            img {
+              border-radius: rem(8);
+            }
+
+            img, svg {
+              margin: 0 0 rem(12);
+
+              @media (min-width: breakpoint(md)) {
+                margin: 0 0 rem(20);
+              }
+            }
+
+            .accordion-link {
+              width: fit-content;
+              margin: rem(27) 0 0;
+            }
+          }
+        }
+      }
+
+      .accordion-item-show {
+        .accordion-headline {
+          .accordion-headline-icon {
+            .accordion-headline-icon-wrapper {
+              top: rem(-28);
+            }
+          }
+        }
+        .accordion-content {
+          grid-template-rows: 1fr;
+          padding: rem(16) 0 0;
+        }
+      }
+    }
+  }
+}

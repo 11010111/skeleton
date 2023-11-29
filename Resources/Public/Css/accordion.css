@@ -1,0 +1,82 @@
+.accordion .accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  column-gap: 1.25rem;
+  row-gap: 1.5rem;
+}
+@media (min-width: 48em) {
+  .accordion .accordion-wrapper {
+    row-gap: 2rem;
+  }
+}
+@media (min-width: 80em) {
+  .accordion .accordion-wrapper {
+    row-gap: 2.5rem;
+  }
+}
+.accordion .accordion-wrapper .accordion-item-wrapper {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item {
+  background-color: var(--white);
+  border: 0.0625rem solid var(--lightgrey);
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-headline {
+  display: grid;
+  grid-template-columns: 1fr 1.5rem;
+  column-gap: 1.25rem;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-headline .headline {
+  margin: 0;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-headline .accordion-headline-icon {
+  display: grid;
+  grid-template-rows: 1.5rem 1.5rem;
+  row-gap: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-headline .accordion-headline-icon .accordion-headline-icon-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: top 300ms;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 0;
+  transition: grid-template-rows 300ms, padding-top 300ms;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content .accordion-content-anim {
+  display: grid;
+  overflow: hidden;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content .accordion-content-anim img {
+  border-radius: 0.5rem;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content .accordion-content-anim img, .accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content .accordion-content-anim svg {
+  margin: 0 0 0.75rem;
+}
+@media (min-width: 48em) {
+  .accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content .accordion-content-anim img, .accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content .accordion-content-anim svg {
+    margin: 0 0 1.25rem;
+  }
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item .accordion-content .accordion-content-anim .accordion-link {
+  width: fit-content;
+  margin: 1.6875rem 0 0;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item-show .accordion-headline .accordion-headline-icon .accordion-headline-icon-wrapper {
+  top: -1.75rem;
+}
+.accordion .accordion-wrapper .accordion-item-wrapper .accordion-item-show .accordion-content {
+  grid-template-rows: 1fr;
+  padding: 1rem 0 0;
+}

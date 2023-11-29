@@ -1,0 +1,60 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="accordion" href="EXT:skeleton/Resources/Public/Css/accordion.css" />
+<f:asset.script identifier="accordion-js" src="EXT:skeleton/Resources/Public/Out/accordion.bundle.js" />
+
+<skeleton:wrapper render="{data}" class="accordion">
+  <skeleton:container render="{data}">
+    <div class="accordion-wrapper">
+      <f:render partial="Rte" arguments="{_all}" />
+
+      <f:if condition="{records}">
+        <div class="accordion-item-wrapper">
+          <f:for each="{records}" as="accordion">
+            <div class="accordion-item">
+              <div class="accordion-headline">
+                <f:if condition="{accordion.data.title}">
+                  <f:render partial="Headline" arguments="{type: '{f:if(condition: data.header_layout, then: \'{data.header_layout + 1}\')}', headline: '{accordion.data.title}', class:'h4'}" />
+                </f:if>
+                <div class="accordion-headline-icon">
+                  <div class="accordion-headline-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                      <path d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                      <path d="M240-440q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h480q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H240Z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <f:if condition="{accordion.data.image} || {accordion.data.description} || {accordion.data.link}">
+                <div class="accordion-content">
+                  <div class="accordion-content-anim">
+                    <f:for each="{accordion.image}" as="image">
+                      <f:render partial="Picture" arguments="{file: image}" />
+                    </f:for>
+
+                    <f:if condition="{accordion.data.description}">
+                      <div class="accordion-rte">
+                        {accordion.data.description -> f:format.html()}
+                      </div>
+                    </f:if>
+
+                    <f:if condition="{accordion.data.link}">
+                      <f:link.typolink class="primary-btn accordion-link" parameter="{accordion.data.link}" parts-as="link">
+                        <span>{link.title}</span>
+                      </f:link.typolink>
+                    </f:if>
+                  </div>
+                </div>
+              </f:if>
+            </div>
+          </f:for>
+        </div>
+      </f:if>
+    </div>
+  </skeleton:container>
+</skeleton:wrapper>
+
+</html>
