@@ -5,7 +5,7 @@ mod.wizards.newContentElement.wizardItems {
   common {
     elements {
       skeleton_header {
-        iconIdentifier = content-accordion
+        iconIdentifier = content-header
         title = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_header.label
         description = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_header.description
         tt_content_defValues {
