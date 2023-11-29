@@ -1,0 +1,26 @@
+##############################
+#### NEW CONTENT ELEMENTS ####
+##############################
+mod.wizards.newContentElement.wizardItems {
+  common {
+    elements {
+      skeleton_accordion {
+        iconIdentifier = content-accordion
+        title = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.label
+        description = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.description
+        tt_content_defValues {
+          CType = skeleton_accordion
+        }
+      }
+    }
+    show := addToList(skeleton_accordion)
+  }
+}
+
+#mod.web_layout {
+#  tt_content {
+#    preview {
+#      my_ctype = EXT:skeleton/Resources/Private/Backend/Templates/Preview/MyTemplate.html
+#    }
+#  }
+#}
