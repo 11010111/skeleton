@@ -16,11 +16,3 @@ mod.wizards.newContentElement.wizardItems {
     show := addToList(skeleton_card)
   }
 }
-
-#mod.web_layout {
-#  tt_content {
-#    preview {
-#      my_ctype = EXT:skeleton/Resources/Private/Backend/Templates/Preview/MyTemplate.html
-#    }
-#  }
-#}
