@@ -4,6 +4,7 @@ const plugin = require('tailwindcss/plugin')
 export default {
   darkMode: 'class',
   content: [
+    "ContentBlocks/ContentElements/**/*.html",
     "Resources/Private/Layouts/**/*.html",
     "Resources/Private/Partials/**/*.html",
     "Resources/Private/Templates/**/*.html",
