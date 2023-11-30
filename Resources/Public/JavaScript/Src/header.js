@@ -1,6 +1,6 @@
 import anime from 'animejs'
 
-;(() => {
+const header = () => {
   const containers = document.querySelectorAll('.header')
 
   if (!containers) return
@@ -20,8 +20,10 @@ import anime from 'animejs'
       })
 
       const seek = () => {
-        const imageY = (imageWrapper.offsetTop - window.scrollY) / 3.49
-        animation.seek(animation.duration * (imageY / 100))
+        if (window.scrollY < imageWrapper.offsetTop) {
+          const imageY = (imageWrapper.offsetTop - window.scrollY) / 3.49
+          animation.seek(animation.duration * (imageY / 100))
+        }
       }
     
       seek()
@@ -46,4 +48,6 @@ import anime from 'animejs'
       })
     })
   })
-})();
+}
+
+header()

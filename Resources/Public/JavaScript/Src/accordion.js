@@ -1,4 +1,4 @@
-;(() => {
+const accordion = () => {
   const containers = document.querySelectorAll('.accordion')
 
   if (!containers) return
@@ -17,5 +17,7 @@
         accordion.classList.toggle('accordion-item-show')
       })
     })
-  });
-})();
+  })
+}
+
+accordion()

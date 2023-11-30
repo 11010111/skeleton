@@ -32,6 +32,7 @@
   height: 100%;
   aspect-ratio: 16/9;
   border-radius: 0.5rem;
+  background-color: var(--black);
 }
 .textpic .textpic-above-center .textpic-images, .textpic .textpic-below-center .textpic-images {
   display: flex;

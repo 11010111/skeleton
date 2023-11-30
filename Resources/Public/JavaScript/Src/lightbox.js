@@ -1,4 +1,4 @@
-;(() => {
+const lightBox = () => {
   let currentIndex = 0
   let currentGroup = []
 
@@ -126,4 +126,6 @@
 
     element.addEventListener('click', load)
   })
-})();
+}
+
+lightBox()
