@@ -16,4 +16,10 @@ call_user_func(function () {
     'Configuration/TypoScript',
     'Skeleton'
   );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    $extensionKey,
+    'Configuration/TypoScript/Headless/',
+    'Skeleton (Headless)'
+  );
 });

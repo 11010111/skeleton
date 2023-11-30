@@ -1,0 +1,84 @@
+lib.appearance {
+  fields {
+    container = TEXT
+    container {
+      field = container
+    }
+    breakpoint = TEXT
+    breakpoint {
+      field = breakpoint
+    }
+    alignment = TEXT
+    alignment {
+      field = alignment
+    }
+    mt = TEXT
+    mt {
+      field = mt
+    }
+    mb = TEXT
+    mb {
+      field = mb
+    }
+    pt = TEXT
+    pt {
+      field = pt
+    }
+    pb = TEXT
+    pb {
+      field = pb
+    }
+    tablet_bp = TEXT
+    tablet_bp {
+      field = tablet_bp
+    }
+    tablet_mt = TEXT
+    tablet_mt {
+      field = tablet_mt
+    }
+    tablet_mb = TEXT
+    tablet_mb {
+      field = tablet_mb
+    }
+    tablet_pt = TEXT
+    tablet_pt {
+      field = tablet_pt
+    }
+    tablet_pb = TEXT
+    tablet_pb {
+      field = tablet_pb
+    }
+    desktop_bp = TEXT
+    desktop_bp {
+      field = desktop_bp
+    }
+    desktop_mt = TEXT
+    desktop_mt {
+      field = desktop_mt
+    }
+    desktop_mb = TEXT
+    desktop_mb {
+      field = desktop_mb
+    }
+    desktop_pt = TEXT
+    desktop_pt {
+      field = desktop_pt
+    }
+    desktop_pb = TEXT
+    desktop_pb {
+      field = desktop_pb
+    }
+    background = TEXT
+    background {
+      field = background
+    }
+    color = TEXT
+    color {
+      field = color
+    }
+    tag = TEXT
+    tag {
+      field = tag
+    }
+  }
+}

@@ -1,0 +1,4 @@
+##########################
+#### HEADLESS CONTENT ####
+##########################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:skeleton/Configuration/TypoScript/Headless/ContentElement" extensions="typoscript">

@@ -1,0 +1,27 @@
+tt_content.skeleton_header =< lib.contentElementWithHeader
+tt_content.skeleton_header {
+  fields {
+    content {
+      fields {
+        bodytext = TEXT
+        bodytext {
+          field = bodytext
+          parseFunc =< lib.parseFunc_RTE
+        }
+        image = TEXT
+        image {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+            10 {
+              references.fieldName = image
+              as = files
+              processingConfiguration {
+                delayProcessing = 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

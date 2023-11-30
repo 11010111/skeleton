@@ -1,0 +1,12 @@
+lib.contentElementWithHeader {
+  fields {
+    content {
+      fields {
+        rteWidth = TEXT
+        rteWidth {
+          field = rte_width
+        }
+      }
+    }
+  }
+}

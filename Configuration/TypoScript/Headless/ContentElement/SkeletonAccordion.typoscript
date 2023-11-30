@@ -1,0 +1,80 @@
+tt_content.skeleton_accordion =< lib.contentElementWithHeader
+tt_content.skeleton_accordion {
+  fields {
+    content {
+      fields {
+        bodytext = TEXT
+        bodytext {
+          field = bodytext
+          parseFunc =< lib.parseFunc_RTE
+        }
+        skeletonContent {
+          fields {
+            elements = CONTENT
+            elements {
+              table = tx_skeleton_content
+              select {
+                pidInList.data = {field:pid}
+                where.data = field:uid
+                where.wrap = {#uid_foreign}=|
+              }
+              renderObj = JSON
+              renderObj {
+                fields {
+                  image = TEXT
+                  image {
+                    dataProcessing {
+                      10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                      10 {
+                        references.fieldName = image
+                        as = files
+                        processingConfiguration {
+                          delayProcessing = 1
+                        }
+                      }
+                    }
+                  }
+                  title = TEXT
+                  title {
+                    field = title
+                  }
+                  description = TEXT
+                  description {
+                    field = description
+                    parseFunc =< lib.parseFunc_RTE
+                  }
+                  link = TEXT
+                  link {
+                    field = link
+                    htmlSpecialChars = 1
+                    typolink {
+                      parameter {
+                        field = link
+                      }
+                      returnLast = result
+                    }
+                  }
+                }
+                stdWrap.wrap = |###BREAK###
+              }
+              stdWrap {
+                innerWrap = [|]
+                split {
+                  token = ###BREAK###
+                  cObjNum = 1 |*|2|*| 3
+                  1 {
+                    current = 1
+                    stdWrap.wrap = |
+                  }
+                  2 < .1
+                  2.stdWrap.wrap = ,|
+                  3 < .1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
