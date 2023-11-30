@@ -396,7 +396,7 @@ config {
   // Compression and Concatenation of CSS and JS Files
   compressJs = 1
   compressCss = 1
-  concatenateJs = 1
+  concatenateJs = 0
   concatenateCss = 1
 
   ## Header Policy
