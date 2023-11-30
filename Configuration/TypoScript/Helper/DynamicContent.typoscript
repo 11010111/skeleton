@@ -4,7 +4,10 @@
 #
 #  EXAMPLE
 #  ---------------
-#  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', wrap: '<div class=\"hero\">|</div>'}" />
+#  <f:cObject
+#   typoscriptObjectPath="lib.dynamicContent"
+#   data="{pageUid: '{data.uid}', colPos: '0', wrap: '<div class=\"hero\">|</div>'}"
+#  />
 #
 #
 #  COLUMN NUMBERS
