@@ -26,7 +26,12 @@
   .header-image {
     display: flex;
     justify-content: center;
-    padding: 0 var(--min-mx);
+    padding: 0 var(--max-x-nav);
+
+    picture {
+      border-radius: rem(8);
+      overflow: hidden;
+    }
 
     img, svg {
       width: 100%;

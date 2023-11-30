@@ -25,7 +25,11 @@
 .header .header-image {
   display: flex;
   justify-content: center;
-  padding: 0 var(--min-mx);
+  padding: 0 var(--max-x-nav);
+}
+.header .header-image picture {
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 .header .header-image img, .header .header-image svg {
   width: 100%;
