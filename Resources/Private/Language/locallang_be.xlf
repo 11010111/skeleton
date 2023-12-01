@@ -56,7 +56,7 @@
                 <source>Header</source>
             </trans-unit>
             <trans-unit id="skeleton_header.description">
-                <source>Page Header</source>
+                <source>Page Header Content</source>
             </trans-unit>
 
             <trans-unit id="skeleton_content.label">
@@ -78,6 +78,13 @@
             </trans-unit>
             <trans-unit id="skeleton_accordion.description">
                 <source>Repeated Content</source>
+            </trans-unit>
+
+            <trans-unit id="skeleton_footer.label">
+                <source>Footer</source>
+            </trans-unit>
+            <trans-unit id="skeleton_footer.description">
+                <source>Page Footer Content</source>
             </trans-unit>
         </body>
     </file>

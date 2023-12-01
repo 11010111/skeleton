@@ -1,0 +1,90 @@
+.footer {
+  font-size: 0.75rem;
+}
+.footer .footer-wrapper {
+  display: grid;
+  column-gap: 1.25rem;
+  row-gap: 1.5rem;
+}
+@media (min-width: 48em) {
+  .footer .footer-wrapper {
+    row-gap: 2.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer .footer-wrapper {
+    grid-template-columns: 0.75fr 1.25fr;
+  }
+}
+@media (min-width: 80em) {
+  .footer .footer-wrapper {
+    row-gap: 5rem;
+  }
+}
+.footer .footer-wrapper .footer-copyright {
+  display: grid;
+  row-gap: 1.5rem;
+}
+@media (min-width: 48em) {
+  .footer .footer-wrapper .footer-copyright {
+    row-gap: 2.5rem;
+  }
+}
+@media (min-width: 80em) {
+  .footer .footer-wrapper .footer-copyright {
+    row-gap: 5rem;
+  }
+}
+.footer .footer-wrapper .footer-copyright .footer-logo a {
+  width: fit-content;
+}
+.footer .footer-wrapper .footer-copyright .footer-logo a svg {
+  width: auto;
+  height: 1.5rem;
+}
+.footer .footer-wrapper .footer-copyright .footer-logo a svg path {
+  fill: var(--white);
+}
+.footer .footer-wrapper .footer-copyright .rte-wrapper {
+  display: grid;
+  align-items: flex-end;
+}
+.footer .footer-wrapper .footer-link-social-wrapper {
+  display: grid;
+  row-gap: 1.5rem;
+}
+@media (min-width: 48em) {
+  .footer .footer-wrapper .footer-link-social-wrapper {
+    row-gap: 2.5rem;
+  }
+}
+@media (min-width: 80em) {
+  .footer .footer-wrapper .footer-link-social-wrapper {
+    row-gap: 5rem;
+  }
+}
+.footer .footer-wrapper .footer-link-social-wrapper .footer-link-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
+}
+@media (min-width: 64em) {
+  .footer .footer-wrapper .footer-link-social-wrapper .footer-link-wrapper {
+    justify-content: flex-end;
+  }
+}
+.footer .footer-wrapper .footer-link-social-wrapper .footer-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
+}
+@media (min-width: 64em) {
+  .footer .footer-wrapper .footer-link-social-wrapper .footer-social-links {
+    justify-content: flex-end;
+  }
+}
+.footer .footer-wrapper .footer-link-social-wrapper .footer-social-links svg {
+  fill: var(--white);
+}

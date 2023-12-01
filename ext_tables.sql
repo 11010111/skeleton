@@ -32,14 +32,13 @@ CREATE TABLE tx_skeleton_content
   uid              INT(11) unsigned    DEFAULT 0  NOT NULL auto_increment,
   pid              INT(11)             DEFAULT 0  NOT NULL,
 
-  uid_local        INT(11) unsigned    DEFAULT 0  NOT NULL,
   uid_foreign      INT(11) unsigned    DEFAULT 0  NOT NULL,
   sorting          INT(11) unsigned    DEFAULT 0  NOT NULL,
   sorting_foreign  INT(11) unsigned    DEFAULT 0  NOT NULL,
 
   image            INT(11)             DEFAULT 0  NOT NULL,
   title            VARCHAR(255)        DEFAULT '' NOT NULL,
-  description      TEXT                           NOT NULL,
+  description      TEXT                               NULL,
   link             TEXT                               NULL,
 
   tstamp           INT(11) unsigned    DEFAULT 0  NOT NULL,

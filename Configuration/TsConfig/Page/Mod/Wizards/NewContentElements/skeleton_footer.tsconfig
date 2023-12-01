@@ -1,0 +1,18 @@
+##############################
+#### NEW CONTENT ELEMENTS ####
+##############################
+mod.wizards.newContentElement.wizardItems {
+  common {
+    elements {
+      skeleton_footer {
+        iconIdentifier = content-listgroup
+        title = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_footer.label
+        description = LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_footer.description
+        tt_content_defValues {
+          CType = skeleton_footer
+        }
+      }
+    }
+    show := addToList(skeleton_footer)
+  }
+}

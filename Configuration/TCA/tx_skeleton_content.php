@@ -5,17 +5,19 @@ return [
     'iconfile' => 'EXT:skeleton/Resources/Public/Icons/content/content-default.svg',
     'title' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:tx_skeleton_content',
     'label' => 'title',
+    'label_alt' => 'image, description, link',
     'sortby' => 'sorting',
     'tstamp' => 'tstamp',
     'crdate' => 'crdate',
     'editlock' => 'editlock',
+    'type' => 'uid_foreign:CType',
     'languageField' => 'sys_language_uid',
     'transOrigPointerField' => 'l18n_parent',
     'transOrigDiffSourceField'  => 'l18n_diffsource',
     'prependAtCopy' => 'LLL:EXT:lang/locallang_general.xlf:LGL.prependAtCopy',
     'copyAfterDuplFields' => 'sys_language_uid',
     'useColumnsForDefaultValues' => 'sys_language_uid',
-    'searchFields' => 'title, description',
+    'searchFields' => 'image, title, description, link',
     'delete' => 'deleted',
     'enablecolumns' => [
       'disabled' => 'hidden'
@@ -25,6 +27,17 @@ return [
     'showRecordFieldList' => 'title, description'
   ],
   'columns' => [
+    'uid_foreign' => [
+      'config' => [
+        'type' => 'select',
+        'renderType' => 'selectSingle',
+        'foreign_table' => 'tt_content',
+        'foreign_table_where' => 'AND {#tt_content}.{#uid}=###REC_FIELD_uid_foreign###',
+        'minitems' => 1,
+        'maxitems' => 1,
+        'size' => 1
+      ],
+    ],
     'editlock' => [
       'displayCond' => 'HIDE_FOR_NON_ADMINS',
       'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:editlock',
@@ -82,7 +95,7 @@ return [
           'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
           'showPossibleLocalizationRecords' => true,
         ],
-        'maxitems' => '1'
+        'maxitems' => 1
       ]
     ],
     'title' => [
@@ -110,18 +123,14 @@ return [
         'type' => 'link',
         'size' => 50,
         'nullable' => 'true',
-        'default' => null,
-        // 'allowedTypes' => ['page', 'url', 'record'],
-        // 'appearance' => [
-        //   'enableBrowser' => false,
-        //   'browserTitle' => 'Browser title',
-        //   'allowedFileExtensions' => ['jpg', 'png', 'pdf'],
-        //   'allowedOptions' => ['params', 'rel', 'class', 'target', 'title']
-        // ]
+        'default' => null
       ]
     ]
   ],
   'types' => [
-    '1' => ['showitem' => 'title, description']
+    '0' => ['showitem' => 'uid_foreign, image, title, description, link'],
+    'skeleton_card' => ['showitem' => 'uid_foreign, image, title, description, link'],
+    'skeleton_accordion' => ['showitem' => 'uid_foreign, image, title, description, link'],
+    'skeleton_footer' => ['showitem' => 'uid_foreign, link'],
   ]
 ];

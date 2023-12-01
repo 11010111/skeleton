@@ -297,6 +297,56 @@ tt_content {
       }
     }
   }
+
+  skeleton_footer =< lib.contentElement
+  skeleton_footer {
+    templateName = SkeletonFooter
+    
+    dataProcessing {
+      10 = database-query
+      10 {
+        if.isTrue.field = tx_skeleton_content
+        table = tx_skeleton_content
+        pidInList.data = {field:pid}
+        where.data = field:uid
+        where.wrap = {#uid_foreign}=|
+
+        dataProcessing.10 = files
+        dataProcessing.10 {
+          if.isTrue.field = image
+          references.fieldName = image
+          as = image
+        }
+      }
+
+      20 = flex-form
+      20 {
+        if.isTrue.field = pi_flexform
+        fieldName = pi_flexform
+        as = flexForm
+      }
+
+      30 = menu
+      30 {
+        levels = 2
+        includeSpacer = 1
+        as = navigation
+        
+        dataProcessing.10 = files
+        dataProcessing.10 {
+          references.fieldName = media
+          as = media
+        }
+      }
+
+      40 = files
+      40 {
+        if.isTrue.field = image
+        references.fieldName = image
+        as = files
+      }
+    }
+  }
 }
 
 

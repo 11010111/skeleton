@@ -230,7 +230,6 @@ defined('TYPO3') or die('Access denied.');
         'type' => 'inline',
         'foreign_table' => 'tx_skeleton_content',
         'foreign_field' => 'uid_foreign',
-        'foreign_table_field' => 'uid_local',
         'appearance' => [
           'showSynchronizationLink' => true,
           'showAllLocalizationLink' => true,
@@ -366,18 +365,6 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
     'tx_skeleton_content' => [
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
       'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
-      'config' => [
-        'overrideChildTca' => [
-          'ctrl' => [
-            'iconfile' => 'content-menu-card',
-          ],
-          'types' => [
-            '1' => [
-              'showitem' => 'image, title, description, link'
-            ]
-          ]
-        ]
-      ]
     ]
   ]
 ];
@@ -434,18 +421,6 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_accordion'] = [
     'tx_skeleton_content' => [
       'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.label',
       'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.description',
-      'config' => [
-        'overrideChildTca' => [
-          'ctrl' => [
-            'iconfile' => 'content-accrodion',
-          ],
-          'types' => [
-            '1' => [
-              'showitem' => 'image, title, description, link'
-            ]
-          ]
-        ]
-      ]
     ]
   ]
 ];
@@ -498,6 +473,55 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_header'] = [
         'enableRichtext' => true,
         'richtextConfiguration' => 'skeleton'
       ]
+    ]
+  ]
+];
+
+##########################
+### SKELETON FOOTER ###
+##########################
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_footer'] = 'content-listgroup';
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+  'tt_content',
+  'CType',
+  [
+    'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_footer.label',
+    'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_footer.description',
+    'value' => 'skeleton_footer',
+    'icon' => 'content-listgroup',
+    'group' => 'common'
+  ]
+);
+
+$GLOBALS['TCA']['tt_content']['types']['skeleton_footer'] = [
+  'showitem' => '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+      --palette--;;general,
+      --palette--;;headers,
+      --palette--;;text,
+      --palette--;;image,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+      --palette--;;frames,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+      --palette--;;hidden,
+      --palette--;;access,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+      --palette--;;language,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+      --palette--;;categories,
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+      --palette--;;description,
+  ',
+  'columnsOverrides' => [
+    'bodytext' => [
+      'config' => [
+        'enableRichtext' => true,
+        'richtextConfiguration' => 'skeleton'
+      ]
+      ],
+    'image' => [
+      'label' => 'Social Icons'
     ]
   ]
 ];
