@@ -1,0 +1,14 @@
+page {
+  10 {
+    fields {
+      footer = CONTENT_JSON
+      footer {
+        table = tt_content
+        select {
+          pidInList = {$page.variables.footerSource}
+          orderBy = sorting
+        }
+      }
+    }
+  }
+}
