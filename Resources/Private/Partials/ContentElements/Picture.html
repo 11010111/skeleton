@@ -4,7 +4,7 @@
   <f:then>
     <f:if condition="{file.title} && {file.extension} == svg">
       <f:then>
-        <f:link.typolink parameter="{file.link}" title="{file.title}" additionalParams="{aria-label: file.alternative}">
+        <f:link.typolink parameter="{file.link}" title="{file.title}" additionalAttributes="{aria-label: file.alternative}">
           <f:render section="Picture" arguments="{_all}" />
         </f:link.typolink>
       </f:then>
