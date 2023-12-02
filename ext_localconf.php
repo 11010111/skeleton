@@ -11,3 +11,8 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['skeleton'] = 'EXT:skeleton/Config
  * Add global skeleton namespace
  */
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['skeleton'] = ['KSNC\\Skeleton\\ViewHelpers'];
+
+/***************
+ * Disable Errors
+ */
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '';

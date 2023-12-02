@@ -54,6 +54,7 @@ html {
 }
 
 body {
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -475,6 +476,36 @@ time {
     @media (min-width: breakpoint(md)) {
       width: rem(64);
       height: rem(64);
+    }
+  }
+}
+
+.site_error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+
+  .inline {
+    .header-headings {
+      display: flex;
+      align-items: center;
+      gap: rem(20);
+
+      .site_error_num {
+        margin: 0;
+      }
+
+      .site_error_pip {
+        width: rem(2);
+        background-color: var(--lightgrey);
+        height: rem(100);
+      }
+
+      .site_error_msg {
+        font-size: rem(28);
+      }
     }
   }
 }
