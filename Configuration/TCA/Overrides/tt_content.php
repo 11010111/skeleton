@@ -363,8 +363,17 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_card'] = [
       ]
     ],
     'tx_skeleton_content' => [
-      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.label',
-      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_card.description',
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:skeleton_card.label',
+      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:skeleton_card.description',
+      'config' => [
+        'overrideChildTca' => [
+          'types' => [
+            '0' => [
+              'showitem' => 'uid_foreign, image, title, description, link'
+            ]
+          ]
+        ]
+      ]
     ]
   ]
 ];
@@ -419,8 +428,17 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_accordion'] = [
       ]
     ],
     'tx_skeleton_content' => [
-      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.label',
-      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_be.xlf:skeleton_accordion.description',
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:skeleton_accordion.label',
+      'description' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:skeleton_accordion.description',
+      'config' => [
+        'overrideChildTca' => [
+          'types' => [
+            '0' => [
+              'showitem' => 'uid_foreign, image, title, description, link'
+            ]
+          ]
+        ]
+      ]
     ]
   ]
 ];
@@ -519,7 +537,7 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_footer'] = [
         'enableRichtext' => true,
         'richtextConfiguration' => 'skeleton'
       ]
-      ],
+    ],
     'image' => [
       'label' => 'Social Icons'
     ]

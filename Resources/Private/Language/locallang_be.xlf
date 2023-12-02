@@ -63,21 +63,21 @@
                 <source>Content</source>
             </trans-unit>
             <trans-unit id="skeleton_content.description">
-                <source>Repeated Content</source>
+                <source>Repeatable Content</source>
             </trans-unit>
 
             <trans-unit id="skeleton_card.label">
                 <source>Cards</source>
             </trans-unit>
             <trans-unit id="skeleton_card.description">
-                <source>Repeated Content</source>
+                <source>Repeatable Content</source>
             </trans-unit>
 
             <trans-unit id="skeleton_accordion.label">
                 <source>Accordion</source>
             </trans-unit>
             <trans-unit id="skeleton_accordion.description">
-                <source>Repeated Content</source>
+                <source>Repeatable Content</source>
             </trans-unit>
 
             <trans-unit id="skeleton_footer.label">

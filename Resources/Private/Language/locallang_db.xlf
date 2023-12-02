@@ -6,9 +6,6 @@
             <authorEmail></authorEmail>
         </header>
         <body>
-            <trans-unit id="image">
-                <source>Image</source>
-            </trans-unit>
             <trans-unit id="tx_skeleton_content">
                 <source>Content</source>
             </trans-unit>
@@ -23,6 +20,24 @@
             </trans-unit>
             <trans-unit id="tx_skeleton_content.link">
                 <source>Link</source>
+            </trans-unit>
+
+            <trans-unit id="image">
+                <source>Image</source>
+            </trans-unit>
+
+            <trans-unit id="skeleton_card.label">
+                <source>Cards</source>
+            </trans-unit>
+            <trans-unit id="skeleton_card.description">
+                <source>Cards Repeatable Content</source>
+            </trans-unit>
+
+            <trans-unit id="skeleton_accordion.label">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="skeleton_accordion.description">
+                <source>Accordion Repeatable Content</source>
             </trans-unit>
         </body>
     </file>
