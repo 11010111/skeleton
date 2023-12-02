@@ -88,3 +88,7 @@
 .footer .footer-wrapper .footer-link-social-wrapper .footer-social-links svg {
   fill: var(--white);
 }
+.footer .footer-wrapper .footer-link-social-wrapper .footer-social-links svg, .footer .footer-wrapper .footer-link-social-wrapper .footer-social-links img {
+  max-width: 2rem;
+  max-height: 2rem;
+}

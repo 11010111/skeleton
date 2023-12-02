@@ -87,6 +87,11 @@
         svg {
           fill: var(--white);
         }
+
+        svg, img {
+          max-width: rem(32);
+          max-height: rem(32);
+        }
       }
     }
   }
