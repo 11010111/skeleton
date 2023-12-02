@@ -7,7 +7,7 @@
         </header>
         <body>
             <trans-unit id="tx_skeleton_content">
-                <source>Content</source>
+                <source>Skeleton Content</source>
             </trans-unit>
             <trans-unit id="tx_skeleton_content.image">
                 <source>Image</source>
