@@ -208,13 +208,6 @@ page {
 [end]
 
 
-################################
-#### BACKEND TEMPLATE PATHS ####
-################################
-module.tx_backend.view.partialRootPaths.100 = EXT:skeleton/Resources/Private/Backend/Partials/
-module.tx_backend.view.templateRootPaths.100 = EXT:skeleton/Resources/Private/Backend/Templates/
-
-
 #####################################
 ### CUSTOM CONTENT TEMPLATE PATHS ###
 #####################################
