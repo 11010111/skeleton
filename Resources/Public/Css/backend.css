@@ -1,0 +1,4 @@
+.t3-page-ce-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
