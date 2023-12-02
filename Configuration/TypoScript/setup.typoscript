@@ -8,6 +8,8 @@
 #### HELPER ####
 ################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:skeleton/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skeleton/Configuration/TypoScript/Helper/Logo.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skeleton/Configuration/TypoScript/Helper/Svg.typoscript">
 
 
 ##############
@@ -22,7 +24,10 @@ page {
   10 {
     variables {
       menuItems = TEXT
-      menuItems.value = 4
+      menuItems.value = {$page.variables.menuItems}
+
+      footerSource = TEXT
+      footerSource.value = {$page.variables.footerSource}
     }
 
     templateName = TEXT
@@ -360,50 +365,6 @@ page.bodyTagAdd = class="home"
 [traverse(page, "uid") not in [1]]
 page.bodyTagAdd = class="sequent"
 [end]
-
-
-#################
-### SITE LOGO ###
-#################
-lib.logo = IMAGE
-lib.logo {
-  file = EXT:skeleton/Resources/Public/Images/logo.svg
-  stdWrap.typolink.parameter = 1
-  stdWrap.typolink.title.data = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
-}
-
-
-########################
-### SITE LOGO AS SVG ###
-########################
-lib.logoSVG = SVG
-lib.logoSVG {
-  renderMode = inline
-  src.field = src
-  stdWrap.typolink.parameter = 1
-  stdWrap.typolink.title.data = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
-}
-
-
-#########################
-### RENDER INLINE SVG ###
-#########################
-lib.svg = SVG
-lib.svg {
-  renderMode = inline
-  src.field = src
-}
-
-
-##############
-### FOOTER ###
-##############
-lib.footer = RECORDS
-lib.footer {
-  tables = tt_content
-  source = 1
-  wrap = |
-}
 
 
 ################
