@@ -1,0 +1,9 @@
+############
+### PAGE ###
+############
+page {
+  variables {
+    menuItems = 4
+    footerSource = 2
+  }
+}
