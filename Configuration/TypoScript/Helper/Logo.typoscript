@@ -1,0 +1,21 @@
+#################
+### SITE LOGO ###
+#################
+lib.logo = IMAGE
+lib.logo {
+  file = EXT:skeleton/Resources/Public/Images/logo.svg
+  stdWrap.typolink.parameter = 1
+  stdWrap.typolink.title.data = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
+}
+
+
+########################
+### SITE LOGO AS SVG ###
+########################
+lib.logoSVG = SVG
+lib.logoSVG {
+  renderMode = inline
+  src.field = src
+  stdWrap.typolink.parameter = 1
+  stdWrap.typolink.title.data = LLL:EXT:skeleton/Resources/Private/Language/locallang.xlf:home
+}

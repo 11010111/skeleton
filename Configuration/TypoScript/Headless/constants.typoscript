@@ -1,0 +1,4 @@
+#################
+### VARIBALES ###
+#################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skeleton/Configuration/TypoScript/variables.typoscript">

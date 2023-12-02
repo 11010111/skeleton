@@ -1,0 +1,8 @@
+#########################
+### RENDER INLINE SVG ###
+#########################
+lib.svg = SVG
+lib.svg {
+  renderMode = inline
+  src.field = src
+}
