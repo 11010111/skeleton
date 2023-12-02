@@ -6,3 +6,6 @@ services:
 
   KSNC\Skeleton\:
     resource: '../Classes/*'
+  
+  KSNC\Skeleton\Preview\RecordPreviewRenderer:
+    public: true

@@ -22,22 +22,52 @@
                 <source>Container</source>
             </trans-unit>
             <trans-unit id="breakpoint">
-                <source>Breakpoint</source>
+                <source>Container Breakpoint</source>
             </trans-unit>
             <trans-unit id="alignment">
-                <source>Alignment</source>
+                <source>Container Alignment</source>
             </trans-unit>
             <trans-unit id="mt">
-                <source>Margin Top</source>
+                <source>Mobile Margin Top</source>
             </trans-unit>
             <trans-unit id="mb">
-                <source>Margin Bottom</source>
+                <source>Mobile Margin Bottom</source>
             </trans-unit>
             <trans-unit id="pt">
-                <source>Padding Top</source>
+                <source>Mobile Padding Top</source>
             </trans-unit>
             <trans-unit id="pb">
-                <source>Padding Bottom</source>
+                <source>Mobile Padding Bottom</source>
+            </trans-unit>
+            <trans-unit id="tablet_bp">
+                <source>Tablet Breakpoint</source>
+            </trans-unit>
+            <trans-unit id="tablet_mt">
+                <source>Tablet Margin Top</source>
+            </trans-unit>
+            <trans-unit id="tablet_mb">
+                <source>Tablet Margin Bottom</source>
+            </trans-unit>
+            <trans-unit id="tablet_pt">
+                <source>Tablet Padding Top</source>
+            </trans-unit>
+            <trans-unit id="tablet_pb">
+                <source>Tablet Padding Bottom</source>
+            </trans-unit>
+            <trans-unit id="desktop_bp">
+                <source>Desktop Breakpoint</source>
+            </trans-unit>
+            <trans-unit id="desktop_mt">
+                <source>Desktop Margin Top</source>
+            </trans-unit>
+            <trans-unit id="desktop_mb">
+                <source>Desktop Margin Bottom</source>
+            </trans-unit>
+            <trans-unit id="desktop_pt">
+                <source>Desktop Padding Top</source>
+            </trans-unit>
+            <trans-unit id="desktop_pb">
+                <source>Desktop Padding Bottom</source>
             </trans-unit>
             <trans-unit id="background">
                 <source>Background</source>
@@ -46,7 +76,7 @@
                 <source>Color</source>
             </trans-unit>
             <trans-unit id="tag">
-                <source>Tag</source>
+                <source>HTML Tag</source>
             </trans-unit>
             <trans-unit id="rte_width">
                 <source>RTE Width</source>
