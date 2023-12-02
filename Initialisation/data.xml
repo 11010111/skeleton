@@ -3,28 +3,36 @@
 	<header type="array">
 		<XMLversion>1.0</XMLversion>
 		<meta type="array">
-			<title>Data</title>
-			<description>First Install Data</description>
+			<title></title>
+			<description></description>
 			<notes></notes>
 			<packager_username>admin</packager_username>
 			<packager_name></packager_name>
 			<packager_email></packager_email>
-			<TYPO3_version>11.5.*</TYPO3_version>
-			<created></created>
+			<TYPO3_version>12.4.8</TYPO3_version>
+			<created>Sat 2. December 2023</created>
 		</meta>
-		<static_tables index="relStaticTables" type="array"></static_tables>
+		<static_tables index="relStaticTables" type="array">
+			<tablename index="0">pages</tablename>
+			<tablename index="1">sys_template</tablename>
+			<tablename index="2">tt_content</tablename>
+			<tablename index="3">tx_skeleton_content</tablename>
+		</static_tables>
 		<excludeMap type="array"></excludeMap>
 		<softrefCfg type="array"></softrefCfg>
-		<extensionDependencies type="array">
-			<extkey index="0">container</extkey>
-		</extensionDependencies>
+		<extensionDependencies type="array"></extensionDependencies>
 		<charset>utf-8</charset>
 		<pagetree type="array">
-			<node index="1" type="array">
-				<uid>1</uid>
+			<node index="0" type="array">
+				<uid>0</uid>
 				<node index="subrow" type="array">
-					<node index="2" type="array">
-						<uid>2</uid>
+					<node index="1" type="array">
+						<uid>1</uid>
+						<node index="subrow" type="array">
+							<node index="2" type="array">
+								<uid>2</uid>
+							</node>
+						</node>
 					</node>
 				</node>
 			</node>
@@ -71,11 +79,6 @@
 						<softref_element index="include_static_file:ext_fileref:11" type="array">
 							<field>include_static_file</field>
 							<spKey>ext_fileref</spKey>
-							<matchString>EXT:mask/Configuration/TypoScript</matchString>
-						</softref_element>
-						<softref_element index="include_static_file:ext_fileref:14" type="array">
-							<field>include_static_file</field>
-							<spKey>ext_fileref</spKey>
 							<matchString>EXT:skeleton/Configuration/TypoScript</matchString>
 						</softref_element>
 					</softrefs>
@@ -117,9 +120,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">0</field>
-				<field index="tstamp" type="integer">0</field>
-				<field index="crdate" type="integer">0</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">1701542032</field>
+				<field index="crdate" type="integer">1701529427</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -139,12 +141,11 @@
 				<field index="t3ver_state" type="integer">0</field>
 				<field index="t3ver_stage" type="integer">0</field>
 				<field index="perms_userid" type="integer">2</field>
-				<field index="perms_groupid" type="integer">0</field>
+				<field index="perms_groupid" type="integer">1</field>
 				<field index="perms_user" type="integer">31</field>
-				<field index="perms_group" type="integer">27</field>
+				<field index="perms_group" type="integer">31</field>
 				<field index="perms_everybody" type="integer">0</field>
 				<field index="title">Skeleton</field>
-				<field index="slug">/</field>
 				<field index="doktype" type="integer">1</field>
 				<field index="TSconfig" type="NULL"></field>
 				<field index="is_siteroot" type="integer">1</field>
@@ -156,14 +157,12 @@
 				<field index="layout" type="integer">0</field>
 				<field index="target"></field>
 				<field index="media" type="integer">0</field>
-				<field index="lastUpdated" type="integer">0</field>
 				<field index="keywords" type="NULL"></field>
 				<field index="cache_timeout" type="integer">0</field>
 				<field index="cache_tags"></field>
-				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1701529427</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -175,11 +174,14 @@
 				<field index="mount_pid" type="integer">0</field>
 				<field index="mount_pid_ol" type="integer">0</field>
 				<field index="l18n_cfg" type="integer">2</field>
-				<field index="fe_login_mode" type="integer">0</field>
 				<field index="backend_layout"></field>
 				<field index="backend_layout_next_level"></field>
-				<field index="tsconfig_includes" type="NULL"></field>
+				<field index="tsconfig_includes"></field>
 				<field index="categories" type="integer">0</field>
+				<field index="lastUpdated" type="integer">0</field>
+				<field index="newUntil" type="integer">0</field>
+				<field index="slug">/</field>
+				<field index="tx_impexp_origuid" type="integer">1</field>
 				<field index="seo_title"></field>
 				<field index="no_index" type="integer">0</field>
 				<field index="no_follow" type="integer">0</field>
@@ -193,7 +195,6 @@
 				<field index="canonical_link"></field>
 				<field index="sitemap_priority">0.5</field>
 				<field index="sitemap_changefreq"></field>
-				<field index="tx_impexp_origuid" type="integer">0</field>
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
@@ -201,9 +202,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">1</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">0</field>
-				<field index="crdate" type="integer">0</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">1701537757</field>
+				<field index="crdate" type="integer">1701529427</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -211,20 +211,16 @@
 				<field index="sorting" type="integer">256</field>
 				<field index="description" type="NULL"></field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="t3ver_oid" type="integer">0</field>
-				<field index="t3ver_wsid" type="integer">0</field>
-				<field index="t3ver_state" type="integer">0</field>
-				<field index="t3ver_stage" type="integer">0</field>
 				<field index="title">DEFAULT TEMPLATE</field>
 				<field index="root" type="integer">1</field>
 				<field index="clear" type="integer">3</field>
-				<field index="include_static_file">EXT:fluid_styled_content/Configuration/TypoScript/,EXT:fluid_styled_content/Configuration/TypoScript/Styling/,EXT:form/Configuration/TypoScript/,EXT:mask/Configuration/TypoScript,EXT:skeleton/Configuration/TypoScript</field>
-				<field index="constants" type="NULL"></field>
+				<field index="include_static_file">EXT:fluid_styled_content/Configuration/TypoScript/,EXT:fluid_styled_content/Configuration/TypoScript/Styling/,EXT:form/Configuration/TypoScript/,EXT:skeleton/Configuration/TypoScript</field>
+				<field index="constants"></field>
 				<field index="config"></field>
 				<field index="basedOn"></field>
-				<field index="includeStaticAfterBasedOn" type="integer">0</field>
+				<field index="includeStaticAfterBasedOn" type="integer">1</field>
 				<field index="static_file_mode" type="integer">0</field>
-				<field index="tx_impexp_origuid" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">1</field>
 			</fieldlist>
 			<related index="rels" type="array">
 				<field index="include_static_file" type="array">
@@ -241,9 +237,6 @@
 									<matchString>EXT:form/Configuration/TypoScript/</matchString>
 								</softref_element>
 								<softref_element index="11" type="array">
-									<matchString>EXT:mask/Configuration/TypoScript</matchString>
-								</softref_element>
-								<softref_element index="14" type="array">
 									<matchString>EXT:skeleton/Configuration/TypoScript</matchString>
 								</softref_element>
 							</softref_key>
@@ -256,9 +249,8 @@
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">2</field>
 				<field index="pid" type="integer">1</field>
-				<field index="tstamp" type="integer">0</field>
-				<field index="crdate" type="integer">0</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">1701559249</field>
+				<field index="crdate" type="integer">1701529427</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -272,18 +264,17 @@
 				<field index="l10n_source" type="integer">0</field>
 				<field index="l10n_state" type="NULL"></field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="l10n_diffsource">{&quot;doktype&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;slug&quot;:&quot;&quot;,&quot;nav_title&quot;:&quot;&quot;,&quot;subtitle&quot;:&quot;&quot;,&quot;seo_title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;no_index&quot;:&quot;&quot;,&quot;no_follow&quot;:&quot;&quot;,&quot;sitemap_changefreq&quot;:&quot;&quot;,&quot;sitemap_priority&quot;:&quot;&quot;,&quot;og_title&quot;:&quot;&quot;,&quot;og_description&quot;:&quot;&quot;,&quot;og_image&quot;:&quot;&quot;,&quot;twitter_title&quot;:&quot;&quot;,&quot;twitter_description&quot;:&quot;&quot;,&quot;twitter_image&quot;:&quot;&quot;,&quot;twitter_card&quot;:&quot;&quot;,&quot;abstract&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;author_email&quot;:&quot;&quot;,&quot;lastUpdated&quot;:&quot;&quot;,&quot;layout&quot;:&quot;&quot;,&quot;newUntil&quot;:&quot;&quot;,&quot;backend_layout&quot;:&quot;&quot;,&quot;backend_layout_next_level&quot;:&quot;&quot;,&quot;content_from_pid&quot;:&quot;&quot;,&quot;target&quot;:&quot;&quot;,&quot;cache_timeout&quot;:&quot;&quot;,&quot;cache_tags&quot;:&quot;&quot;,&quot;is_siteroot&quot;:&quot;&quot;,&quot;no_search&quot;:&quot;&quot;,&quot;php_tree_stop&quot;:&quot;&quot;,&quot;module&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;tsconfig_includes&quot;:&quot;&quot;,&quot;TSconfig&quot;:&quot;&quot;,&quot;l18n_cfg&quot;:&quot;&quot;,&quot;hidden&quot;:&quot;&quot;,&quot;nav_hide&quot;:&quot;&quot;,&quot;starttime&quot;:&quot;&quot;,&quot;endtime&quot;:&quot;&quot;,&quot;extendToSubpages&quot;:&quot;&quot;,&quot;fe_group&quot;:&quot;&quot;,&quot;fe_login_mode&quot;:&quot;&quot;,&quot;editlock&quot;:&quot;&quot;,&quot;categories&quot;:&quot;&quot;,&quot;rowDescription&quot;:&quot;&quot;}</field>
+				<field index="l10n_diffsource">{&quot;doktype&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;slug&quot;:&quot;&quot;,&quot;nav_title&quot;:&quot;&quot;,&quot;subtitle&quot;:&quot;&quot;,&quot;abstract&quot;:&quot;&quot;,&quot;keywords&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;author_email&quot;:&quot;&quot;,&quot;lastUpdated&quot;:&quot;&quot;,&quot;layout&quot;:&quot;&quot;,&quot;newUntil&quot;:&quot;&quot;,&quot;backend_layout&quot;:&quot;&quot;,&quot;backend_layout_next_level&quot;:&quot;&quot;,&quot;content_from_pid&quot;:&quot;&quot;,&quot;target&quot;:&quot;&quot;,&quot;cache_timeout&quot;:&quot;&quot;,&quot;cache_tags&quot;:&quot;&quot;,&quot;is_siteroot&quot;:&quot;&quot;,&quot;no_search&quot;:&quot;&quot;,&quot;php_tree_stop&quot;:&quot;&quot;,&quot;module&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;tsconfig_includes&quot;:&quot;&quot;,&quot;TSconfig&quot;:&quot;&quot;,&quot;l18n_cfg&quot;:&quot;&quot;,&quot;hidden&quot;:&quot;&quot;,&quot;nav_hide&quot;:&quot;&quot;,&quot;starttime&quot;:&quot;&quot;,&quot;endtime&quot;:&quot;&quot;,&quot;extendToSubpages&quot;:&quot;&quot;,&quot;fe_group&quot;:&quot;&quot;,&quot;editlock&quot;:&quot;&quot;,&quot;categories&quot;:&quot;&quot;,&quot;rowDescription&quot;:&quot;&quot;}</field>
 				<field index="t3ver_oid" type="integer">0</field>
 				<field index="t3ver_wsid" type="integer">0</field>
 				<field index="t3ver_state" type="integer">0</field>
 				<field index="t3ver_stage" type="integer">0</field>
 				<field index="perms_userid" type="integer">2</field>
-				<field index="perms_groupid" type="integer">0</field>
+				<field index="perms_groupid" type="integer">1</field>
 				<field index="perms_user" type="integer">31</field>
-				<field index="perms_group" type="integer">27</field>
+				<field index="perms_group" type="integer">31</field>
 				<field index="perms_everybody" type="integer">0</field>
 				<field index="title">Footer</field>
-				<field index="slug">/footer</field>
 				<field index="doktype" type="integer">6</field>
 				<field index="TSconfig" type="NULL"></field>
 				<field index="is_siteroot" type="integer">0</field>
@@ -295,14 +286,12 @@
 				<field index="layout" type="integer">0</field>
 				<field index="target"></field>
 				<field index="media" type="integer">0</field>
-				<field index="lastUpdated" type="integer">0</field>
 				<field index="keywords" type="NULL"></field>
 				<field index="cache_timeout" type="integer">0</field>
 				<field index="cache_tags"></field>
-				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1701529427</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -314,11 +303,14 @@
 				<field index="mount_pid" type="integer">0</field>
 				<field index="mount_pid_ol" type="integer">0</field>
 				<field index="l18n_cfg" type="integer">0</field>
-				<field index="fe_login_mode" type="integer">0</field>
 				<field index="backend_layout"></field>
 				<field index="backend_layout_next_level"></field>
-				<field index="tsconfig_includes" type="NULL"></field>
+				<field index="tsconfig_includes"></field>
 				<field index="categories" type="integer">0</field>
+				<field index="lastUpdated" type="integer">0</field>
+				<field index="newUntil" type="integer">0</field>
+				<field index="slug">/footer</field>
+				<field index="tx_impexp_origuid" type="integer">2</field>
 				<field index="seo_title"></field>
 				<field index="no_index" type="integer">1</field>
 				<field index="no_follow" type="integer">1</field>
@@ -332,7 +324,6 @@
 				<field index="canonical_link"></field>
 				<field index="sitemap_priority">0.5</field>
 				<field index="sitemap_changefreq"></field>
-				<field index="tx_impexp_origuid" type="integer">0</field>
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
@@ -341,9 +332,8 @@
 				<field index="uid" type="integer">1</field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="pid" type="integer">2</field>
-				<field index="tstamp" type="integer">0</field>
-				<field index="crdate" type="integer">0</field>
-				<field index="cruser_id" type="integer">1</field>
+				<field index="tstamp" type="integer">1701530433</field>
+				<field index="crdate" type="integer">1701529427</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -356,15 +346,15 @@
 				<field index="l10n_source" type="integer">0</field>
 				<field index="l10n_state" type="NULL"></field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="l18n_diffsource">{&quot;CType&quot;:&quot;&quot;,&quot;colPos&quot;:&quot;&quot;,&quot;tx_container_parent&quot;:&quot;&quot;,&quot;header&quot;:&quot;&quot;,&quot;frame_class&quot;:&quot;&quot;,&quot;space_before_class&quot;:&quot;&quot;,&quot;space_after_class&quot;:&quot;&quot;,&quot;container&quot;:&quot;&quot;,&quot;padding_top&quot;:&quot;&quot;,&quot;padding_bottom&quot;:&quot;&quot;,&quot;background_color&quot;:&quot;&quot;,&quot;foreground_color&quot;:&quot;&quot;,&quot;sectionIndex&quot;:&quot;&quot;,&quot;linkToTop&quot;:&quot;&quot;,&quot;sys_language_uid&quot;:&quot;&quot;,&quot;hidden&quot;:&quot;&quot;,&quot;starttime&quot;:&quot;&quot;,&quot;endtime&quot;:&quot;&quot;,&quot;fe_group&quot;:&quot;&quot;,&quot;editlock&quot;:&quot;&quot;,&quot;categories&quot;:&quot;&quot;,&quot;rowDescription&quot;:&quot;&quot;}</field>
+				<field index="l18n_diffsource">{&quot;CType&quot;:&quot;&quot;,&quot;colPos&quot;:&quot;&quot;,&quot;header&quot;:&quot;&quot;,&quot;header_layout&quot;:&quot;&quot;,&quot;header_position&quot;:&quot;&quot;,&quot;date&quot;:&quot;&quot;,&quot;rte_width&quot;:&quot;&quot;,&quot;header_link&quot;:&quot;&quot;,&quot;subheader&quot;:&quot;&quot;,&quot;bodytext&quot;:&quot;&quot;,&quot;image&quot;:&quot;&quot;,&quot;frame_class&quot;:&quot;&quot;,&quot;container&quot;:&quot;&quot;,&quot;breakpoint&quot;:&quot;&quot;,&quot;alignment&quot;:&quot;&quot;,&quot;mt&quot;:&quot;&quot;,&quot;mb&quot;:&quot;&quot;,&quot;pt&quot;:&quot;&quot;,&quot;pb&quot;:&quot;&quot;,&quot;tablet_bp&quot;:&quot;&quot;,&quot;tablet_mt&quot;:&quot;&quot;,&quot;tablet_mb&quot;:&quot;&quot;,&quot;tablet_pt&quot;:&quot;&quot;,&quot;tablet_pb&quot;:&quot;&quot;,&quot;desktop_bp&quot;:&quot;&quot;,&quot;desktop_mt&quot;:&quot;&quot;,&quot;desktop_mb&quot;:&quot;&quot;,&quot;desktop_pt&quot;:&quot;&quot;,&quot;desktop_pb&quot;:&quot;&quot;,&quot;background&quot;:&quot;&quot;,&quot;color&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;hidden&quot;:&quot;&quot;,&quot;starttime&quot;:&quot;&quot;,&quot;endtime&quot;:&quot;&quot;,&quot;fe_group&quot;:&quot;&quot;,&quot;editlock&quot;:&quot;&quot;,&quot;sys_language_uid&quot;:&quot;&quot;,&quot;categories&quot;:&quot;&quot;,&quot;rowDescription&quot;:&quot;&quot;}</field>
 				<field index="t3ver_oid" type="integer">0</field>
 				<field index="t3ver_wsid" type="integer">0</field>
 				<field index="t3ver_state" type="integer">0</field>
 				<field index="t3ver_stage" type="integer">0</field>
-				<field index="CType">c100</field>
+				<field index="CType">skeleton_footer</field>
 				<field index="header">## Footer</field>
 				<field index="header_position"></field>
-				<field index="bodytext" type="NULL"></field>
+				<field index="bodytext">&lt;p&gt;Copyright @ 2023 by Skeleton&lt;/p&gt;</field>
 				<field index="bullets_type" type="integer">0</field>
 				<field index="uploads_description" type="integer">0</field>
 				<field index="uploads_type" type="integer">0</field>
@@ -380,8 +370,8 @@
 				<field index="cols" type="integer">0</field>
 				<field index="space_before_class"></field>
 				<field index="space_after_class"></field>
-				<field index="records" type="NULL"></field>
-				<field index="pages" type="NULL"></field>
+				<field index="records"></field>
+				<field index="pages"></field>
 				<field index="colPos" type="integer">0</field>
 				<field index="subheader"></field>
 				<field index="header_link"></field>
@@ -390,12 +380,11 @@
 				<field index="list_type"></field>
 				<field index="sectionIndex" type="integer">1</field>
 				<field index="linkToTop" type="integer">0</field>
-				<field index="file_collections" type="NULL"></field>
+				<field index="file_collections"></field>
 				<field index="filelink_size" type="integer">0</field>
 				<field index="filelink_sorting"></field>
 				<field index="filelink_sorting_direction"></field>
 				<field index="target"></field>
-				<field index="date" type="integer">0</field>
 				<field index="recursive" type="integer">0</field>
 				<field index="imageheight" type="integer">0</field>
 				<field index="pi_flexform" type="NULL"></field>
@@ -410,15 +399,31 @@
 				<field index="table_header_position" type="integer">0</field>
 				<field index="table_tfoot" type="integer">0</field>
 				<field index="categories" type="integer">0</field>
-				<field index="selected_categories" type="NULL"></field>
-				<field index="tx_impexp_origuid" type="integer">0</field>
-				<field index="tx_container_parent" type="integer">0</field>
-				<field index="container">full</field>
+				<field index="selected_categories">0</field>
+				<field index="date" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">1</field>
+				<field index="container">container</field>
 				<field index="breakpoint">md</field>
-				<field index="padding_top">50</field>
-				<field index="padding_bottom">50</field>
-				<field index="background_color">#000000</field>
-				<field index="foreground_color">#ffffff</field>
+				<field index="alignment"></field>
+				<field index="mt"></field>
+				<field index="mb"></field>
+				<field index="pt">6</field>
+				<field index="pb">16</field>
+				<field index="tablet_bp">md</field>
+				<field index="tablet_mt"></field>
+				<field index="tablet_mb"></field>
+				<field index="tablet_pt">10</field>
+				<field index="tablet_pb">24</field>
+				<field index="desktop_bp">xl</field>
+				<field index="desktop_mt"></field>
+				<field index="desktop_mb"></field>
+				<field index="desktop_pt">20</field>
+				<field index="desktop_pb">20</field>
+				<field index="color"></field>
+				<field index="background"></field>
+				<field index="tag"></field>
+				<field index="rte_width"></field>
+				<field index="tx_skeleton_content" type="integer">0</field>
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
