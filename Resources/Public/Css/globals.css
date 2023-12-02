@@ -114,7 +114,6 @@ html {
 }
 
 body {
-  margin: 0;
   overflow-x: hidden;
 }
 
@@ -533,28 +532,4 @@ time {
     width: 4rem;
     height: 4rem;
   }
-}
-
-.site_error {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100dvw;
-  height: 100dvh;
-}
-.site_error .inline .header-headings {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-.site_error .inline .header-headings .site_error_num {
-  margin: 0;
-}
-.site_error .inline .header-headings .site_error_pip {
-  width: 0.125rem;
-  background-color: var(--lightgrey);
-  height: 6.25rem;
-}
-.site_error .inline .header-headings .site_error_msg {
-  font-size: 1.75rem;
 }

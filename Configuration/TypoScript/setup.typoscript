@@ -426,8 +426,7 @@ config {
   inlineStyle2TempFile = 1
   admPanel = {$config.admPanel}
   debug = 0
-  contentObjectExceptionHandler = 1
-  contentObjectExceptionHandler.errorMessage = Something went wrong %s
+  contentObjectExceptionHandler = 0
   cache_period = 86400
   sendCacheHeaders = {$config.sendCacheHeaders}
   intTarget =
