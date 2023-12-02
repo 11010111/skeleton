@@ -865,7 +865,7 @@ const fe = () => {
     if (n) {
       const t = y({
         targets: n,
-        scale: [2, 1],
+        scale: [1.5, 1],
         duration: 800,
         elasticity: 200,
         easing: "easeInOutSine",
