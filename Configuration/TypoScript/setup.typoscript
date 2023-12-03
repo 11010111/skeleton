@@ -411,6 +411,6 @@ config {
     40.header = X-Xss-Protection: 1; mode=block
     50.header = X-Content-Type-Options: nosniff
     60.header = Referrer-Policy: strict-origin
-    70.header = Cache-control: max-age=31536000
+    70.header = Cache-control: public, max-age=31536000
   }
 }
