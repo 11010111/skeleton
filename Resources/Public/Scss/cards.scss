@@ -24,7 +24,7 @@
       position: relative;
       border-radius: rem(6);
       border: rem(1) solid rgba(0, 0, 0, 0.25);
-      box-shadow: 0 0 0 rem(4) rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0 rem(4) rgba(0, 0, 0, 0.05);
       overflow: hidden;
 
       &::before {
