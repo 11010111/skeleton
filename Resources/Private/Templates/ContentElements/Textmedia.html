@@ -25,7 +25,7 @@
 
 <f:section name="Files">
   <f:for each="{files}" as="file">
-    <f:if condition="{data.image_zoom} && !{file.link} && {file.type} != 3 && {file.type} != 4">
+    <f:if condition="{settings.media.popup.directImageLink} && {data.image_zoom} && !{file.link} && {file.type} != 3 && {file.type} != 4">
       <f:then>
         <ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
           <f:render section="Type" arguments="{_all}" />

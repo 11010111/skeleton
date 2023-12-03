@@ -16,7 +16,7 @@
 <f:section name="Files">
   <f:for each="{files}" as="file">
     <div class="grid-item">
-      <f:if condition="{data.image_zoom} && !{file.link}">
+      <f:if condition="{settings.media.popup.directImageLink} && {data.image_zoom} && !{file.link}">
         <f:then>
           <ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
             <f:render partial="Picture" arguments="{_all}" />
