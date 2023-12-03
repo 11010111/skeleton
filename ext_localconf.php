@@ -16,3 +16,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['skeleton'] = ['KSNC\\
  * Add backend CSS
  */
 $GLOBALS['TYPO3_CONF_VARS']['BE']['stylesheets']['skeleton'] = 'EXT:skeleton/Resources/Public/Css/backend.css';
+
+/***************
+ * Disable Errors
+ */
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '';
