@@ -539,9 +539,34 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_footer'] = [
       ]
     ],
     'image' => [
-      'label' => 'Social Icons'
+      'label' => 'LLL:EXT:skeleton/Resources/Private/Language/locallang_db.xlf:social_icons'
     ]
   ]
 ];
 
 $GLOBALS['TCA']['tt_content']['ctrl']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+
+$GLOBALS['TCA']['tt_content']['types']['header']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['div']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['text']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['image']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['textpic']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['textmedia']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['bullets']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['html']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['list']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['table']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['uploads']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['form_formframework']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_abstract']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_categorized_content']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_categorized_pages']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_pages']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_recently_updated']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_related_pages']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_section']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_section_pages']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_sitemap']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_sitemap_pages']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['menu_subpages']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['types']['shortcut']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
