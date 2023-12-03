@@ -25,6 +25,9 @@
             <trans-unit id="image">
                 <source>Image</source>
             </trans-unit>
+            <trans-unit id="social_icons">
+                <source>Social Icons</source>
+            </trans-unit>
 
             <trans-unit id="skeleton_card.label">
                 <source>Cards</source>
