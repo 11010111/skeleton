@@ -405,11 +405,12 @@ config {
 
   ## Header Policy
   additionalHeaders {
-    10.header = Content-Security-Policy: default-src 'self'; script-src 'self'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; frame-src 'self' https://www.youtube-nocookie.com;
+    10.header = Content-Security-Policy: default-src 'self'; script-src 'self'; script-src-elem 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data: https://i.ytimg.com https://i.vimeocdn.com; font-src 'self' data:; frame-src 'self' https://www.youtube-nocookie.com https://player.vimeo.com; frame-ancestors 'self';
     20.header = strict-transport-security: max-age=31536000
     30.header = X-Frame-Options: sameorigin
     40.header = X-Xss-Protection: 1; mode=block
     50.header = X-Content-Type-Options: nosniff
     60.header = Referrer-Policy: strict-origin
+    70.header = Cache-control: max-age=31536000
   }
 }
