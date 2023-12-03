@@ -19,15 +19,17 @@
 
               <f:if condition="{card.data.title} || {card.data.description} || {card.data.link}">
                 <div class="card-content">
-                  <f:if condition="{card.data.title}">
-                    <f:render partial="Headline" arguments="{type: '{f:if(condition: data.header_layout, then: \'{data.header_layout + 1}\')}', headline: '{card.data.title}', class:'h4'}" />
-                  </f:if>
+                  <div class="card-content-inner">
+                    <f:if condition="{card.data.title}">
+                      <f:render partial="Headline" arguments="{type: '{f:if(condition: data.header_layout, then: \'{data.header_layout + 1}\')}', headline: '{card.data.title}', class:'h4'}" />
+                    </f:if>
 
-                  <f:if condition="{card.data.description}">
-                    <div class="card-rte">
-                      {card.data.description -> f:format.html()}
-                    </div>
-                  </f:if>
+                    <f:if condition="{card.data.description}">
+                      <div class="card-rte">
+                        {card.data.description -> f:format.html()}
+                      </div>
+                    </f:if>
+                  </div>
 
                   <f:if condition="{card.data.link}">
                     <f:link.typolink class="primary-btn card-link" parameter="{card.data.link}" parts-as="link">
