@@ -495,9 +495,9 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_header'] = [
   ]
 ];
 
-##########################
+#######################
 ### SKELETON FOOTER ###
-##########################
+#######################
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['skeleton_footer'] = 'content-listgroup';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -544,8 +544,10 @@ $GLOBALS['TCA']['tt_content']['types']['skeleton_footer'] = [
   ]
 ];
 
+#############################
+### PAGE PREVIEW RENDERER ###
+#############################
 $GLOBALS['TCA']['tt_content']['ctrl']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
-
 $GLOBALS['TCA']['tt_content']['types']['header']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
 $GLOBALS['TCA']['tt_content']['types']['div']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
 $GLOBALS['TCA']['tt_content']['types']['text']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
@@ -570,3 +572,4 @@ $GLOBALS['TCA']['tt_content']['types']['menu_sitemap']['previewRenderer'] = KSNC
 $GLOBALS['TCA']['tt_content']['types']['menu_sitemap_pages']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
 $GLOBALS['TCA']['tt_content']['types']['menu_subpages']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
 $GLOBALS['TCA']['tt_content']['types']['shortcut']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
+// $GLOBALS['TCA']['tt_content']['types']['news_pi1']['previewRenderer'] = KSNC\Skeleton\Preview\RecordPreviewRenderer::class;
