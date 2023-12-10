@@ -1,56 +1,56 @@
-const u = () => {
-  let e = 0, t = [];
-  const b = document.querySelectorAll(".lightbox");
-  if (!b)
+const lightBox = () => {
+  let currentIndex = 0, currentGroup = [];
+  const elements = document.querySelectorAll(".lightbox");
+  if (!elements)
     return;
-  const h = (a) => {
-    a.preventDefault();
-  }, n = (a) => {
-    switch (a) {
+  const prevent = (e) => {
+    e.preventDefault();
+  }, action = (type) => {
+    switch (type) {
       case "prev":
-        e = e > 0 ? e - 1 : e, i.style.left = e * -100 + "vw";
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : currentIndex, wrapper.style.left = currentIndex * -100 + "vw";
         break;
       case "next":
-        e = e < t.length - 1 ? e + 1 : e, i.style.left = e * -100 + "vw";
+        currentIndex = currentIndex < currentGroup.length - 1 ? currentIndex + 1 : currentIndex, wrapper.style.left = currentIndex * -100 + "vw";
         break;
       case "close":
-        l.classList.remove("lightbox-show"), s.classList.remove("lightbox-action-disabled"), c.classList.remove("lightbox-action-disabled"), i.childNodes.forEach((o) => {
-          o.querySelector(".lightbox").removeEventListener("click", h), o.remove();
-        }), i.innerHTML = "", e = 0, t = null;
+        container.classList.remove("lightbox-show"), prev.classList.remove("lightbox-action-disabled"), next.classList.remove("lightbox-action-disabled"), wrapper.childNodes.forEach((item) => {
+          item.querySelector(".lightbox").removeEventListener("click", prevent), item.remove();
+        }), wrapper.innerHTML = "", currentIndex = 0, currentGroup = null;
         break;
       case "show":
-        l.classList.add("lightbox-show");
+        container.classList.add("lightbox-show");
         break;
       case "btn":
-        s.classList.remove("lightbox-action-disabled"), c.classList.remove("lightbox-action-disabled"), e === 0 && t.length > 1 && s.classList.add("lightbox-action-disabled"), e === t.length - 1 && t.length > 1 && c.classList.add("lightbox-action-disabled"), e === 0 && e === t.length - 1 && (s.classList.add("lightbox-action-disabled"), c.classList.add("lightbox-action-disabled"));
+        prev.classList.remove("lightbox-action-disabled"), next.classList.remove("lightbox-action-disabled"), currentIndex === 0 && currentGroup.length > 1 && prev.classList.add("lightbox-action-disabled"), currentIndex === currentGroup.length - 1 && currentGroup.length > 1 && next.classList.add("lightbox-action-disabled"), currentIndex === 0 && currentIndex === currentGroup.length - 1 && (prev.classList.add("lightbox-action-disabled"), next.classList.add("lightbox-action-disabled"));
     }
-  }, l = document.createElement("div");
-  l.className = "lightbox-container";
-  const d = document.createElement("div");
-  d.className = "primary-btn lightbox-close", d.addEventListener("click", () => {
-    n("close");
+  }, container = document.createElement("div");
+  container.className = "lightbox-container";
+  const close = document.createElement("div");
+  close.className = "primary-btn lightbox-close", close.addEventListener("click", () => {
+    action("close");
   });
-  const i = document.createElement("div");
-  i.className = "lightbox-wrapper";
-  const s = document.createElement("div");
-  s.className = "primary-btn lightbox-prev", s.addEventListener("click", () => {
-    n("prev"), n("btn");
+  const wrapper = document.createElement("div");
+  wrapper.className = "lightbox-wrapper";
+  const prev = document.createElement("div");
+  prev.className = "primary-btn lightbox-prev", prev.addEventListener("click", () => {
+    action("prev"), action("btn");
   });
-  const c = document.createElement("div");
-  c.className = "primary-btn lightbox-next", c.addEventListener("click", () => {
-    n("next"), n("btn");
-  }), l.appendChild(d), l.appendChild(i), l.appendChild(s), l.appendChild(c), document.body.appendChild(l), b.forEach((a) => {
-    const o = (m) => {
-      m.preventDefault();
-      const g = a.getAttribute("rel");
-      t = document.querySelectorAll(`[rel="${g}"]`), t.forEach((p, x) => {
-        const v = p.cloneNode(!0);
-        v.addEventListener("click", h);
-        const r = document.createElement("div");
-        r.className = "lightbox-item", r.appendChild(v), i.appendChild(r), a === p && (e = x, i.style.left = e * -100 + "vw");
-      }), n("show"), n("btn"), t.length === 0 && (s.classList.add("lightbox-action-disabled"), c.classList.add("lightbox-action-disabled"));
+  const next = document.createElement("div");
+  next.className = "primary-btn lightbox-next", next.addEventListener("click", () => {
+    action("next"), action("btn");
+  }), container.appendChild(close), container.appendChild(wrapper), container.appendChild(prev), container.appendChild(next), document.body.appendChild(container), elements.forEach((element) => {
+    const load = (e) => {
+      e.preventDefault();
+      const rel = element.getAttribute("rel");
+      currentGroup = document.querySelectorAll(`[rel="${rel}"]`), currentGroup.forEach((el, index) => {
+        const clone = el.cloneNode(!0);
+        clone.addEventListener("click", prevent);
+        const item = document.createElement("div");
+        item.className = "lightbox-item", item.appendChild(clone), wrapper.appendChild(item), element === el && (currentIndex = index, wrapper.style.left = currentIndex * -100 + "vw");
+      }), action("show"), action("btn"), currentGroup.length === 0 && (prev.classList.add("lightbox-action-disabled"), next.classList.add("lightbox-action-disabled"));
     };
-    a.addEventListener("click", o);
+    element.addEventListener("click", load);
   });
 };
-u();
+lightBox();

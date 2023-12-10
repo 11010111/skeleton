@@ -1,13 +1,13 @@
-const t = () => {
-  const c = document.querySelectorAll(".accordion");
-  c && c.forEach((n) => {
-    const e = n.querySelectorAll(".accordion-item");
-    e && e.forEach((o) => {
-      const r = o.querySelector(".accordion-headline");
-      r && r.addEventListener("click", () => {
-        o.classList.toggle("accordion-item-show");
+const accordion = () => {
+  const containers = document.querySelectorAll(".accordion");
+  containers && containers.forEach((container) => {
+    const accordions = container.querySelectorAll(".accordion-item");
+    accordions && accordions.forEach((accordion2) => {
+      const headline = accordion2.querySelector(".accordion-headline");
+      headline && headline.addEventListener("click", () => {
+        accordion2.classList.toggle("accordion-item-show");
       });
     });
   });
 };
-t();
+accordion();

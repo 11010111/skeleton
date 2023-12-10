@@ -4,7 +4,11 @@ import { defineConfig } from 'vite'
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
   publicDir: false,
+  esbuild: {
+    minifyIdentifiers: false
+  },
   build: {
+    minify: true,
     copyPublicDir: false,
     emptyOutDir: true,
     outDir: 'Resources/Public/Out',
